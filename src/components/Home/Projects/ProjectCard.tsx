@@ -18,9 +18,9 @@ const ProjectCard: React.FC<MyProjectsCardProps> = ({ item }) => {
     <>
       <div className="box">
         <Image
-          className="rounded-t-md"
+          className="rounded-t-md w-full h-[200px]"
           height={200}
-          width={400}
+          width={500}
           src={item?.image}
           alt=""
         />
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<MyProjectsCardProps> = ({ item }) => {
               href={item?.gitHub_link}
               target="_new"
             >
-              <FaGithub className="text-xl"/>
+              <FaGithub className="text-xl" />
               <button>GitHub Link</button>
             </a>
           </div>

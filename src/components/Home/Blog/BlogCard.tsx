@@ -18,9 +18,9 @@ const BlogCard: React.FC<MyBlogsCardProps> = ({ item }) => {
     <>
       <div className="box">
         <Image
-          className="rounded-t-md"
+          className="rounded-t-md w-full h-[200px]"
           height={200}
-          width={400}
+          width={500}
           src={item?.image}
           alt=""
         />
