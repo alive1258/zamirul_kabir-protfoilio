@@ -1,8 +1,8 @@
 import React from "react";
 import { BiBox } from "react-icons/bi";
-import { MyExperienceCardProps } from "./Experience";
+import { MyEducationCardProps } from "./Education";
 
-const ExperienceCard: React.FC<MyExperienceCardProps> = ({ item }) => {
+const EducationCard: React.FC<MyEducationCardProps> = ({ item }) => {
   return (
     <>
       <div className="flex gap-6 text-[#ffffff] space-y-3">
@@ -18,8 +18,8 @@ const ExperienceCard: React.FC<MyExperienceCardProps> = ({ item }) => {
           <div className="space-y-2 px-3 py-3">
             <h4>{item?.date}</h4>
             <div className="border-b w-36 border-[#34a578]"></div>
-            <h1 className="md:text-2xl text-xl">{item?.title}</h1>
-            <h3 className="text-[#34a578]">{item?.company}</h3>
+            <h1 className="md:text-2xl text-xl">{item?.certificate}</h1>
+            <h3 className="text-[#34a578]">{item?.name}</h3>
             <p>{item?.description}</p>
           </div>
         </div>
@@ -28,4 +28,4 @@ const ExperienceCard: React.FC<MyExperienceCardProps> = ({ item }) => {
   );
 };
 
-export default ExperienceCard;
+export default EducationCard;

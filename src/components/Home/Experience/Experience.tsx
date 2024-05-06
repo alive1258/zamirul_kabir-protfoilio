@@ -1,5 +1,4 @@
 import "../../Home/Services/Services.css";
-import { BiBox } from "react-icons/bi";
 import ExperienceAnimation from "./ExperienceAnimation";
 import ExperienceCard from "./ExperienceCard";
 
@@ -30,7 +29,7 @@ const Experience = async () => {
       {/* Experience */}
 
       <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
-        <span>My</span>
+        <span className="text-[#ffffff]">My</span>
         <span className="text-[#34a578]">Experience</span>
       </div>
       <div className="md:mt-20 mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
