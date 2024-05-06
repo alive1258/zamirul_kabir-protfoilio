@@ -5,7 +5,7 @@ import { MyExperienceCardProps } from "./Experience";
 const ExperienceCard: React.FC<MyExperienceCardProps> = ({ item }) => {
   return (
     <>
-      <div className="flex gap-6 text-[#ffffff] space-y-3">
+      <div className="flex gap-6 text-[#ffffff] pb-4">
         <div className="flex flex-col justify-center items-center ">
           <div className="rounded-full flex justify-center items-center w-10 h-10  bg-[#34a578]">
             <BiBox size={20} className="text-[#ffffff]" />

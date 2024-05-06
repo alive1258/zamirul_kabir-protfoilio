@@ -1,6 +1,4 @@
 import "../../Home/Services/Services.css";
-import { BiBox } from "react-icons/bi";
-
 import EducationAnimation from "./EducationAnimation";
 import EducationCard from "./EducationCard";
 
