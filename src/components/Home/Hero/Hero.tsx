@@ -21,7 +21,7 @@ const Hero = () => {
               {" "}
               front-end development
             </span>
-             ,I strive to create visually appealing and intuitive digital
+            ,I strive to create visually appealing and intuitive digital
             experiences focused on crafting clean & user-friendly experiences.
             Driven by a passion for user-centric design, my aim to craft
             websites and applications that not only look great but also provide
@@ -32,7 +32,7 @@ const Hero = () => {
           </p>
           <div className="md:mt-12 mt-6 pb-6">
             <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
-              <button className="border-2 font-semibold flex gap-4 items-center border-[#34a578] duration-300 transition-all px-6 py-4 rounded-lg hover:bg-[#34a578] transition ease-in-out delay-150">
+              <button className="border-2 px-4 py-2 font-semibold flex gap-4 items-center border-[#34a578]   rounded-lg hover:btn  ">
                 DOWNLOAD RESUME{" "}
                 <AiOutlineDownload size={23} className="font-bold" />
               </button>
@@ -41,7 +41,6 @@ const Hero = () => {
         </div>
         <div className="md:w-[480px] box mt-4">
           <Image
-           
             className="bg-[#11152c]  pt-4"
             src={zamirulPic}
             width={480}

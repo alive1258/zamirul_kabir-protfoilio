@@ -147,11 +147,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="mt-4 flex justify-end">
-              <input
-                type="submit"
-                value="Send message"
-                className="px-4 cursor-pointer py-2 font-semibold rounded-md bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
-              ></input>
+              <input type="submit" value="Send message" className="btn"></input>
             </div>
           </form>
         </div>

@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { MyProjectsCardProps } from "./Projects";
 import Image from "next/image";
 import ProductsDetailsModal from "./ProductsDetailsModal";
+import { FaGithub } from "react-icons/fa";
+import { MdRemoveRedEye } from "react-icons/md";
 
-const ProjectCard: React.FC<MyProjectsCardProps> = ({ project }) => {
+const ProjectCard: React.FC<MyProjectsCardProps> = ({ item }) => {
   const [showModal, setShowModal] = useState(false);
   const [productId, setProductId] = useState<string | null>(null);
 
@@ -14,20 +16,49 @@ const ProjectCard: React.FC<MyProjectsCardProps> = ({ project }) => {
 
   return (
     <>
-      <div className="box p-4">
-        <Image height={200} width={400} src={project.image_url} alt="" />
-        <h1 className="text-2xl mt-3">{project.name}</h1>
-        <p className="mt-2">{project.category}</p>
-        <button
-          onClick={() => {
-            setProductId(project?._id);
-            handleShowModal();
-          }}
-        >
-          View Details
-        </button>
+      <div className="box">
+        <Image
+          className="rounded-t-md"
+          height={200}
+          width={400}
+          src={item?.image}
+          alt=""
+        />
+        <div className="px-5">
+          <h1 className="text-2xl pt-3">{item?.name}</h1>
+          <p className="pt-2 text-[#34a578]">{item?.category}</p>
+          <div className="pt-4 flex justify-between items-center">
+            <a
+              className="flex border border-[#34a578] p-2 rounded-lg items-center space-x-2"
+              href={item?.live_link}
+              target="_new"
+            >
+              <MdRemoveRedEye className="text-xl" />
+              <button>Live Link</button>
+            </a>
+            <a
+              className="flex border border-[#34a578] p-2 rounded-lg items-center space-x-2"
+              href={item?.gitHub_link}
+              target="_new"
+            >
+              <FaGithub className="text-xl"/>
+              <button>GitHub Link</button>
+            </a>
+          </div>
+          <div className="flex justify-center items-center pt-6 pb-5">
+            <button
+              className="btn"
+              onClick={() => {
+                setProductId(item?._id);
+                handleShowModal();
+              }}
+            >
+              View Details
+            </button>
+          </div>
+        </div>
       </div>
-      {showModal && productId !== null && ( 
+      {showModal && productId !== null && (
         <ProductsDetailsModal
           onClose={() => {
             setShowModal(false);
@@ -40,5 +71,3 @@ const ProjectCard: React.FC<MyProjectsCardProps> = ({ project }) => {
 };
 
 export default ProjectCard;
-
-
