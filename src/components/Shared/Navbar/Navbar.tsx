@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
-
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaFacebookF } from "react-icons/fa";
 import zlogo from "../../../assets/image/zl2.png";
@@ -36,8 +35,8 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <ul className="hidden cursor-pointer md:flex gap-8">
               <li>
-                <Link to="home" smooth={true} duration={1100}>
-                  Home
+                <Link to="hero" smooth={true} duration={1100}>
+                  Hero
                 </Link>
               </li>
               <li>
@@ -51,21 +50,27 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="services" smooth={true} duration={1100}>
-                  Services
+                <Link to="experience" smooth={true} duration={1100}>
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link to="education" smooth={true} duration={1100}>
+                  Education
+                </Link>
+              </li>
+              <li>
+                <Link to="projects" smooth={true} duration={1100}>
+                  Projects
                 </Link>
               </li>
 
               <li>
-                <Link to="portfolio" smooth={true} duration={1100}>
-                  Portfolio
+                <Link to="blog" smooth={true} duration={500}>
+                  Blog
                 </Link>
               </li>
-              {/* <li>
-                                <Link to='blog' smooth={true} duration={500}>
-                                    Blog
-                                </Link>
-                            </li> */}
+
               <li>
                 <Link to="contact" smooth={true} duration={1100}>
                   Contact
@@ -90,11 +95,11 @@ const Navbar = () => {
             <li className="py-6 list-none">
               <Link
                 onClick={handleClick}
-                to="home"
+                to="hero"
                 smooth={true}
                 duration={1100}
               >
-                Home
+                Hero
               </Link>
             </li>
             <div className="border-b-2 border-[#34a578]"></div>
@@ -114,6 +119,30 @@ const Navbar = () => {
               {" "}
               <Link
                 onClick={handleClick}
+                to="experience"
+                smooth={true}
+                duration={1100}
+              >
+                Experience
+              </Link>
+            </li>
+            <div className="border-b-2 border-[#34a578]"></div>
+            <li className="py-6 list-none">
+              {" "}
+              <Link
+                onClick={handleClick}
+                to="education"
+                smooth={true}
+                duration={1100}
+              >
+                Education
+              </Link>
+            </li>
+            <div className="border-b-2 border-[#34a578]"></div>
+            <li className="py-6 list-none">
+              {" "}
+              <Link
+                onClick={handleClick}
                 to="skills"
                 smooth={true}
                 duration={1100}
@@ -126,27 +155,28 @@ const Navbar = () => {
               {" "}
               <Link
                 onClick={handleClick}
-                to="services"
+                to="projects"
                 smooth={true}
                 duration={1100}
               >
-                Services
+                Projects
               </Link>
             </li>
-
             <div className="border-b-2 border-[#34a578]"></div>
             <li className="py-6 list-none">
               {" "}
               <Link
                 onClick={handleClick}
-                to="portfolio"
+                to="blog"
                 smooth={true}
                 duration={1100}
               >
-                Portfolio
+                Blog
               </Link>
             </li>
+
             <div className="border-b-2 border-[#34a578]"></div>
+
             <li className="py-6 list-none">
               {" "}
               <Link
@@ -209,3 +239,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

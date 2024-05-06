@@ -1,89 +1,38 @@
-"use client";
-import CountUp from "react-countup";
-
+/* eslint-disable react/no-unescaped-entities */
+import "../../Home/Services/Services.css";
+import PersonalAnimation from "./PersonalAnimation";
 const PersonalInfo = () => {
   return (
     <>
-      <h1 className="md:text-4xl text-2xl text-center font-semibold">
-        About <span className="text-[#34a578]">Me</span>
-      </h1>
-      <div className=" px-2">
-        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 gap-6">
-          <div className="grid md:grid-cols-2 grid-cols-1">
-            <div className="space-y-4">
-              <p>First Name : Zamirul</p>
-              <p>Age : 26 Years</p>
-              <p>
-                Freelance : <span className="text-[#34a578]">Available</span>
-              </p>
-              <p>Phone : +88 01611910296</p>
-              <p>Skype : live:.cid.28d0e9af847f87cd</p>
-              <div data-aos="fade-up-right" className="md:pt-10 pb-6">
-                {/* <ScrollLink to="contact"> */}
-                <button className="px-4 py-2 font-semibold rounded-md bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
-                  Hire Me
-                </button>
-                {/* </ScrollLink> */}
-              </div>
-            </div>
-            <div className="space-y-4">
-              <p>Last Name : Kabir</p>
-              <p>Nationality : Bangladeshi</p>
-              <p>Address : Sirajganj, Bangladesh</p>
-              <p>Email : zamirulkabir999@gmail.com</p>
-              <p>Languages : Bangla, English,Hindi,Arabic</p>
-              <p></p>
-            </div>
+      <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
+        <span>About</span>
+        <span className="text-[#34a578]">Me</span>
+      </div>
+      <div className=" ">
+        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 space-x-14">
+          <div className="md:w-[540px]">
+            <h3 className="text-3xl text-[#34a578] font-semibold">
+              Who I Am ?
+            </h3>
+
+            <p className="text-lg pt-7">
+              I'm Zamirul Kabir, a committed and enthusiastic coder. I'm always
+              looking for new methods to improve my abilities, and I thrive on
+              learning and accepting new technologies. As a coder, I have a
+              strong desire to solve problems and a fast learning curve. My area
+              of expertise is JavaScript, and I enjoy using its capabilities to
+              create creative solutions. I'm open to a variety of work options
+              that fit my goals and skill set. In my professional journey, I've
+              cultivated a strong foundation in JavaScript, enabling me to
+              tackle challenges with creativity and efficiency. I'm excited
+              about the prospect of exploring new opportunities that allow me to
+              leverage my skills and contribute meaningfully
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
-            <div data-aos="flip-left" className="border-2 ">
-              <div className="px-6 py-4">
-                <CountUp
-                  className="text-4xl font-bold text-[#34a578]"
-                  start={0}
-                  end={25}
-                  duration={12}
-                />{" "}
-                <sup className="text-2xl font-bold text-[#34a578]">+</sup>
-                <p className="pt-4 text-xl ">COMPLETED PROJECTS</p>
-              </div>
-            </div>
-            <div className="border-2">
-              <div className="px-6 py-4">
-                <CountUp
-                  className="text-4xl font-bold text-[#34a578]"
-                  start={0}
-                  end={11}
-                  duration={8}
-                />{" "}
-                <sup className="text-2xl font-bold text-[#34a578]">+</sup>
-                <p className="pt-4 text-xl ">AWARDS WON</p>
-              </div>
-            </div>
-            <div className="border-2">
-              <div className="px-6 py-4">
-                <CountUp
-                  className="text-4xl font-bold text-[#34a578]"
-                  start={0}
-                  end={15}
-                  duration={7}
-                />{" "}
-                <sup className="text-2xl font-bold text-[#34a578]">+</sup>
-                <p className="pt-4 text-xl ">HAPPY CUSTOMERS</p>
-              </div>
-            </div>
-            <div data-aos="flip-right" className="border-2">
-              <div className="px-6 py-4">
-                <CountUp
-                  className="text-4xl font-bold text-[#34a578]"
-                  start={0}
-                  end={1}
-                  duration={1}
-                />{" "}
-                <sup className="text-2xl font-bold text-[#34a578]">+</sup>
-                <p className="pt-4 text-xl ">YEARS OF EXPERIENCE</p>
-              </div>
-            </div>
+          {/* Lottie animation  */}
+          {/* <div className="serviceBg p-3"> */}
+          <div className="box p-3">
+            <PersonalAnimation />
           </div>
         </div>
       </div>
