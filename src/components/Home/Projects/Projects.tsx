@@ -41,7 +41,7 @@ const Projects = async () => {
   const data: MyProjects[] = await res.json();
   return (
     <>
-      <div className="container pt-40 text-[#ffffff]">
+      <div id="projects" className="container pt-40 text-[#ffffff]">
         <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
           <span>My</span>
           <span className="text-[#34a578]">Projects</span>
