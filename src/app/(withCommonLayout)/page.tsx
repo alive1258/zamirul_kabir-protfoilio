@@ -16,9 +16,10 @@ const HomePage = () => {
         <Hero />
         <About />
         <Experience />
-        <Education />
         <Skills />
         <Projects />
+        <Education />
+      
         <Blog />
         <Service />
         <Contact />

@@ -13,7 +13,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full z-50 fixed bg-[#000814]  text-[#ffffff] border-b border-gray-600 ">
+      {/* <div className="w-full z-50 fixed bg-[#000814]  text-[#ffffff] border-b border-gray-600 "> */}
+      <div className="w-full z-50 fixed bg-[#0F172A]  text-[#ffffff] border-b border-gray-600 ">
         <div className="py-4 container  md:h-24 font-semibold flex justify-between items-center ">
           <div className="">
             {/* <div className='cursor-pointer h-10 w-10 bg-[#34a578] rounded-full '>
@@ -55,13 +56,13 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="education" smooth={true} duration={1100}>
-                  Education
+                <Link to="projects" smooth={true} duration={1100}>
+                  Projects
                 </Link>
               </li>
               <li>
-                <Link to="projects" smooth={true} duration={1100}>
-                  Projects
+                <Link to="education" smooth={true} duration={1100}>
+                  Education
                 </Link>
               </li>
 
@@ -143,18 +144,6 @@ const Navbar = () => {
               {" "}
               <Link
                 onClick={handleClick}
-                to="skills"
-                smooth={true}
-                duration={1100}
-              >
-                Skills
-              </Link>
-            </li>
-            <div className="border-b-2 border-[#34a578]"></div>
-            <li className="py-6 list-none">
-              {" "}
-              <Link
-                onClick={handleClick}
                 to="projects"
                 smooth={true}
                 duration={1100}
@@ -163,6 +152,19 @@ const Navbar = () => {
               </Link>
             </li>
             <div className="border-b-2 border-[#34a578]"></div>
+            <li className="py-6 list-none">
+              {" "}
+              <Link
+                onClick={handleClick}
+                to="skills"
+                smooth={true}
+                duration={1100}
+              >
+                Skills
+              </Link>
+            </li>
+            <div className="border-b-2 border-[#34a578]"></div>
+        
             <li className="py-6 list-none">
               {" "}
               <Link
