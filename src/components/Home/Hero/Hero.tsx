@@ -6,8 +6,8 @@ import "../../Home/Services/Services.css";
 const Hero = () => {
   return (
     <div id="hero" className="pt-36  container">
-      <div className="grid md:grid-cols-2 grid-cols-1 md:space-x-32 pt-10 ">
-        <div className="md:mt-6 text-[#ffffff]">
+      <div className="md:flex justify-between pt-10 ">
+        <div className="md:mt-6 text-[#ffffff] md:w-[670px]">
           <h1 className="md:text-4xl text-xl font-bold">
             This is <span className="text-[#34a578]">Zamirul Kabir.</span>
           </h1>
@@ -39,12 +39,12 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="md:w-[480px] box mt-4">
+        <div className="md:w-[430px] box mt-4">
           <Image
             className="bg-[#11152c]  pt-4"
             src={zamirulPic}
-            width={480}
-            height={400}
+            width={430}
+            height={430}
             alt="zamirulPic"
           />
         </div>

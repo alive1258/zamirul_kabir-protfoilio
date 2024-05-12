@@ -8,7 +8,10 @@ import "./Services.css";
 const Service = () => {
   return (
     <div id="services" className="md:mt-40 container text-[#ffffff] mt-10">
-      <h1 className="text-4xl text-center font-semibold">Services</h1>
+      <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
+        <span>My</span>
+        <span className="text-[#34a578]">Services</span>
+      </div>
 
       <div className="grid md:grid-cols-3 gap-6 grid-cols-1 mt-10">
         <div className="box  p-4">

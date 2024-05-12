@@ -5,6 +5,7 @@ import { FaFacebookF, FaPinterestP } from "react-icons/fa";
 import { BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import emailjs from "@emailjs/browser";
 import { AiOutlineMail } from "react-icons/ai";
+import "../../Home/Services/Services.css";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -37,7 +38,7 @@ const Contact = () => {
       <h1 className="text-4xl text-center">Contact</h1>
       <div className="grid md:grid-cols-3 md:gap-8 gap-2 mt-16">
         <div>
-          <div className="shadow-2xl bg-[#11152c] rounded-lg p-4">
+          <div className="shadow-2xl box rounded-lg p-4">
             <h1 className="text-2xl font-semibold">GET IN TOUCH</h1>
             <p className="mt-4">
               DON'T BE SHY. I appreciate your openness to collaboration and
@@ -100,7 +101,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="col-span-2 px-6 md:px-20  shadow-2xl mb-4 bg-[#11152c]  rounded-xl">
+        <div className="col-span-2 px-6 md:px-20  shadow-2xl mb-4 box rounded-xl">
           <form ref={form} onSubmit={sendEmail} className="py-8">
             <div className="md:flex gap-6 ">
               <input

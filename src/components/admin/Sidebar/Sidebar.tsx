@@ -8,7 +8,11 @@ import { MdOutlineDashboard } from "react-icons/md";
 
 const Sidebar = () => {
   const menus = [
-    { name: "dashboard", link: "/dashboard/admin/dashboard", icon: MdOutlineDashboard },
+    {
+      name: "Dashboard",
+      link: "/dashboard/admin/dashboard",
+      icon: MdOutlineDashboard,
+    },
     {
       name: "Experience",
       link: "/dashboard/admin/experience",

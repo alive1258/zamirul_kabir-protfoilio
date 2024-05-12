@@ -1,12 +1,26 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { MySkillsCardProps } from "./Skills";
 import "../Services/Services";
+import { motion } from "framer-motion";
 
 const SkillCard: React.FC<MySkillsCardProps> = ({ item }) => {
   return (
     <>
-      <div className="skillsBg">
+      <motion.div
+        initial={{ opacity: 0, y: 150 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+            ease: "easeInOut",
+          },
+        }}
+        viewport={{ once: false }}
+        className="skillsBg"
+      >
         <div className="">
           <div className="flex justify-center items-center">
             <Image
@@ -19,7 +33,7 @@ const SkillCard: React.FC<MySkillsCardProps> = ({ item }) => {
           </div>
           <p className="pt-3 text-center text-xl">{item?.name}</p>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
