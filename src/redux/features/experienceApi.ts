@@ -6,7 +6,7 @@ interface ExperiencesResponse {
   date: string;
   title: string;
   description: string;
-  company: number;
+  company: string;
   acknowledged: boolean;
 }
 

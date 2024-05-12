@@ -5,7 +5,6 @@ interface SkillsResponse {
   _id: string;
   name: string;
   image: string;
-
   acknowledged: boolean;
 }
 

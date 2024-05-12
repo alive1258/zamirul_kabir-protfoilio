@@ -1,7 +1,12 @@
+import AllSkills from "@/components/admin/AllSkills/AllSkills";
 import React from "react";
 
 const SkillsPage = () => {
-  return <div>SkillsPage</div>;
+  return (
+    <>
+      <AllSkills />
+    </>
+  );
 };
 
 export default SkillsPage;

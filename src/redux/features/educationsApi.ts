@@ -6,7 +6,7 @@ interface EducationsResponse {
   date: string;
   name: string;
   description: string;
-  certificate: number;
+  certificate: string;
   acknowledged: boolean;
 }
 
