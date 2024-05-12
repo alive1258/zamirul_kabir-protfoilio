@@ -1,7 +1,12 @@
 import React from "react";
+import AllProjects from "./../../../../../components/admin/AllProjects/AllProjects";
 
 const ProjectPage = () => {
-  return <div>ProjectPage</div>;
+  return (
+    <>
+      <AllProjects />
+    </>
+  );
 };
 
 export default ProjectPage;

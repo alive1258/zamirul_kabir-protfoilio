@@ -14,8 +14,10 @@ const NotFoundPage = () => {
               <Image width={450} height={450} src={n404} alt="image" />
             </div>
 
-            <h1>Oops!</h1>
+           <div className="text-white">
+           <h1>Oops!</h1>
             <p>Sorry, an unexpected error has occurred.</p>
+           </div>
             {/* Displaying error status text or message */}
             <p className="text-red-700 font-semibold">
               <i>page not Found</i>
