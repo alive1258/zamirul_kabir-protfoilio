@@ -10,7 +10,11 @@ import zlogo from "../../../assets/image/zl2.png";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+  const [activeLink, setActiveLink] = useState("");
 
+  const handleSetActive = (to: string) => {
+    setActiveLink(to);
+  };
   return (
     <>
       {/* <div className="w-full z-50 fixed bg-[#000814]  text-[#ffffff] border-b border-gray-600 "> */}
@@ -36,44 +40,149 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
             <ul className="hidden cursor-pointer md:flex gap-8">
               <li>
-                <Link to="hero" smooth={true} duration={1100}>
+                <Link
+                  to="hero"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("hero")}
+                  className={
+                    activeLink === "hero"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   Hero
                 </Link>
               </li>
               <li>
-                <Link to="about" smooth={true} duration={1100}>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("about")}
+                  className={
+                    activeLink === "about"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   About
                 </Link>
               </li>
+
               <li>
-                <Link to="skills" smooth={true} duration={1100}>
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link to="experience" smooth={true} duration={1100}>
+                <Link
+                  to="experience"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("experience")}
+                  className={
+                    activeLink === "experience"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   Experience
                 </Link>
               </li>
               <li>
-                <Link to="projects" smooth={true} duration={1100}>
+                <Link
+                  to="skills"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("skills")}
+                  className={
+                    activeLink === "skills"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
+                  Skills
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="projects"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("projects")}
+                  className={
+                    activeLink === "projects"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="education" smooth={true} duration={1100}>
+                <Link
+                  to="education"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("education")}
+                  className={
+                    activeLink === "education"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   Education
                 </Link>
               </li>
 
               <li>
-                <Link to="blog" smooth={true} duration={500}>
+                <Link
+                  to="blog"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("blog")}
+                  className={
+                    activeLink === "blog"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   Blog
                 </Link>
               </li>
 
               <li>
-                <Link to="contact" smooth={true} duration={1100}>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("contact")}
+                  className={
+                    activeLink === "contact"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
                   Contact
                 </Link>
               </li>
@@ -164,7 +273,7 @@ const Navbar = () => {
               </Link>
             </li>
             <div className="border-b-2 border-[#34a578]"></div>
-        
+
             <li className="py-6 list-none">
               {" "}
               <Link

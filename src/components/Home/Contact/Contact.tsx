@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div id="contact" className="md:mt-40 mt-10 container text-[#ffffff] pb-10">
       <h1 className="text-4xl text-center">Contact</h1>
-      <div className="grid md:grid-cols-3 md:gap-8 gap-2 mt-16">
+      <div className="grid md:grid-cols-3 md:gap-8 gap-6 mt-16">
         <div>
           <div className="shadow-2xl box rounded-lg p-4">
             <h1 className="text-2xl font-semibold">GET IN TOUCH</h1>

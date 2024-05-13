@@ -7,7 +7,11 @@ import zAnimate from "../../../../me.json";
 const PersonalAnimation = () => {
   return (
     <>
-      <Lottie className="h-96 w-full" animationData={zAnimate} loop={true} />
+      <Lottie
+        className="md:h-96 md:w-full"
+        animationData={zAnimate}
+        loop={true}
+      />
     </>
   );
 };

@@ -9,7 +9,7 @@ const PersonalInfo = () => {
         <span className="text-[#34a578]">Me</span>
       </div>
       <div className=" ">
-        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 space-x-14">
+        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 md:space-x-14">
           <div className="md:w-[540px]">
             <h3 className="text-3xl text-[#34a578] font-semibold">
               Who I Am ?
@@ -31,7 +31,7 @@ const PersonalInfo = () => {
           </div>
           {/* Lottie animation  */}
           {/* <div className="serviceBg p-3"> */}
-          <div className="box p-3">
+          <div className="box p-3 md:mt-0 mt-12">
             <PersonalAnimation />
           </div>
         </div>
