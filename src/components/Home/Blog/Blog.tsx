@@ -6,6 +6,7 @@ export interface MyBlogs {
   name: string;
   image: string;
   introduction: string;
+  content?: string;
   rating: string;
   review: string;
   title1: string;

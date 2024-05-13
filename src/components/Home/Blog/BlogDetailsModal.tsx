@@ -66,11 +66,17 @@ const BlogDetailsModal: React.FC<MyBlogsCardProps> = ({ onClose, blogId }) => {
                     <div className="space-y-2 pt-4">
                       <p> {singleBlog?.introduction}</p>
                     </div>
+                    <h1 className="text-3xl py-4">Content</h1>
+                    <div className="space-y-2 pt-4">
+                      <p className="text-3xl"> {singleBlog?.content}</p>
+                      <p> {singleBlog?.Des1}</p>
+                    </div>
                     <h1 className="text-3xl py-4">Details</h1>
                     <div className="space-y-2 pt-4">
                       <p className="text-3xl"> {singleBlog?.title1}</p>
                       <p> {singleBlog?.Des1}</p>
                     </div>
+
                     <div className="space-y-2 pt-4">
                       <p className="text-3xl"> {singleBlog?.title2}</p>
                       <p> {singleBlog?.Des2}</p>
