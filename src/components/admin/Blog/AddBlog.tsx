@@ -199,7 +199,7 @@ const AddBlog = () => {
 
   return (
     <>
-      <div className="w-[400px] mx-auto">
+      <div className="">
         <div className="text-2xl font-bold text-center mt-14">
           <h1>Add Blog</h1>
         </div>

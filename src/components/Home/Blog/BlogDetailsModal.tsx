@@ -68,8 +68,12 @@ const BlogDetailsModal: React.FC<MyBlogsCardProps> = ({ onClose, blogId }) => {
                     </div>
                     <h1 className="text-3xl py-4">Content</h1>
                     <div className="space-y-2 pt-4">
-                      <p className="text-3xl"> {singleBlog?.content}</p>
-                      <p> {singleBlog?.Des1}</p>
+                      <div
+                        className="space-y-2 pt-4"
+                        dangerouslySetInnerHTML={{
+                          __html: singleBlog?.content || "",
+                        }}
+                      ></div>
                     </div>
                     <h1 className="text-3xl py-4">Details</h1>
                     <div className="space-y-2 pt-4">
