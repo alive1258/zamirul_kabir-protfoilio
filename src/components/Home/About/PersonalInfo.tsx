@@ -15,19 +15,17 @@ const PersonalInfo = () => {
               Who I Am ?
             </h3>
 
-            <p className="text-lg pt-7">
-              I'm Zamirul Kabir, a committed and enthusiastic coder. I'm always
-              looking for new methods to improve my abilities, and I thrive on
-              learning and accepting new technologies. As a coder, I have a
-              strong desire to solve problems and a fast learning curve. My area
-              of expertise is JavaScript, and I enjoy using its capabilities to
-              create creative solutions. I'm open to a variety of work options
-              that fit my goals and skill set. In my professional journey, I've
-              cultivated a strong foundation in JavaScript, enabling me to
-              tackle challenges with creativity and efficiency. I'm excited
-              about the prospect of exploring new opportunities that allow me to
-              leverage my skills and contribute meaningfully
-            </p>
+        <p className="text-lg leading-relaxed mt-7">
+
+
+  I specialize in working across the entire stack, from crafting responsive front-end interfaces to building robust back-end systems. My focus is on creating meaningful digital experiences that are fast, user-friendly, and maintainable.
+  <br /><br />
+  <span className="font-semibold text-[#34a578]">Tech Stack I Work With:</span><br />
+  JavaScript, TypeScript, React.js, Redux, Next.js, Node.js, Express.js,Mongoose, NestJS,<br />
+  MongoDB, PostgreSQL, MySQL
+  <br /><br />
+  I'm currently open to new opportunities where I can contribute, learn, and grow as part of a motivated and forward-thinking team. Let’s build something impactful together.
+</p>
           </div>
           {/* Lottie animation  */}
           {/* <div className="serviceBg p-3"> */}

@@ -16,20 +16,11 @@ const Hero = () => {
             <span className="font-semibold text-[#34a578]">Web Developer.</span>
           </h2>
           <p className="pt-10 text-lg">
-            With a keen eye for design and expertise in
-            <span className="font-semibold text-[#34a578]">
-              {" "}
-              front-end development
-            </span>
-            ,I strive to create visually appealing and intuitive digital
-            experiences focused on crafting clean & user-friendly experiences.
-            Driven by a passion for user-centric design, my aim to craft
-            websites and applications that not only look great but also provide
-            seamless and enjoyable interactions. Attention to detail is at the
-            core of my work. I strive for pixel-perfect designs and meticulously
-            crafted code to ensure the highest level of quality in every
-            project.
-          </p>
+  As a passionate <span className="font-semibold text-[#34a578]">Full-Stack Developer</span> with over 2 years of hands-on experience, I specialize in building modern, responsive, and scalable web applications. With a strong foundation in both front-end and back-end technologies, I bring a balanced approach to design and functionality. <br /><br />
+  I have a keen eye for detail and a deep appreciation for clean, user-focused design. My goal is to create digital experiences that are not only visually engaging but also intuitive and accessible. From pixel-perfect UI implementation to writing robust, maintainable code, I ensure every project meets the highest standards of quality and performance. <br /><br />
+  I’m driven by curiosity, creativity, and a constant desire to improve—always seeking new challenges and opportunities to grow.
+</p>
+
           <div className="md:mt-12 mt-6 pb-6">
             <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
               <button className="border-2 px-4 py-2 font-semibold flex gap-4 items-center border-[#34a578]   rounded-lg hover:btn  ">
@@ -39,15 +30,17 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="md:w-[400px] box mt-4">
-          <Image
-            className="bg-[#11152c]  pt-4"
-            src={zamirulPic}
-            width={400}
-            height={400}
-            alt="zamirulPic"
-          />
-        </div>
+     <div className="relative w-full box max-w-md h-80 md:h-[600px] mt-4">
+  <Image
+    className="rounded bg-[#11152c] object-cover"
+    src={zamirulPic}
+    alt="zamirulPic"
+    fill
+    sizes="(max-width: 768px) 100vw, 500px"
+    priority // optional, for performance
+  />
+</div>
+
       </div>
     </div>
   );
