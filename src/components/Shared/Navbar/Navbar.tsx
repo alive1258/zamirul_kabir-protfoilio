@@ -1,11 +1,9 @@
 "use client";
 import React, { useState } from "react";
-
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaFacebookF } from "react-icons/fa";
-import zlogo from "../../../assets/image/zl2.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -15,11 +13,12 @@ const Navbar = () => {
   const handleSetActive = (to: string) => {
     setActiveLink(to);
   };
+
   return (
     <>
       {/* <div className="w-full z-50 fixed bg-[#000814]  text-[#ffffff] border-b border-gray-600 "> */}
       <div className="w-full z-50 fixed bg-[#0F172A]  text-[#ffffff] border-b border-gray-600 ">
-        <div className="py-4 container  md:h-24 font-semibold flex justify-between items-center ">
+        <div className="py-4 max-w-full w-[1440px] mx-auto md:px-[70px] px-5 md:h-24 font-semibold flex justify-between items-center ">
           <div className="">
             {/* <div className='cursor-pointer h-10 w-10 bg-[#34a578] rounded-full '>
                             <Link to='/' smooth={true} duration={500}>

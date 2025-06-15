@@ -1,3 +1,4 @@
+import SlideUp from "@/components/Shared/animations/SlideUp";
 import "../../Home/Services/Services.css";
 import ExperienceAnimation from "./ExperienceAnimation";
 import ExperienceCard from "./ExperienceCard";
@@ -11,6 +12,8 @@ export interface MyExperience {
 }
 export interface MyExperienceCardProps {
   item: MyExperience;
+  idx: number;
+  delay: number;
 }
 
 const Experience = async () => {
@@ -33,13 +36,20 @@ const Experience = async () => {
         <span className="text-[#34a578]">Experience</span>
       </div>
       <div className="md:mt-20 mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
-        <div className="box p-3">
-          <ExperienceAnimation />
+        <div className="box p-3 group">
+          <SlideUp>
+            <ExperienceAnimation />
+          </SlideUp>
         </div>
         {/* Experience */}
         <div>
-          {data?.map((experience) => (
-            <ExperienceCard key={experience._id} item={experience} />
+          {data?.map((experience, idx) => (
+            <ExperienceCard
+              key={experience._id}
+              idx={idx}
+              delay={idx * 0.3}
+              item={experience}
+            />
           ))}
         </div>
       </div>

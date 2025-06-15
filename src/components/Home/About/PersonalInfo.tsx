@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+import SlideUp from "@/components/Shared/animations/SlideUp";
 import "../../Home/Services/Services.css";
 import PersonalAnimation from "./PersonalAnimation";
+import SlideRight from "@/components/Shared/animations/SlideRight";
+import SlideLeft from "@/components/Shared/animations/SlideLeft";
 const PersonalInfo = () => {
   return (
     <>
@@ -15,22 +18,40 @@ const PersonalInfo = () => {
               Who I Am ?
             </h3>
 
-        <p className="text-lg leading-relaxed mt-7">
+            <SlideLeft>
+              <p className="text-lg leading-relaxed mt-7">
+                I specialize in working across the entire stack, from crafting
+                responsive front-end interfaces to building robust back-end
+                systems. My focus is on creating meaningful digital experiences
+                that are fast, user-friendly, and maintainable.
+              </p>
+            </SlideLeft>
 
+            <p className="font-semibold text-[#34a578] mt-5">
+              Tech Stack I Work With:
+            </p>
+            <SlideLeft>
+              <p className="text-lg leading-relaxed mt-2">
+                JavaScript, TypeScript, React.js, Redux, Next.js, Node.js,
+                Express.js,Mongoose, NestJS, MongoDB, PostgreSQL, MySQL
+              </p>
+            </SlideLeft>
 
-  I specialize in working across the entire stack, from crafting responsive front-end interfaces to building robust back-end systems. My focus is on creating meaningful digital experiences that are fast, user-friendly, and maintainable.
-  <br /><br />
-  <span className="font-semibold text-[#34a578]">Tech Stack I Work With:</span><br />
-  JavaScript, TypeScript, React.js, Redux, Next.js, Node.js, Express.js,Mongoose, NestJS,<br />
-  MongoDB, PostgreSQL, MySQL
-  <br /><br />
-  I'm currently open to new opportunities where I can contribute, learn, and grow as part of a motivated and forward-thinking team. Let’s build something impactful together.
-</p>
+            <SlideLeft>
+              <p className="text-lg leading-relaxed mt-5">
+                I'm currently open to new opportunities where I can contribute,
+                learn, and grow as part of a motivated and forward-thinking
+                team. Let’s build something impactful together.
+              </p>
+            </SlideLeft>
           </div>
           {/* Lottie animation  */}
           {/* <div className="serviceBg p-3"> */}
-          <div className="box p-3 md:mt-0 mt-12">
-            <PersonalAnimation />
+
+          <div className="box p-3 md:mt-0 mt-12 group ">
+            <SlideUp>
+              <PersonalAnimation />
+            </SlideUp>
           </div>
         </div>
       </div>

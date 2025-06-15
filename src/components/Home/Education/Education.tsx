@@ -1,3 +1,4 @@
+import SlideUp from "@/components/Shared/animations/SlideUp";
 import "../../Home/Services/Services.css";
 import EducationAnimation from "./EducationAnimation";
 import EducationCard from "./EducationCard";
@@ -11,6 +12,8 @@ export interface MyEducation {
 }
 export interface MyEducationCardProps {
   item: MyEducation;
+  idx: number;
+  delay: number;
 }
 
 const Education = async () => {
@@ -35,13 +38,20 @@ const Education = async () => {
       <div className="md:mt-20 mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
         {/* education */}
         <div>
-          {data?.map((education) => (
-            <EducationCard key={education._id} item={education} />
+          {data?.map((education, idx) => (
+            <EducationCard
+              key={education._id}
+              item={education}
+              idx={idx}
+              delay={idx * 0.3}
+            />
           ))}
         </div>
         {/* educationAnimation */}
         <div className="box p-3">
-          <EducationAnimation />
+          <SlideUp>
+            <EducationAnimation />
+          </SlideUp>
         </div>
       </div>
     </div>

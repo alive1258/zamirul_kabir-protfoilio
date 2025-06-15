@@ -27,6 +27,8 @@ export interface MyProjects {
 }
 export interface MyProjectsCardProps {
   item: MyProjects;
+  idx: number;
+  delay: number;
 }
 
 const Projects = async () => {
@@ -48,8 +50,13 @@ const Projects = async () => {
         </div>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-10">
-          {data?.slice(0, 6)?.map((project: MyProjects) => (
-            <ProjectCard item={project} key={project._id} />
+          {data?.slice(0, 6)?.map((project: MyProjects, idx) => (
+            <ProjectCard
+              item={project}
+              key={project._id}
+              idx={idx}
+              delay={idx * 0.3}
+            />
           ))}
         </div>
       </div>

@@ -6,7 +6,11 @@ import experienceAnimate from "../../../../experience.json";
 const ExperienceAnimation = () => {
   return (
     <>
-      <Lottie animationData={experienceAnimate} loop={true} />
+      <Lottie
+        className=" md:w-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+        animationData={experienceAnimate}
+        loop={true}
+      />
     </>
   );
 };
