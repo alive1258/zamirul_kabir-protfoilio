@@ -22,6 +22,8 @@ export interface MyBlogs {
 }
 export interface MyBlogsCardProps {
   item: MyBlogs;
+  idx: number;
+  delay: number;
 }
 
 const Blog = async () => {
@@ -39,9 +41,9 @@ const Blog = async () => {
           <span className="text-[#34a578]">Blogs</span>
         </div>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 pt-10">
-          {data?.slice(0, 3)?.map((blog: MyBlogs) => (
-            <BlogCard item={blog} key={blog._id} />
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10">
+          {data?.slice(0, 3)?.map((blog: MyBlogs, idx) => (
+            <BlogCard item={blog} key={blog._id} idx={idx} delay={idx * 0.3} />
           ))}
         </div>
       </div>

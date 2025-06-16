@@ -30,14 +30,14 @@ const PersonalInfo = () => {
             <p className="font-semibold text-[#34a578] mt-5">
               Tech Stack I Work With:
             </p>
-            <SlideLeft>
+            <SlideLeft delay={0.4}>
               <p className="text-lg leading-relaxed mt-2">
                 JavaScript, TypeScript, React.js, Redux, Next.js, Node.js,
                 Express.js,Mongoose, NestJS, MongoDB, PostgreSQL, MySQL
               </p>
             </SlideLeft>
 
-            <SlideLeft>
+            <SlideLeft delay={0.9}>
               <p className="text-lg leading-relaxed mt-5">
                 I'm currently open to new opportunities where I can contribute,
                 learn, and grow as part of a motivated and forward-thinking

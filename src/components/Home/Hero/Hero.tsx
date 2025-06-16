@@ -3,6 +3,8 @@ import zamirulPic from "../../../../public/assets/image/zamirul_pic.png";
 import { AiOutlineDownload } from "react-icons/ai";
 import "../../Home/Services/Services.css";
 import ZoomIn from "@/components/Shared/animations/ZoomIn";
+import SlideLeft from "@/components/Shared/animations/SlideLeft";
+import SlideUp from "@/components/Shared/animations/SlideUp";
 // import AnimatedText from "@/components/Shared/animations/AnimatedText";
 
 const Hero = () => {
@@ -22,35 +24,51 @@ const Hero = () => {
             I am a Professional{" "}
             <span className="font-semibold text-[#34a578]">Web Developer.</span>
           </h2>
-          <p className="pt-10 text-lg">
-            As a passionate{" "}
-            <span className="font-semibold text-[#34a578]">
-              Full-Stack Developer
-            </span>{" "}
-            with over 2 years of hands-on experience, I specialize in building
-            modern, responsive, and scalable web applications. With a strong
-            foundation in both front-end and back-end technologies, I bring a
-            balanced approach to design and functionality. <br />
+          <div className="pt-10 text-lg">
+            <SlideLeft delay={0.4}>
+              As a passionate{" "}
+              <span className="font-semibold text-[#34a578]">
+                Full-Stack Developer
+              </span>{" "}
+              <p>
+                with over 2 years of hands-on experience, I specialize in
+                building modern, responsive, and scalable web applications. With
+                a strong foundation in both front-end and back-end technologies,
+                I bring a balanced approach to design and functionality.
+              </p>
+            </SlideLeft>
             <br />
-            I have a keen eye for detail and a deep appreciation for clean,
-            user-focused design. My goal is to create digital experiences that
-            are not only visually engaging but also intuitive and accessible.
-            From pixel-perfect UI implementation to writing robust, maintainable
-            code, I ensure every project meets the highest standards of quality
-            and performance. <br />
+            <SlideLeft delay={0.9}>
+              <p>
+                {" "}
+                I have a keen eye for detail and a deep appreciation for clean,
+                user-focused design. My goal is to create digital experiences
+                that are not only visually engaging but also intuitive and
+                accessible. From pixel-perfect UI implementation to writing
+                robust, maintainable code, I ensure every project meets the
+                highest standards of quality and performance.
+              </p>
+            </SlideLeft>
             <br />
-            I’m driven by curiosity, creativity, and a constant desire to
-            improve—always seeking new challenges and opportunities to grow.
-          </p>
-
-          <div className="md:mt-12 mt-6 pb-6">
-            <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
-              <button className="border-2 px-4 py-2 font-semibold flex gap-4 items-center border-[#34a578]   rounded-lg hover:btn  ">
-                DOWNLOAD RESUME{" "}
-                <AiOutlineDownload size={23} className="font-bold" />
-              </button>
-            </a>
+            <SlideLeft delay={1.3}>
+              <p>
+                {" "}
+                I’m driven by curiosity, creativity, and a constant desire to
+                improve—always seeking new challenges and opportunities to grow.
+              </p>
+            </SlideLeft>
           </div>
+
+          <SlideUp>
+            <div className="md:mt-12 mt-6 pb-6">
+              <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
+                <button className="border-2 px-4 py-2 font-semibold flex gap-4 items-center border-[#34a578]   rounded-lg hover:btn  ">
+                  DOWNLOAD RESUME{" "}
+                  <AiOutlineDownload size={23} className="font-bold" />
+                </button>
+              </a>
+            </div>
+          </SlideUp>
         </div>
         <ZoomIn>
           <div className="boxs md:h-[600px] rounded-2xl mt-4">

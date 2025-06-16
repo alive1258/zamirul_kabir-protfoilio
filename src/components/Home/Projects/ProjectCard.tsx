@@ -18,8 +18,8 @@ const ProjectCard: React.FC<MyProjectsCardProps> = ({ item, delay = 0 }) => {
   return (
     <>
       <SlideUp delay={delay}>
-        <div className="boxs">
-          <div className="z-20 pt-4">
+        <div className="bg-[#0F172A] box border-[#151D2F]">
+          <div className="">
             <Image
               className="rounded-t-md w-full h-[200px]"
               height={200}

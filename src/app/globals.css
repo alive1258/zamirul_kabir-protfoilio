@@ -7,7 +7,7 @@
     @apply max-w-full w-[1440px] mx-auto md:px-20 px-5;
   }
   .skillsBg {
-    @apply h-40 rounded-lg py-4 border flex items-center justify-center  border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 hover:border-emerald-500 transition-all duration-500 hover:scale-[1.15] cursor-pointer;
+    @apply hover:shadow-[0_0_20px_4px_#10B981] hover:shadow-emerald-500 h-40 rounded-lg py-4 border flex items-center justify-center  border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 hover:border-emerald-500 transition-all duration-500 hover:scale-105 cursor-pointer;
   }
   .eduBg {
     @apply h-52  rounded-lg py-4 border flex items-center justify-center  border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 hover:border-violet-500 transition-all duration-500 hover:scale-105 cursor-pointer;

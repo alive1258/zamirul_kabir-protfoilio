@@ -1,23 +1,39 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaFacebookF } from "react-icons/fa";
+import { RiArrowUpLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
   const [activeLink, setActiveLink] = useState("");
+  const [scrollPercent, setScrollPercent] = useState(0);
 
   const handleSetActive = (to: string) => {
     setActiveLink(to);
   };
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scroll = Math.min((scrollTop / docHeight) * 100, 100);
+      setScrollPercent(Math.round(scroll));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/* <div className="w-full z-50 fixed bg-[#000814]  text-[#ffffff] border-b border-gray-600 "> */}
-      <div className="w-full z-50 fixed bg-[#0F172A]  text-[#ffffff] border-b border-gray-600 ">
+      <header className="w-full z-50 fixed bg-[#0F172A]  text-[#ffffff] border-b border-gray-600 ">
         <div className="py-4 max-w-full w-[1440px] mx-auto md:px-[70px] px-5 md:h-24 font-semibold flex justify-between items-center ">
           <div className="">
             {/* <div className='cursor-pointer h-10 w-10 bg-[#34a578] rounded-full '>
@@ -343,7 +359,58 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+
+        {/* scroll Percent section    */}
+        <div className="hidden lg:flex fixed flex-col right-0  mr-4 bottom-4">
+          <div className="space-y-4 relative">
+            <div
+              className={`absolute right-0 mr-4 bottom-0 transition-opacity duration-500 ${
+                scrollPercent === 100
+                  ? "opacity-0 pointer-events-none"
+                  : "opacity-100"
+              }`}
+            >
+              <div
+                className="group relative size-14 rounded-full flex justify-center items-center border-2 border-border-base bg-[#111217]"
+                style={{
+                  background: `conic-gradient(#34a578 ${
+                    scrollPercent * 3.6
+                  }deg, #E4E4E7 ${scrollPercent * 3.6}deg)`,
+                }}
+              >
+                {/* Inner Circle with Percentage */}
+                <div className="size-11 bg-[#111217] rounded-full flex items-center justify-center text-sm  text-[#34a578]">
+                  {scrollPercent}%
+                </div>
+
+                {/* Scroll to top button (only visible on hover) */}
+                <button
+                  aria-label="Scroll to top"
+                  onClick={scrollToTop}
+                  className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full hover:bg-[#34a578] hover:border-[#34a578] cursor-pointer"
+                >
+                  <RiArrowUpLine className="text-white" size={28} />
+                </button>
+              </div>
+            </div>
+
+            {/* Scroll to top button */}
+            <div
+              onClick={scrollToTop}
+              className={`absolute right-0  mr-4 bottom-4 bg-white size-14 ml-2 border-4 transition-all duration-500 ease-in-out group cursor-pointer hover:bg-[#34a578] hover:border-[#34a578] rounded-full flex justify-center items-center border-[#34a578] ${
+                scrollPercent === 100
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
+              }`}
+            >
+              <RiArrowUpLine
+                className="text-[#34a578] group-hover:text-white"
+                size={28}
+              />
+            </div>
+          </div>
+        </div>
+      </header>
     </>
   );
 };
