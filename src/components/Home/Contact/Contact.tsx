@@ -112,13 +112,13 @@ const Contact = () => {
                 type="text"
                 name="from_name"
                 placeholder="First Name"
-                className="input  bg-[#11152c] border border-violet-500  rounded-lg p-2 w-full md:mt-2"
+                className="input  bg-[#11152c] border border-gray-800  rounded-lg p-2 w-full md:mt-2"
               />
               <input
                 type="text"
                 name="from_name"
                 placeholder="Last Name"
-                className="input bg-[#11152c] border border-violet-500 rounded-lg  p-2 w-full md:mt-2 mt-4"
+                className="input bg-[#11152c] border border-gray-800 rounded-lg  p-2 w-full md:mt-2 mt-4"
               />
             </div>
             <div className="md:flex gap-6 mt-4">
@@ -126,13 +126,13 @@ const Contact = () => {
                 type="number"
                 name="from_phone"
                 placeholder="Phone"
-                className="input bg-[#11152c] border border-violet-500 rounded-lg p-2 w-full md:mt-2"
+                className="input bg-[#11152c] border border-gray-800 rounded-lg p-2 w-full md:mt-2"
               />
               <input
                 type="email"
                 name="from_email"
                 placeholder="Email"
-                className="input bg-[#11152c] border border-violet-500 rounded-lg p-2 w-full md:mt-2 mt-4"
+                className="input bg-[#11152c] border border-gray-800 rounded-lg p-2 w-full md:mt-2 mt-4"
               />
             </div>
             <div className="mt-6">
@@ -140,19 +140,23 @@ const Contact = () => {
                 type="text"
                 name="from_address"
                 placeholder="Adress"
-                className="input bg-[#11152c] border border-violet-500  rounded-lg p-2 input-bordered w-full "
+                className="input bg-[#11152c] border border-gray-800  rounded-lg p-2 input-bordered w-full "
               />
             </div>
 
             <div className="mt-6">
               <textarea
                 name="message"
-                className="textarea bg-[#11152c] border border-violet-500 rounded-lg p-2 textarea-bordered h-36 w-full"
+                className="textarea bg-[#11152c] border border-gray-800 rounded-lg p-2 textarea-bordered h-36 w-full"
                 placeholder="Message or description"
               ></textarea>
             </div>
             <div className="mt-4 flex justify-end">
-              <input type="submit" value="Send message" className="btn"></input>
+              <input
+                type="submit"
+                value="Send message"
+                className="glow-button"
+              ></input>
             </div>
           </form>
         </div>

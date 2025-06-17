@@ -1,10 +1,10 @@
 // components/Loading.js
 const Loading = () => {
   return (
-    <div className="container pt-10">
+    <div className="container pt-10 justify-center items-center flex">
       <button
         type="button"
-        className="bg-[#55a630] cursor-not-allowed opacity-75 px-4 py-2 rounded-md flex items-center justify-center"
+        className="bg-[#0ff] cursor-not-allowed opacity-75 px-4 py-2 rounded-md flex items-center justify-center"
       >
         <svg
           className="animate-spin h-5 w-5 mr-3 text-white"
@@ -18,6 +18,10 @@ const Loading = () => {
         </svg>
         Loading...
       </button>
+
+      <div className="neon-loader">
+        <div className="neon-loader-ring"></div>
+      </div>
     </div>
   );
 };

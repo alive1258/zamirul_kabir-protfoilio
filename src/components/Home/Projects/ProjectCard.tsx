@@ -50,7 +50,7 @@ const ProjectCard: React.FC<MyProjectsCardProps> = ({ item, delay = 0 }) => {
               </div>
               <div className="flex justify-center items-center pt-6 pb-5">
                 <button
-                  className="btn"
+                  className="glow-button"
                   onClick={() => {
                     setProductId(item?._id);
                     handleShowModal();

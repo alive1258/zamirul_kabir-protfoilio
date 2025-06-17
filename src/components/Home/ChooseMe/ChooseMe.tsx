@@ -1,15 +1,45 @@
 import SlideUp from "@/components/Shared/animations/SlideUp";
 import Image from "next/image";
 import React from "react";
+import {
+  FaStar,
+  FaHeart,
+  FaMoon,
+  FaRocket,
+  FaShieldAlt,
+  FaClock,
+  FaCode,
+} from "react-icons/fa";
+
+// Reusable Card Component for Scroll Section
+const Card = ({
+  icon,
+  title,
+  desc,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}) => {
+  return (
+    <div className="min-w-[260px] max-w-[260px] bg-[#0f172a] border border-[#1f223c] rounded-xl text-white shadow hover:shadow-emerald-500 cursor-pointer transition-all duration-300 ease-in-out p-6 mx-2">
+      {icon}
+      <h3 className="text-lg font-bold text-emerald-400 text-center">
+        {title}
+      </h3>
+      <p className="text-sm text-gray-400 mt-2 text-center">{desc}</p>
+    </div>
+  );
+};
 
 const ChooseMe = () => {
   return (
     <>
-      <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2 md:mt-20">
+      <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2 mt-10 md:mt-20">
         <span className="text-white">Why </span>
         <span className="text-[#34a578]">Choose Me</span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 container md:mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-y-0 gap-y-6 container mt-16">
         {/* card 1 */}
         <SlideUp delay={0.1}>
           <div
@@ -47,7 +77,7 @@ const ChooseMe = () => {
                 className="border px-4 py-2 rounded-lg mt-2 flex justify-center items-center"
               >
                 <h1 className={`text-2xl text-primary-muted font-semibold`}>
-                  4
+                  4+
                 </h1>
               </div>
             </div>
@@ -182,6 +212,61 @@ const ChooseMe = () => {
             </div>
           </div>
         </SlideUp>
+      </div>
+
+      <div className="mt-20 overflow-hidden container">
+        {/* Title */}
+
+        {/* Scroll Track */}
+        <div className="infinite-scroll-track flex animate-scroll space-x-4 w-max">
+          {/* 7 Cards with React Icons */}
+          <Card
+            icon={<FaStar className="text-yellow-500 text-3xl mb-2 mx-auto" />}
+            title="Expertise & Quality"
+            desc="Years of experience delivering scalable, maintainable, and modern digital solutions."
+          />
+          <Card
+            icon={<FaHeart className="text-red-500 text-3xl mb-2 mx-auto" />}
+            title="Client-Centric Approach"
+            desc="Focused on understanding your goals to build what truly serves your business."
+          />
+          <Card
+            icon={<FaMoon className="text-indigo-500 text-3xl mb-2 mx-auto" />}
+            title="Reliable & Available"
+            desc="Always available for feedback, updates, and support — even after delivery."
+          />
+          <Card
+            icon={<FaRocket className="text-pink-500 text-3xl mb-2 mx-auto" />}
+            title="Fast & Optimized"
+            desc="Optimized for performance to ensure your web or mobile app runs smoothly."
+          />
+          <Card
+            icon={
+              <FaShieldAlt className="text-blue-600 text-3xl mb-2 mx-auto" />
+            }
+            title="Secure Development"
+            desc="Security best practices are built into every layer of your project."
+          />
+          <Card
+            icon={
+              <FaClock className="text-emerald-500 text-3xl mb-2 mx-auto" />
+            }
+            title="On-Time Delivery"
+            desc="Committed to delivering your project on time, every time."
+          />
+          <Card
+            icon={<FaCode className="text-purple-500 text-3xl mb-2 mx-auto" />}
+            title="Clean & Modern Code"
+            desc="I write efficient, maintainable, and industry-standard code for long-term success."
+          />
+
+          {/* Optional: Duplicate for seamless loop */}
+          <Card
+            icon={<FaStar className="text-yellow-500 text-3xl mb-2 mx-auto" />}
+            title="Expertise & Quality"
+            desc="Years of experience delivering scalable, maintainable, and modern digital solutions."
+          />
+        </div>
       </div>
     </>
   );

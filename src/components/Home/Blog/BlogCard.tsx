@@ -36,7 +36,7 @@ const BlogCard: React.FC<MyBlogsCardProps> = ({ item, delay = 0 }) => {
 
             <div className="flex justify-center items-center pt-6 pb-5">
               <button
-                className="btn"
+                className="glow-button"
                 onClick={() => {
                   setBlogId(item?._id);
                   handleShowModal();
