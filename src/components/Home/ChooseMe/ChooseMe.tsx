@@ -22,12 +22,15 @@ const Card = ({
   desc: string;
 }) => {
   return (
-    <div className="min-w-[260px] max-w-[260px] bg-[#0f172a] border border-[#1f223c] rounded-xl text-white shadow hover:shadow-emerald-500 cursor-pointer transition-all duration-300 ease-in-out p-6 mx-2">
+    // <div className="min-w-[260px] max-w-[260px] bg-[#0f172a] border border-[#1f223c] rounded-xl text-white shadow hover:shadow-emerald-500 cursor-pointer transition-all duration-300 ease-in-out p-6 mx-2">
+    <div className="w-full dark:bg-[#0f172a] border border-[#1f223c] sm:w-[90%] min-w-[260px] max-w-[260px] bg-[#f2f8f9] px-[20px] py-[30px] relative overflow-hidden group cursor-pointer rounded-md before:bg-[#00838d] before:w-[38px] before:h-[38px] before:absolute before:top-0 before:right-0 before:rounded-bl-[35px] before:z-[-1] hover:before:scale-[38] before:transition-all before:ease-out before:duration-[300ms] z-[0]">
       {icon}
-      <h3 className="text-lg font-bold text-emerald-400 text-center">
+      <h3 className="text-lg transition-all duration-500 group-hover:text-white ease-out font-bold text-emerald-400 text-center">
         {title}
       </h3>
-      <p className="text-sm text-gray-400 mt-2 text-center">{desc}</p>
+      <p className="text-sm transition-all duration-500 group-hover:text-white ease-out text-gray-400 mt-2 text-center">
+        {desc}
+      </p>
     </div>
   );
 };

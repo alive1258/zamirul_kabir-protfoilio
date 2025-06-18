@@ -78,13 +78,6 @@ const Hero = () => {
         <ZoomIn>
           <div className="boxs md:h-[600px] rounded-2xl mt-4">
             <div className="z-20 p-1.5 relative overflow-hidden rounded-2xl cursor-pointer">
-              {/* <Image
-                className="w-full h-[570px] object-cover rounded-2xl hover:scale-105 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-                src={zamirulPic}
-                alt="zamirulPic"
-                width={400}
-                height={700}
-              /> */}
               <ImageWithSkeleton
                 src={zamirulPic}
                 alt="zamirulPic"
