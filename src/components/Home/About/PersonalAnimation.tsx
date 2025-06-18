@@ -8,7 +8,7 @@ const PersonalAnimation = () => {
   return (
     <>
       <Lottie
-        className="md:h-96 md:w-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
+        className="md:h-96  md:w-full group-hover:scale-105 transition-transform duration-500 ease-in-out"
         animationData={zAnimate}
         loop={true}
       />

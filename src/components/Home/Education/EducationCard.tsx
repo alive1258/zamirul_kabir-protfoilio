@@ -9,7 +9,7 @@ const EducationCard: React.FC<MyEducationCardProps> = ({ item, delay = 0 }) => {
       <div className="flex gap-6 text-[#ffffff] pb-4">
         {/* Experience  */}
         <SlideUp delay={delay}>
-          <div className="box ">
+          <div className="box">
             <div className="space-y-2 px-3 py-3">
               <h4>{item?.date}</h4>
               <div className="border-b w-36 border-[#34a578]"></div>

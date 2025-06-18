@@ -36,7 +36,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="md:mt-40 overflow-hidden relative text-[#ffffff] "
+      className="md:py-20 pt-10 overflow-hidden relative text-[#ffffff] "
     >
       {/* BLURRED BLUE CIRCLE */}
       <div className="absolute md:block hidden blurred-blue-circle"></div>
@@ -67,11 +67,11 @@ const Contact = () => {
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:48px_39px] "></div>
 
       <div className="container">
-        <div className="md:text-4xl  text-2xl font-semibold justify-center item-center flex space-x-2 md:mt-20">
+        <div className="md:text-4xl   text-2xl font-semibold justify-center item-center flex space-x-2">
           <span className="text-white">Contact </span>
           <span className="text-[#34a578]"> Me</span>
         </div>
-        <div className="grid md:grid-cols-3 md:gap-8 gap-6 mt-16">
+        <div className="grid md:grid-cols-3 md:gap-8 md:mt-16 mt-8">
           <div>
             <div className="shadow-2xl box rounded-lg p-4">
               <h1 className="text-2xl font-semibold">GET IN TOUCH</h1>

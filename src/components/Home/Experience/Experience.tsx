@@ -30,7 +30,7 @@ const Experience = async () => {
   return (
     <div
       id="experience"
-      className="md:mt-40 pt-10 overflow-hidden relative  pb-10"
+      className="md:pt-40 py-10 overflow-hidden relative  pb-10"
     >
       {/* Experience */}
       {/* BLURRED BLUE CIRCLE */}

@@ -30,7 +30,7 @@ const Education = async () => {
   return (
     <div
       id="education"
-      className="md:mt-40 pt-10 overflow-hidden relative pb-10"
+      className="md:pt-40 pt-10 overflow-hidden relative pb-10"
     >
       {/* education */} {/* Experience */}
       {/* BLURRED BLUE CIRCLE */}

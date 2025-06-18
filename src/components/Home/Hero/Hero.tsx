@@ -4,7 +4,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import "../../Home/Services/Services.css";
 import ZoomIn from "@/components/Shared/animations/ZoomIn";
 import SlideLeft from "@/components/Shared/animations/SlideLeft";
-import SlideUp from "@/components/Shared/animations/SlideUp";
+
 import ImageWithSkeleton from "@/components/Shared/animations/ImageWithSkeleton";
 // import AnimatedText from "@/components/Shared/animations/AnimatedText";
 
@@ -12,9 +12,8 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="md:pt-36 pt-14 relative h-full w-full bg-[#0f172a] overflow-hidden"
+      className="md:pt-36 pb-28 py-14 relative h-full w-full bg-[#0f172a] overflow-hidden"
     >
-      {/* BLURRED BLUE CIRCLE */}
       <div className="absolute md:block hidden blurred-blue-circle"></div>
       <div
         className="absolute rounded-full opacity-40 blur-[150px] bg-[#E9C12F]"
@@ -29,7 +28,7 @@ const Hero = () => {
 
       {/* Blurred Effect - Blue Circle */}
       <div
-        className="absolute rounded-full opacity-[0.38] blur-[125px] bg-[#5158DA]"
+        className="absolute rounded-full opacity-[0.38] blur-[125px] bg-[#5158DA] pointer-events-none"
         style={{
           width: "699.729px",
           height: "626.07px",
@@ -37,8 +36,9 @@ const Hero = () => {
           bottom: "-377.762px",
         }}
       ></div>
-      <div className="absolute md:block hidden bottom-gradient-line"></div>
-      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:48px_39px] "></div>
+      {/* <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:48px_39px] "></div> */}
+
+      <div className="absolute bottom-0 left-0 right-0 top-0 pointer-events-none bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:48px_39px]"></div>
 
       <div className="grid md:grid-cols-2 grid-cols-1 container md:gap-20 gap-10 pt-10 ">
         <div className="md:mt-6 text-[#ffffff]">
@@ -51,11 +51,14 @@ const Hero = () => {
             </div>
           </div>
 
-          <h2 className="md:text-4xl text-2xl font-bold pt-4">
-            I am a Professional{" "}
-            <span className="font-semibold text-[#34a578]">Web Developer.</span>
+          <h2 className="md:text-3xl text-2xl font-bold pt-4">
+            I am a Professional
+            <span className="font-semibold text-[#34a578]">
+              {" "}
+              Web Developer.
+            </span>
           </h2>
-          <div className="pt-10 text-lg">
+          <div className="pt-8 text-lg">
             <SlideLeft delay={0.4}>
               As a passionate{" "}
               <span className="font-semibold text-[#34a578]">
@@ -79,27 +82,23 @@ const Hero = () => {
                 robust, maintainable code, I ensure every project meets the
                 highest standards of quality and performance.
               </p>
-            </SlideLeft>
-            <br />
-            <SlideLeft delay={1.3}>
               <p>
                 {" "}
                 I’m driven by curiosity, creativity, and a constant desire to
                 improve—always seeking new challenges and opportunities to grow.
               </p>
             </SlideLeft>
+            <br />
           </div>
 
-          <SlideUp>
-            <div className="md:mt-12 mt-6 pb-6">
-              <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
-                <button className="glowing-button flex space-x-4">
-                  <span> DOWNLOAD RESUME </span>
-                  <AiOutlineDownload size={23} className="font-bold" />
-                </button>
-              </a>
-            </div>
-          </SlideUp>
+          <div className="md:mt-2 mt-2 pb-6 z-50">
+            <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
+              <button className="glowing-button  flex space-x-4">
+                <span> DOWNLOAD RESUME </span>
+                <AiOutlineDownload size={23} className="font-bold" />
+              </button>
+            </a>
+          </div>
         </div>
         <ZoomIn>
           <div className="boxs md:h-[600px] rounded-2xl mt-4">
