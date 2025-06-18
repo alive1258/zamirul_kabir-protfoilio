@@ -23,7 +23,7 @@ const Card = ({
 }) => {
   return (
     // <div className="min-w-[260px] max-w-[260px] bg-[#0f172a] border border-[#1f223c] rounded-xl text-white shadow hover:shadow-emerald-500 cursor-pointer transition-all duration-300 ease-in-out p-6 mx-2">
-    <div className="w-full dark:bg-[#0f172a] border border-[#1f223c] sm:w-[90%] min-w-[260px] max-w-[260px] bg-[#f2f8f9] px-[20px] py-[30px] relative overflow-hidden group cursor-pointer rounded-md before:bg-[#00838d] before:w-[38px] before:h-[38px] before:absolute before:top-0 before:right-0 before:rounded-bl-[35px] before:z-[-1] hover:before:scale-[38] before:transition-all before:ease-out before:duration-[300ms] z-[0]">
+    <div className="w-full  dark:bg-[#0f172a] border border-[#1f223c] sm:w-[90%] min-w-[260px] max-w-[260px] bg-[#f2f8f9] px-[20px] py-[30px] relative overflow-hidden group cursor-pointer rounded-md before:bg-[#J] before:w-[38px] before:h-[38px] before:absolute before:top-0 before:right-0 before:rounded-bl-[35px] before:z-[-1] hover:before:scale-[38] before:transition-all before:ease-out before:duration-[300ms] z-[0]">
       {icon}
       <h3 className="text-lg transition-all duration-500 group-hover:text-white ease-out font-bold text-emerald-400 text-center">
         {title}
@@ -37,11 +37,20 @@ const Card = ({
 
 const ChooseMe = () => {
   return (
-    <>
+    <div className="overflow-hidden relative pb-20">
       <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2 mt-10 md:mt-20">
         <span className="text-white">Why </span>
         <span className="text-[#34a578]">Choose Me</span>
       </div>
+      <div
+        className="absolute rounded-full opacity-[0.38] blur-[125px] bg-[#10b981]"
+        style={{
+          width: "699.729px",
+          height: "626.07px",
+          left: "152.271px",
+          bottom: "-377.762px",
+        }}
+      ></div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-y-0 gap-y-6 container mt-16">
         {/* card 1 */}
         <SlideUp delay={0.1}>
@@ -271,7 +280,7 @@ const ChooseMe = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

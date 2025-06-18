@@ -20,6 +20,220 @@
   }
 }
 
+/* ===================================================
+  Animations
+=================================================== */
+
+/* Vertical Scroll Animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Gradient Line Movement - Top */
+@keyframes moveLine {
+  0% {
+    transform: translateX(-594px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+/* Gradient Line Movement - Bottom */
+@keyframes moveBottomLine {
+  100% {
+    transform: translateX(-594px);
+  }
+  0% {
+    transform: translateX(100vw);
+  }
+}
+
+/* Floating Pulse Animation */
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    border-radius: 99px;
+  }
+  50% {
+    transform: translateY(-2px) scale(1.05);
+    border-radius: 99px;
+  }
+}
+/* ===================================================
+  Blurred Shape Effects
+=================================================== */
+
+/* Green Circle Blur */
+.blur-circle-green {
+  position: absolute;
+  width: 364px;
+  height: 364px;
+  left: 140px;
+  top: 30px;
+  background-color: #84cc16;
+  opacity: 0.5;
+  filter: blur(175px);
+  border-radius: 9999px;
+  z-index: 0;
+}
+
+/* Purple Circle Blur */
+.blur-circle-purple {
+  position: absolute;
+  width: 364px;
+  height: 364px;
+  right: 140px;
+  top: 80px;
+  background-color: #d946ef;
+  opacity: 0.5;
+  filter: blur(175px);
+  border-radius: 9999px;
+  z-index: 0;
+}
+
+/* Blue Circle Blur - General */
+.blurred-blue-circle {
+  position: absolute;
+  width: 455px;
+  height: 455px;
+  right: -87px;
+  bottom: -134px;
+  border-radius: 455px;
+  opacity: 0.16;
+  background: var(--blue-500, #3b82f6);
+  filter: blur(100px);
+}
+
+/* Blue Circle Blur - Service Detail */
+.service-detail-blurred-circle {
+  position: absolute;
+  width: 672px;
+  height: 672px;
+  border-radius: 672px;
+  background: #3b82f6;
+  opacity: 0.6;
+  filter: blur(175px);
+  top: -328px;
+  left: -461px;
+}
+
+/* Green Circle Blur - Alternative */
+.green-blur-circle {
+  position: absolute;
+  width: 672px;
+  height: 672px;
+  border-radius: 50%;
+  background: #10b981;
+  opacity: 0.6;
+  filter: blur(175px);
+  top: -335px;
+  right: -478px;
+}
+
+/* Blue Circle Blur - Team Section */
+.blue-blur-circle-team {
+  width: 672px;
+  height: 672px;
+  position: absolute;
+  right: -400px;
+  top: 100px;
+  border-radius: 672px;
+  background: #3b82f6;
+  opacity: 0.6;
+  filter: blur(175px);
+  z-index: -1;
+}
+
+/* Rotated White Shape (Decorative) */
+.white-rotated-shape {
+  width: 312px;
+  height: 989px;
+  transform: rotate(5deg);
+  position: absolute;
+  right: 0;
+  top: -250px;
+  background: white;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* ===================================================
+  Gradient Lines
+=================================================== */
+
+/* Top Gradient Line */
+.custom-gradient-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 594px;
+  height: 4px;
+  background: linear-gradient(85deg, rgba(255, 255, 255, 0) 0%, #2154ff 100%);
+  animation: moveLine 8s linear infinite;
+}
+
+/* Top Gradient Line - Static Version */
+.custom-gradient-line-top {
+  width: 594px;
+  height: 4px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(85deg, #2154ff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Bottom Gradient Line */
+.bottom-gradient-line {
+  position: absolute;
+  width: 594px;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(85deg, #2154ff 0%, rgba(255, 255, 255, 0) 100%);
+  animation: moveBottomLine 8s linear infinite;
+}
+/* ===================================================
+  Blue Blurred Shape (Extra)
+=================================================== */
+
+/* Large Blurred Blue Shape - Top Left */
+.blurred-blue-shape-1 {
+  width: 600px;
+  height: 216px;
+  transform: rotate(14.814deg);
+  flex-shrink: 0;
+  border-radius: 600px;
+  opacity: 0.3;
+  background-color: #3b82f6;
+  filter: blur(100px);
+  position: absolute;
+  top: 2.5rem;
+  left: -8rem;
+  display: none;
+}
+
+/* Large Blurred Blue Shape - Bottom Left */
+.blurred-blue-shape-2 {
+  width: 600px;
+  height: 326px;
+  transform: rotate(20.582deg);
+  flex-shrink: 0;
+  border-radius: 600px;
+  opacity: 0.3;
+  background-color: #3b82f6;
+  filter: blur(100px);
+  position: absolute;
+  top: 2.5rem;
+  left: -8rem;
+  display: none;
+}
+
 .glowing-button {
   padding: 12px 24px;
   background: transparent;

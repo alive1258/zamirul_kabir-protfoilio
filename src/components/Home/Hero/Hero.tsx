@@ -10,21 +10,47 @@ import ImageWithSkeleton from "@/components/Shared/animations/ImageWithSkeleton"
 
 const Hero = () => {
   return (
-    <div id="hero" className="md:pt-36 pt-14  container">
-      <div className="grid md:grid-cols-2 grid-cols-1  md:gap-20 gap-10 pt-10 ">
+    <div
+      id="hero"
+      className="md:pt-36 pt-14 relative h-full w-full bg-[#0f172a] overflow-hidden"
+    >
+      {/* BLURRED BLUE CIRCLE */}
+      <div className="absolute md:block hidden blurred-blue-circle"></div>
+      <div
+        className="absolute rounded-full opacity-40 blur-[150px] bg-[#E9C12F]"
+        // 952fe9
+        style={{
+          width: "593.727px",
+          height: "531.226px",
+          right: "-72.727px",
+          top: "-345.17px",
+        }}
+      ></div>
+
+      {/* Blurred Effect - Blue Circle */}
+      <div
+        className="absolute rounded-full opacity-[0.38] blur-[125px] bg-[#5158DA]"
+        style={{
+          width: "699.729px",
+          height: "626.07px",
+          left: "152.271px",
+          bottom: "-377.762px",
+        }}
+      ></div>
+      <div className="absolute md:block hidden bottom-gradient-line"></div>
+      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:48px_39px] "></div>
+
+      <div className="grid md:grid-cols-2 grid-cols-1 container md:gap-20 gap-10 pt-10 ">
         <div className="md:mt-6 text-[#ffffff]">
-          {/* <AnimatedText
-            lines={["This is Zamirul Kabir."]}
-            className="md:text-4xl text-start text-xl font-bold"
-          /> */}
-          <div className="typing-container md:text-4xl text-xl font-bold">
-            <h3 className="typing-text">
-              This is <span className="text-[#34a578]">Zamirul Kabir.</span>
-            </h3>
+          <div className="flex space-x-2">
+            <h1 className="md:text-4xl text-xl font-bold">This is</h1>
+            <div className="typing-container md:text-4xl text-xl font-bold">
+              <h3 className="typing-text">
+                <span className="text-[#34a578]">Zamirul Kabir.</span>
+              </h3>
+            </div>
           </div>
-          {/* <h1 className="md:text-4xl text-xl font-bold">
-            This is <span className="text-[#34a578]">Zamirul Kabir.</span>
-          </h1> */}
+
           <h2 className="md:text-4xl text-2xl font-bold pt-4">
             I am a Professional{" "}
             <span className="font-semibold text-[#34a578]">Web Developer.</span>

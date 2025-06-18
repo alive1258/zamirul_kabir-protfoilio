@@ -28,29 +28,60 @@ const Experience = async () => {
   const data: MyExperience[] = await res.json();
 
   return (
-    <div id="experience" className="md:mt-40 pt-10 container pb-10">
+    <div
+      id="experience"
+      className="md:mt-40 pt-10 overflow-hidden relative  pb-10"
+    >
       {/* Experience */}
+      {/* BLURRED BLUE CIRCLE */}
+      <div className="absolute md:block hidden blurred-blue-circle"></div>
+      <div
+        className="absolute rounded-full opacity-40 blur-[150px] bg-[#d946ef]"
+        // 952fe9
+        style={{
+          width: "593.727px",
+          height: "531.226px",
+          right: "-72.727px",
+          top: "-345.17px",
+        }}
+      ></div>
 
-      <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
-        <span className="text-[#ffffff]">My</span>
-        <span className="text-[#34a578]">Experience</span>
-      </div>
-      <div className="md:mt-20 mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
-        <div className="box p-3 group">
-          <SlideUp>
-            <ExperienceAnimation />
-          </SlideUp>
+      {/* Blurred Effect - Blue Circle */}
+      <div
+        className="absolute rounded-full opacity-[0.38] blur-[125px] bg-[#5158DA]"
+        style={{
+          width: "699.729px",
+          height: "626.07px",
+          left: "152.271px",
+          bottom: "-377.762px",
+        }}
+      ></div>
+      <div className="absolute md:block hidden bottom-gradient-line"></div>
+
+      {/* <div className="bottom-gradient-line"></div> */}
+      <div className="custom-gradient-line"></div>
+      <div className="container">
+        <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
+          <span className="text-[#ffffff]">My</span>
+          <span className="text-[#34a578]">Experience</span>
         </div>
-        {/* Experience */}
-        <div>
-          {data?.map((experience, idx) => (
-            <ExperienceCard
-              key={experience._id}
-              idx={idx}
-              delay={idx * 0.3}
-              item={experience}
-            />
-          ))}
+        <div className="md:mt-20 mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
+          <div className="box p-3 group">
+            <SlideUp>
+              <ExperienceAnimation />
+            </SlideUp>
+          </div>
+          {/* Experience */}
+          <div>
+            {data?.map((experience, idx) => (
+              <ExperienceCard
+                key={experience._id}
+                idx={idx}
+                delay={idx * 0.3}
+                item={experience}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

@@ -20,7 +20,10 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={`${inter.className} bg-[#0F172A]`}>
+        <body
+          style={{ overscrollBehaviorY: "contain" }}
+          className={`${inter.className} bg-[#0F172A]`}
+        >
           {children}
           <Toaster position="top-right" />
         </body>
