@@ -28,10 +28,7 @@ const Education = async () => {
   const data: MyEducation[] = await res.json();
 
   return (
-    <div
-      id="education"
-      className="md:pt-40 pt-10 overflow-hidden relative pb-10"
-    >
+    <div id="education" className=" overflow-hidden relative pb-10">
       {/* education */} {/* Experience */}
       {/* BLURRED BLUE CIRCLE */}
       <div className="absolute md:block hidden blurred-blue-circle"></div>
