@@ -1,5 +1,4 @@
-import Image from "next/image";
-import zamirulPic from "../../../../public/assets/image/zamirul_pic.png";
+// import zamirulPic from "@/public/assets/image/zamirul_pic";
 import { AiOutlineDownload } from "react-icons/ai";
 import "../../Home/Services/Services.css";
 import ZoomIn from "@/components/Shared/animations/ZoomIn";
@@ -9,6 +8,8 @@ import ImageWithSkeleton from "@/components/Shared/animations/ImageWithSkeleton"
 // import AnimatedText from "@/components/Shared/animations/AnimatedText";
 
 const Hero = () => {
+  const zamirulPic = "/assets/image/zamirul_pic.jpg"; // use the actual extension
+
   return (
     <div
       id="hero"
