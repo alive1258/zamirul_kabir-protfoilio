@@ -58,7 +58,6 @@ const Experience = async () => {
       ></div>
       <div className="absolute md:block hidden bottom-gradient-line"></div>
 
-      {/* <div className="bottom-gradient-line"></div> */}
       <div className="custom-gradient-line"></div>
       <div className="container">
         <div className="md:text-4xl text-2xl font-semibold justify-center item-center flex space-x-2">
