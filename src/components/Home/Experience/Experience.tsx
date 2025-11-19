@@ -72,7 +72,7 @@ const Experience = async () => {
             </SlideUp>
           </div>
           {/* Experience */}
-          <div>
+          <div className="h-[700px] overflow-y-scroll overflow-hidden pr-4">
             {data?.map((experience, idx) => (
               <ExperienceCard
                 key={experience._id}
