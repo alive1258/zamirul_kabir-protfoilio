@@ -131,7 +131,7 @@ const EducationAnimation = () => {
         </div>
 
         {/* Bottom info bar */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+        <div className="absolute  left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
           <div className="flex items-center gap-2 px-4 py-2 bg-black/50 backdrop-blur-md rounded-full border border-white/20">
             <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
             <span className="text-sm text-white/80">Educational Journey</span>

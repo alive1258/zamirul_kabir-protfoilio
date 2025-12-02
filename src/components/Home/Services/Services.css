@@ -65,3 +65,111 @@
     background-position: 0 0;
   }
 }
+
+/* Services.css - Add these styles */
+
+/* Custom animations */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Glassmorphism effects */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Gradient text */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar for services section */
+#services ::-webkit-scrollbar {
+  width: 6px;
+}
+
+#services ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+#services ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #34a578, #45d19c);
+  border-radius: 3px;
+}
+
+#services ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #45d19c, #34a578);
+}
+
+/* Hover effects for service cards */
+.group:hover .group-hover\\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\\:translate-x-2 {
+  transform: translateX(0.5rem);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .process-step {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Gradient background animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
