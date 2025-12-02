@@ -20,9 +20,297 @@
   }
 }
 
+/* Add to globals.css or Services.css */
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateY(-30px) translateX(20px);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translateY(20px) translateX(-20px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(52, 165, 120, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(52, 165, 120, 0.6);
+  }
+}
+
+@keyframes text-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-border {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes width-pulse {
+  0%,
+  100% {
+    width: 0%;
+    left: 50%;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes text-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations */
+.animate-float-slow {
+  animation: float-slow linear infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-text-shimmer {
+  background-size: 200% auto;
+  animation: text-shimmer 3s linear infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-gradient-border {
+  animation: gradient-border 4s ease-in-out infinite;
+}
+
+.animate-width-pulse {
+  animation: width-pulse 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+.animate-text-bounce {
+  animation: text-bounce 2s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+}
+
+/* // =============== */
+
+/* Option 1: Gradient Scrollbar */
+.custom-scrollbar-gradient {
+  scrollbar-width: thin;
+  scrollbar-color: #34a578 rgba(255, 255, 255, 0.05);
+}
+
+.custom-scrollbar-gradient::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar-gradient::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  margin: 4px;
+}
+
+.custom-scrollbar-gradient::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #34a578, #45d19c);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.3s ease;
+}
+
+.custom-scrollbar-gradient::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #45d19c, #34a578);
+  background-clip: content-box;
+}
+
+/* Option 2: Minimal Modern Scrollbar */
+.modern-minimal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #34a578 transparent;
+}
+
+.modern-minimal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modern-minimal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modern-minimal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #34a578;
+  border-radius: 3px;
+}
+
+.modern-minimal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #45d19c;
+}
+
+/* Option 3: Glow Scrollbar */
+.glow-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #34a578 rgba(255, 255, 255, 0.1);
+}
+
+.glow-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.glow-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(52, 165, 120, 0.1);
+}
+
+.glow-scrollbar::-webkit-scrollbar-thumb {
+  background: #34a578;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(52, 165, 120, 0.5);
+  transition: all 0.3s ease;
+}
+
+.glow-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #45d19c;
+  box-shadow: 0 0 15px rgba(69, 209, 156, 0.7);
+}
+
+/* Option 4: Elegant Thin Scrollbar */
+.elegant-thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #34a578 rgba(255, 255, 255, 0.02);
+}
+
+.elegant-thin-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.elegant-thin-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.elegant-thin-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #34a578, #45d19c);
+  border-radius: 2px;
+}
+
+.elegant-thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #45d19c, #34a578);
+}
+
+/* Common animations */
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #34a578 rgba(255, 255, 255, 0.05);
+}
+
+/* Edge/IE scrollbar */
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
 /* ===================================================
+
   Animations
 =================================================== */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 
 /* Vertical Scroll Animation */
 @keyframes scrollUp {

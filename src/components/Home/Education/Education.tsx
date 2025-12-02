@@ -62,19 +62,28 @@ const Education = async () => {
           <span className="text-[#34a578]">Education</span>
         </div>
         <div className="md:mt-20 mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
-          {/* education */}
-          <div>
-            {data?.map((education, idx) => (
-              <EducationCard
-                key={education._id}
-                item={education}
-                idx={idx}
-                delay={idx * 0.3}
-              />
-            ))}
+          <div className="relative group">
+            <div className="relative h-[550px] overflow-y-auto px-7 py-5 rounded-xl bg-white/5 border border-white/10 group-hover:border-[#34a578]/40 transition-colors duration-300 elegant-thin-scrollbar">
+              {/* Content with spacing */}
+              <div className="space-y-6">
+                {data?.map((education, idx) => (
+                  <EducationCard
+                    key={education._id}
+                    item={education}
+                    idx={idx}
+                    delay={idx * 0.3}
+                  />
+                ))}
+              </div>
+
+              {/* Scroll indicator */}
+              <div className="absolute top-1/2 right-2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-1.5 h-10 bg-gradient-to-b from-[#34a578] via-cyan-400 to-[#45d19c] rounded-full animate-pulse"></div>
+              </div>
+            </div>
           </div>
           {/* educationAnimation */}
-          <div className="box p-3">
+          <div className="box p-3 h-full">
             <SlideUp>
               <EducationAnimation />
             </SlideUp>
