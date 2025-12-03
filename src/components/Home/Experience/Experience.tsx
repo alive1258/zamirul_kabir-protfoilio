@@ -71,15 +71,20 @@ const Experience = async () => {
             </SlideUp>
           </div>
           {/* Experience */}
-          <div className="h-[700px] overflow-y-scroll overflow-hidden pr-4">
-            {data?.map((experience, idx) => (
-              <ExperienceCard
-                key={experience._id}
-                idx={idx}
-                delay={idx * 0.3}
-                item={experience}
-              />
-            ))}
+          {/* Experience */}
+          <div className="h-[700px] overflow-hidden relative">
+            <div className="h-full overflow-y-auto pr-4 custom-scrollbar py-6">
+              <div className="">
+                {data?.map((experience, idx) => (
+                  <ExperienceCard
+                    key={experience._id}
+                    idx={idx}
+                    delay={idx * 0.3}
+                    item={experience}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

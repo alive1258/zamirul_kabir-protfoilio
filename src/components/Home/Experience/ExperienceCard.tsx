@@ -49,8 +49,8 @@ const ExperienceCard: React.FC<MyExperienceCardProps> = ({
   delay = 0,
 }) => {
   return (
-    <div className="relative group py-4">
-      {/* Glowing background effect on hover */}
+    <div className="relative group">
+      {/* Glowing background effect */}
       <div className="absolute -inset-4 bg-gradient-to-r from-[#34a578]/10 via-transparent to-cyan-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
       <div className="relative flex gap-6 pb-8">
