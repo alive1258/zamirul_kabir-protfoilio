@@ -87,7 +87,7 @@ const Contact = () => {
 
           {/* Decorative pre-title elements */}
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
+            <div className="w-12 h-px bg-gradient-to-r md:space-x-0 from-transparent via-gray-500 to-transparent rounded-full"></div>
             <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-full">
               <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
               <span className="text-sm font-medium text-gray-400 tracking-widest">
