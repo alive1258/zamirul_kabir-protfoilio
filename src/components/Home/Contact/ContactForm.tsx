@@ -37,9 +37,6 @@ const ContactForm = () => {
       // Simulate API call - replace with your actual email service
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
-      // Here you would integrate with your email service (Nodemailer, EmailJS, etc.)
-      console.log("Form data:", data);
-
       setIsSuccess(true);
       reset();
 

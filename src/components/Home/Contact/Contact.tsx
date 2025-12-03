@@ -1,64 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client";
-import React, { useRef, useState } from "react";
-import {
-  FaFacebookF,
-  FaPinterestP,
-  FaPaperPlane,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-} from "react-icons/fa";
-import {
-  BsInstagram,
-  BsLinkedin,
-  BsWhatsapp,
-  BsSend,
-  BsCheckCircle,
-} from "react-icons/bs";
-import { AiOutlineMail, AiOutlineUser, AiOutlinePhone } from "react-icons/ai";
-import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
-import emailjs from "@emailjs/browser";
+
+import { FaFacebookF, FaPinterestP, FaMapMarkerAlt } from "react-icons/fa";
+import { BsInstagram, BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
+
 import "../../Home/Services/Services.css";
 import SlideUp from "@/components/Shared/animations/SlideUp";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    if (!form.current) return;
-
-    emailjs
-      .sendForm(
-        "service_9uw0v8f",
-        "template_2vak65q",
-        form.current,
-        "MgeqrvTpwff0O--dG"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          form.current?.reset();
-          setIsSubmitting(false);
-          setIsSubmitted(true);
-
-          // Reset success message after 3 seconds
-          setTimeout(() => {
-            setIsSubmitted(false);
-          }, 3000);
-        },
-        (error) => {
-          console.log(error.text);
-          setIsSubmitting(false);
-        }
-      );
-  };
-
   const contactInfo = [
     {
       icon: <AiOutlineMail className="text-2xl" />,

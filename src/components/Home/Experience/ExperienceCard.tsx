@@ -1,48 +1,7 @@
-// import React from "react";
-// import { BiBox } from "react-icons/bi";
-// import { MyExperienceCardProps } from "./Experience";
-// import SlideUp from "@/components/Shared/animations/SlideUp";
-
-// const ExperienceCard: React.FC<MyExperienceCardProps> = ({
-//   item,
-//   delay = 0,
-// }) => {
-//   return (
-//     <>
-//       <div className="flex gap-6 text-[#ffffff] pb-4 ">
-//         <div className="flex flex-col justify-center items-center ">
-//           <div className="rounded-full flex justify-center items-center w-10 h-10  bg-[#34a578]">
-//             <BiBox size={20} className="text-[#ffffff]" />
-//           </div>
-//           <div className="border-l-2 border-gray-400 md:h-40 h-36"></div>
-//         </div>
-
-//         {/* Experience  */}
-//         <SlideUp delay={delay}>
-//           <div className="box ">
-//             <div className="">
-//               <div className="space-y-2 px-3 py-3">
-//                 <h4>{item?.date}</h4>
-//                 <div className="border-b w-36 border-[#34a578]"></div>
-//                 <h1 className="md:text-2xl text-xl">{item?.title}</h1>
-//                 <h3 className="text-[#34a578]">{item?.company}</h3>
-//                 <p>{item?.description}</p>
-//               </div>
-//             </div>
-//           </div>
-//         </SlideUp>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default ExperienceCard;
-
 import React from "react";
 import { BiBox, BiChevronRight, BiCalendar } from "react-icons/bi";
 import { MyExperienceCardProps } from "./Experience";
 import SlideUp from "@/components/Shared/animations/SlideUp";
-import { motion } from "framer-motion";
 
 const ExperienceCard: React.FC<MyExperienceCardProps> = ({
   item,
@@ -118,26 +77,6 @@ const ExperienceCard: React.FC<MyExperienceCardProps> = ({
               <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-white/90 transition-colors duration-300">
                 {item?.description}
               </p>
-
-              {/* Skills/Technologies used (if available) */}
-              {/* {item?.technologies && (
-                <div className="mt-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="w-1.5 h-1.5 bg-[#34a578] rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-400">Technologies Used</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {item.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1.5 text-sm bg-white/5 border border-white/10 rounded-lg text-gray-300 group-hover:bg-[#34a578]/10 group-hover:border-[#34a578]/30 group-hover:text-white transition-all duration-300 hover:scale-105"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )} */}
 
               {/* Bottom gradient line */}
               <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#34a578]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

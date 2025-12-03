@@ -19,6 +19,11 @@ const Navbar = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   useEffect(() => {
     const handleScroll = () => {
+      // ADD THIS CHECK
+      if (typeof window === "undefined" || typeof document === "undefined") {
+        return;
+      }
+
       const scrollTop = window.scrollY;
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
@@ -26,8 +31,13 @@ const Navbar = () => {
       setScrollPercent(Math.round(scroll));
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Check before adding event listener
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      // Trigger initial calculation
+      handleScroll();
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
   }, []);
 
   return (
