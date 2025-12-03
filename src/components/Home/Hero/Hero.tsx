@@ -4,6 +4,7 @@ import "../../Home/Services/Services.css";
 import ZoomIn from "@/components/Shared/animations/ZoomIn";
 import SlideLeft from "@/components/Shared/animations/SlideLeft";
 import ImageWithSkeleton from "@/components/Shared/animations/ImageWithSkeleton";
+import GitHubStats from "@/components/GitHubStats/GitHubStats";
 
 const Hero = () => {
   const zamirulPic = "/assets/image/zamirul_pic.jpg";
@@ -40,109 +41,6 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 top-0 pointer-events-none bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:48px_39px]"></div>
 
       <div className="grid md:grid-cols-2 grid-cols-1 container md:gap-20 gap-10 pt-10 ">
-        {/* <div className="md:mt-6 text-[#ffffff]">
-          <div className="flex space-x-2">
-            <h1 className="md:text-4xl text-xl font-bold">This is</h1>
-            <div className="typing-container md:text-4xl text-xl font-bold">
-              <h3 className="typing-text">
-                <span className="text-[#34a578]">Zamirul Kabir.</span>
-              </h3>
-            </div>
-          </div>
-
-          <h2 className="md:text-3xl text-2xl font-bold pt-4">
-            I am a Professional
-            <span className="font-semibold text-[#34a578]">
-              {" "}
-              Web Developer.
-            </span>
-          </h2>
-       
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#34a578]/20 via-transparent to-cyan-500/20 rounded-2xl blur-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-
-            <div className="relative mt-8 p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10">
-              <SlideLeft delay={0.2}>
-                <p className="text-lg leading-relaxed text-gray-300 mb-6">
-                  As a passionate{" "}
-                  <span className="font-bold text-white bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent">
-                    Frontend-Focused Full-Stack Engineer
-                  </span>{" "}
-                  with{" "}
-                  <span className="font-bold text-[#34a578]">2.5+ years</span>{" "}
-                  of experience, I craft high-performing, visually refined web
-                  applications that blend aesthetics with functionality.
-                </p>
-              </SlideLeft>
-
-              <SlideLeft delay={0.4}>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
-                    <span className="text-gray-300">
-                      Clean, maintainable code with modern architecture
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <span className="text-gray-300">
-                      Pixel-perfect, responsive UI/UX implementation
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="w-2 h-2 bg-[#45d19c] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
-                    <span className="text-gray-300">
-                      Performance optimization & best practices
-                    </span>
-                  </div>
-                </div>
-              </SlideLeft>
-            </div>
-          </div>
-
-          <div className="md:mt-6 mt-4 pb-6 z-50 md:flex md:space-y-0  space-x-7">
-            <a href="/Resume_of_Zamirul.pdf" download="Resume_of_Zamirul.pdf">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-[#34a578] to-[#45d19c] text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-[#34a578]/30 transition-all duration-300 hover:scale-105">
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#34a578] to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-50 transition duration-500"></div>
-                <span className="relative flex items-center gap-3">
-                  DOWNLOAD RESUME
-                  <AiOutlineDownload
-                    size={20}
-                    className="group-hover:translate-y-1 transition-transform"
-                  />
-                </span>
-              </button>
-            </a>
-            <a href="#contact">
-              <button className="group px-8 md:mt-0 mt-5 py-4 bg-transparent border-2 border-[#34a578]/30 text-white font-semibold rounded-xl hover:bg-[#34a578]/10 hover:border-[#34a578] transition-all duration-300">
-                <span className="flex items-center gap-3">
-                  Lets Connect
-                  <svg
-                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </a>
-          </div>
-        </div>
-         */}
-
         <div className="md:mt-6 text-[#ffffff] relative">
           {/* Floating particles background */}
           <div className="absolute -inset-6 overflow-hidden pointer-events-none">

@@ -20,6 +20,7 @@ import { HiOutlineMail, HiOutlineLocationMarker } from "react-icons/hi";
 import emailjs from "@emailjs/browser";
 import "../../Home/Services/Services.css";
 import SlideUp from "@/components/Shared/animations/SlideUp";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -128,26 +129,81 @@ const Contact = () => {
 
       <div className="relative z-10 container">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#34a578]/10 to-transparent border border-[#34a578]/30 mb-6">
-            <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-gray-400 tracking-widest">
-              GET IN TOUCH
-            </span>
+
+        {/* Title */}
+        <div className="relative text-center mb-16 md:mb-24">
+          {/* Animated background gradient */}
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-[600px] h-[200px] bg-gradient-to-r from-[#34a578]/10 via-transparent to-cyan-400/10 blur-3xl opacity-60 rounded-full"></div>
+
+          {/* Decorative pre-title elements */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-full">
+              <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-gray-400 tracking-widest">
+                GET IN TOUCH
+              </span>
+              <div
+                className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.3s" }}
+              ></div>
+            </div>
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Let's{" "}
-            <span className="bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 bg-clip-text text-transparent">
-              Connect & Create
+          {/* Main title with gradient effect */}
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 relative">
+            <span className="relative inline-block">
+              <span className="text-white relative z-10">Let's</span>
+              {/* Glow effect for "About" */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-white/10 via-transparent to-white/10 blur-xl opacity-0 hover:opacity-100 transition-opacity duration-700 rounded-full"></div>
+            </span>
+            <br />
+
+            <span
+              className="relative ml-4 inline-block animate-fade-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <span className="relative z-10 bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                Connect & Create
+              </span>
+              {/* Floating particles */}
+              <div className="absolute -top-3 -right-3 w-3 h-3 bg-cyan-400 rounded-full animate-bounce"></div>
+              <div
+                className="absolute -bottom-2 -left-2 w-2 h-2 bg-[#34a578] rounded-full animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              ></div>
             </span>
           </h1>
 
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          {/* Animated separator */}
+          <div className="mt-6 flex items-center justify-center gap-6">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent rounded-full"></div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
+              <div
+                className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.3s" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"
+                style={{ animationDelay: "0.6s" }}
+              ></div>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent rounded-full"></div>
+          </div>
+
+          {/* Subtitle */}
+          <p className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed px-4">
             Have a project in mind? Let's discuss how we can bring your ideas to
-            life with exceptional web solutions.
+            life
+            <span className="inline-block mx-3 text-[#34a578] animate-bounce">
+              •
+            </span>
+            with exceptional web solutions.
           </p>
         </div>
+
         <div className="grid md:grid-cols-3 gap-8">
           {/* Contact Info Card (keeping your current style) */}
           <SlideUp delay={0.1}>
@@ -240,89 +296,8 @@ const Contact = () => {
                     </h3>
                   </div>
 
-                  {/* Success message */}
-                  {isSubmitted && (
-                    <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 flex items-center gap-3 animate-fade-in">
-                      <BsCheckCircle className="text-green-500 text-xl" />
-                      <span className="text-green-400 font-medium">
-                        Message sent successfully!
-                      </span>
-                    </div>
-                  )}
-
-                  <form ref={form} onSubmit={sendEmail} className="space-y-6">
-                    {/* Two column layout */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="relative group/input">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-[#34a578]/20 via-transparent to-cyan-500/20 rounded-lg blur opacity-0 group-hover/input:opacity-100 transition-opacity duration-500"></div>
-                        <div>
-                          <label className="block text-sm text-gray-400 mb-2">
-                            Enter Name
-                          </label>
-                          <input
-                            type="text"
-                            name="from_name"
-                            required
-                            className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#34a578]/50 transition-all duration-300 relative z-10"
-                            placeholder="Enter your first name"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="relative group/input">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-transparent to-[#34a578]/20 rounded-lg blur opacity-0 group-hover/input:opacity-100 transition-opacity duration-500"></div>
-                        <div>
-                          <label className="block text-sm text-gray-400 mb-2">
-                            Email Address
-                          </label>
-                          <input
-                            type="email"
-                            name="from_email"
-                            required
-                            className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#34a578]/50 transition-all duration-300 relative z-10"
-                            placeholder="your@email.com"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    =
-                    <div className="relative group/input">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-transparent to-[#34a578]/20 rounded-lg blur opacity-0 group-hover/input:opacity-100 transition-opacity duration-500"></div>
-                      <div>
-                        <label className="block text-sm text-gray-400 mb-2">
-                          Your Message
-                        </label>
-                        <textarea
-                          name="message"
-                          required
-                          rows={5}
-                          className="w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#34a578]/50 transition-all duration-300 resize-none relative z-10"
-                          placeholder="Tell me about your project..."
-                        ></textarea>
-                      </div>
-                    </div>
-                    {/* Submit button with matching hover effects */}
-                    <div className="relative group/btn">
-                      <div className="absolute -inset-2 bg-gradient-to-r from-[#34a578] via-cyan-500 to-[#45d19c] rounded-xl blur opacity-0 group-hover/btn:opacity-30 transition duration-500"></div>
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="relative w-full py-4 px-6 bg-gradient-to-r from-[#34a578] to-[#45d19c] text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-[#34a578]/40 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-3"
-                      >
-                        {isSubmitting ? (
-                          <>
-                            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                            <span>Sending...</span>
-                          </>
-                        ) : (
-                          <>
-                            <BsSend className="text-xl" />
-                            <span>Send Message</span>
-                          </>
-                        )}
-                      </button>
-                    </div>
-                  </form>
+                  {/* contact form  */}
+                  <ContactForm />
 
                   {/* Form note with matching style */}
                   <div className="mt-8 pt-6 border-t border-white/10">

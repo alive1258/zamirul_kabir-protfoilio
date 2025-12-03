@@ -642,24 +642,76 @@ const ChooseMe = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 container">
-        {/* Title Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#34a578]/10 to-transparent border border-[#34a578]/30 mb-6">
-            <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-gray-400 tracking-widest">
-              WHY CHOOSE ME
-            </span>
+        {/* Title */}
+        <div className="relative text-center mb-16 md:mb-24">
+          {/* Animated background gradient */}
+          <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-[600px] h-[200px] bg-gradient-to-r from-[#34a578]/10 via-transparent to-cyan-400/10 blur-3xl opacity-60 rounded-full"></div>
+
+          {/* Decorative pre-title elements */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-full">
+              <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-gray-400 tracking-widest">
+                WHY CHOOSE ME
+              </span>
+              <div
+                className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.3s" }}
+              ></div>
+            </div>
+            <div className="w-12 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent rounded-full"></div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Building Digital Excellence with{" "}
-            <span className="bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 bg-clip-text text-transparent">
-              Precision & Passion
+          {/* Main title with gradient effect */}
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 relative">
+            <span className="relative inline-block">
+              <span className="text-white relative z-10">
+                Building Digital Excellence with
+              </span>
+              {/* Glow effect for "About" */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-white/10 via-transparent to-white/10 blur-xl opacity-0 hover:opacity-100 transition-opacity duration-700 rounded-full"></div>
             </span>
-          </h2>
 
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <span
+              className="relative ml-4 inline-block animate-fade-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <span className="relative z-10 bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                Precision & Passion
+              </span>
+              {/* Floating particles */}
+              <div className="absolute -top-3 -right-3 w-3 h-3 bg-cyan-400 rounded-full animate-bounce"></div>
+              <div
+                className="absolute -bottom-2 -left-2 w-2 h-2 bg-[#34a578] rounded-full animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              ></div>
+            </span>
+          </h1>
+
+          {/* Animated separator */}
+          <div className="mt-6 flex items-center justify-center gap-6">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent rounded-full"></div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
+              <div
+                className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                style={{ animationDelay: "0.3s" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"
+                style={{ animationDelay: "0.6s" }}
+              ></div>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent rounded-full"></div>
+          </div>
+
+          {/* Subtitle */}
+          <p className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed px-4">
             I combine technical expertise with creative problem-solving to
+            <span className="inline-block mx-3 text-[#34a578] animate-bounce">
+              •
+            </span>
             deliver exceptional results that drive business growth.
           </p>
         </div>

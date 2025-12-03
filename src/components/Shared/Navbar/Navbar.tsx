@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <>
       {/* <div className="w-full z-50 fixed bg-[#000814]  text-[#ffffff] border-b border-gray-600 "> */}
-      <header className="w-full z-50 fixed bg-[#0F172A]  text-[#ffffff] border-b border-gray-600 ">
+      <header className="w-full z-50 fixed bg-[#0F172A]  text-[#ffffff] border border-white/10">
         <div className="py-4 max-w-full w-[1440px] mx-auto md:px-[70px] px-5 md:h-24 font-semibold flex justify-between items-center ">
           <div className="">
             {/* <div className='cursor-pointer h-10 w-10 bg-[#34a578] rounded-full '>
