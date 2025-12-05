@@ -78,359 +78,52 @@ const PersonalInfo = () => {
         </p>
       </div>
 
-      {/* <div className="">
-        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 md:gap-8">
-  
-          <div className="md:w-full bg-gradient-to-br from-[#0C1222] via-[#131a30] to-[#0C1222] border border-[#26272F] rounded-2xl p-8 shadow-2xl shadow-[#34a578]/5 hover:shadow-[#34a578]/10 transition-shadow duration-500">
-            <SlideUp>
-              <div className="relative">
-                <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#34a578] via-[#45d19c] to-transparent rounded-full"></div>
-                <p className="text-lg leading-relaxed text-gray-300 pl-4">
-                  I specialize in working across the entire stack, from crafting
-                  responsive front-end interfaces to building robust back-end
-                  systems. My focus is on creating meaningful digital
-                  experiences that are fast, user-friendly, and maintainable.
-                </p>
-              </div>
-            </SlideUp>
-
-            <SlideUp delay={0.3}>
-              <div className="mt-8 p-5 bg-gradient-to-r from-[#34a578]/10 via-[#45d19c]/10 to-transparent rounded-xl border border-[#34a578]/40 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full animate-pulse"></div>
-                  <p className="font-bold text-white tracking-wide">
-                    Tech Stack I Work With
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "JavaScript",
-                    "TypeScript",
-                    "React.js",
-                    "Next.js",
-                    "Redux",
-                    "Node.js",
-                    "Express.js",
-                    "NestJS",
-                    "MongoDB",
-                    "PostgreSQL",
-                  ].map((tech, i) => (
-                    <span
-                      key={tech}
-                      className="px-4 py-2 bg-gradient-to-br from-white/5 to-black/10 border border-white/10 rounded-lg text-sm text-gray-300 hover:bg-gradient-to-br hover:from-[#34a578]/20 hover:to-[#45d19c]/20 hover:border-[#34a578]/50 hover:text-white hover:scale-105 transition-all duration-300 backdrop-blur-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </SlideUp>
-
-            <SlideUp delay={0.6}>
-              <div className="mt-8 p-5 bg-gradient-to-r from-white/[0.03] via-white/[0.02] to-transparent rounded-xl border border-white/10">
-                <div className="flex items-start gap-3">
-                  <svg
-                    className="w-6 h-6 text-[#34a578] flex-shrink-0 mt-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                  <p className="text-lg leading-relaxed text-gray-300">
-                    "I'm open to new opportunities where I can grow,
-                    collaborate, and make a real impact. If you're looking for
-                    someone honest, dedicated, curious, and ready to build
-                    meaningful products—let's create something amazing
-                    together."
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 mt-6">
-                  <div className="flex-1 h-px bg-gradient-to-r from-[#34a578] to-transparent"></div>
-                  <span className="text-sm font-medium bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent">
-                    Ready to connect
-                  </span>
-                  <div className="w-2 h-2 bg-[#34a578] rounded-full animate-ping"></div>
-                </div>
-              </div>
-            </SlideUp>
-          </div>
-
-          <div className="box p-3 md:mt-0 mt-12 group">
-            <SlideUp>
-              <PersonalAnimation />
-            </SlideUp>
-          </div>
-        </div>
-      </div> */}
-
       <div className="mt-20 md:mt-24">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           {/* Left Column - Content Card */}
-          <div className="relative group">
-            {/* Glowing background effect */}
-            <div className="absolute -inset-6 bg-gradient-to-br from-[#34a578]/10 via-transparent to-cyan-400/10 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-            {/* Main content card */}
-            <div className="relative bg-gradient-to-br from-white/[0.03] via-black/20 to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 overflow-hidden group-hover:border-[#34a578]/40 transition-all duration-500">
-              {/* Animated border effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#34a578]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          {/* Personal Journey & Philosophy Section */}
+          <SlideUp delay={0.2}>
+            <div className="relative group md:h-[1020px] h-full overflow-y-scroll overflow-x-hidden p-4">
+              {/* Glowing border effect */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#34a578]/20 via-transparent to-cyan-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
 
-              {/* Decorative corner elements */}
-              <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-[#34a578]/20 rounded-tr-lg"></div>
-              <div className="absolute bottom-4 left-4 w-8 h-8 border-b border-l border-cyan-400/20 rounded-bl-lg"></div>
+              {/* Main card */}
+              <div className="relative bg-gradient-to-br from-white/[0.03] via-black/20 to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-8 overflow-hidden group-hover:border-[#34a578]/40 transition-all duration-500">
+                {/* <div className="relative pr-4 timeline-scrollbar bg-gradient-to-br from-white/[0.03] via-white/[0.01] to-transparent backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 overflow-hidden group-hover:border-[#34a578]/30 transition-all duration-500"> */}
+                {/* Animated corner decorations */}
+                <div className="absolute top-0 left-0 w-16 h-16 border-t border-l border-[#34a578]/20 rounded-tl-xl"></div>
+                <div className="absolute bottom-0 right-0 w-16 h-16 border-b border-r border-cyan-400/20 rounded-br-xl"></div>
 
-              {/* Content container */}
-              <div className="relative z-10">
-                {/* Introduction with animated marker */}
-                <SlideUp>
-                  <div className="relative mb-10">
-                    {/* Animated vertical line */}
-                    <div className="absolute -left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#34a578] via-[#45d19c] to-transparent rounded-full"></div>
+                {/* Floating particles */}
+                <div className="absolute top-6 right-6 w-3 h-3 bg-[#34a578] rounded-full animate-pulse"></div>
+                <div
+                  className="absolute bottom-10 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.5s" }}
+                ></div>
 
-                    {/* Floating dot */}
-                    <div className="absolute -left-7 top-4 w-3 h-3 bg-gradient-to-br from-[#34a578] to-cyan-400 rounded-full animate-pulse shadow-lg shadow-[#34a578]/30"></div>
+                {/* Content */}
+                <div className="relative z-10">
+                  {/* Section Header */}
+                  <div className="flex items-center gap-3 mb-8">
+                    <div className="w-3 h-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full animate-pulse"></div>
+                    <h3 className="text-2xl font-bold text-white">
+                      My Journey & Philosophy
+                    </h3>
+                    <div className="ml-auto text-xs px-3 py-1 bg-gradient-to-r from-[#34a578]/20 to-cyan-400/20 rounded-full text-gray-400 border border-white/10">
+                      The Story Behind
+                    </div>
+                  </div>
 
-                    {/* Text content */}
-                    {/* <div className="pl-6">
-                      <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="w-2 h-2 bg-[#34a578] rounded-full animate-ping"></span>
-                        Full-Stack Developer
-                      </h3>
-                      <p className="text-lg leading-relaxed text-gray-300 tracking-wide">
-                        I bridge the gap between beautiful front-end interfaces
-                        and
-                        <span className="inline-block mx-2 bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent font-medium">
-                          robust back-end architecture
-                        </span>
-                        . My passion lies in crafting digital experiences that
-                        are not just functional, but truly exceptional.
-                      </p>
-                    </div> */}
+                  {/* Programming Journey */}
+                  <div className="mb-10 relative">
+                    <div className="absolute -left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-[#34a578] via-cyan-400 to-transparent rounded-full"></div>
 
-                    {/* ===================  */}
-                    {/* <div className="pl-6">
-                      <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="w-2 h-2 bg-[#34a578] rounded-full animate-ping"></span>
-                        Full-Stack Developer
-                      </h3>
-                      <p className="text-lg leading-relaxed text-gray-300 tracking-wide">
-                        I bridge the gap between beautiful front-end interfaces
-                        and
-                        <span className="inline-block mx-2 bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent font-medium">
-                          robust back-end architecture
-                        </span>
-                        . My passion lies in crafting digital experiences that
-                        are not just functional, but truly exceptional.
-                      </p>
-                      <div className="mt-6 space-y-4">
-                        <p className="text-gray-300 leading-relaxed flex items-start gap-2">
-                          <span className="text-[#34a578] mt-1.5">↪</span>
-                          Transforming complex challenges into elegant solutions
-                          through clean code and modern technologies.
-                        </p>
-                        <p className="text-gray-300 leading-relaxed flex items-start gap-2">
-                          <span className="text-cyan-400 mt-1.5">↪</span>
-                          Committed to writing scalable, maintainable code that
-                          stands the test of time and growth.
-                        </p>
-                      </div>
-                    </div> */}
-
-                    {/* ============================  */}
                     <div className="pl-6">
-                      <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="w-2 h-2 bg-[#34a578] rounded-full animate-ping"></span>
-                        Full-Stack Developer
-                      </h3>
-                      <p className="text-lg leading-relaxed text-gray-300 tracking-wide">
-                        I bridge the gap between beautiful front-end interfaces
-                        and
-                        <span className="inline-block mx-2 bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent font-medium">
-                          robust back-end architecture
-                        </span>
-                        . My passion lies in crafting digital experiences that
-                        are not just functional, but truly exceptional.
-                      </p>
-                      <div className="mt-6 p-4 rounded-lg bg-gradient-to-r from-[#34a578]/5 to-transparent border-l-4 border-[#34a578]">
-                        <div className="space-y-3">
-                          <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[#34a578] to-cyan-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white text-xs">✓</span>
-                            </div>
-                            <p className="text-gray-300">
-                              Building performant applications that deliver
-                              seamless user experiences across all platforms.
-                            </p>
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-[#34a578] flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white text-xs">↗</span>
-                            </div>
-                            <p className="text-gray-300">
-                              Continuously evolving with emerging technologies
-                              to create innovative digital solutions.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </SlideUp>
-
-                {/* Tech Stack Section */}
-                <SlideUp delay={0.2}>
-                  <div className="relative p-6 rounded-xl bg-gradient-to-r from-[#34a578]/10 via-[#45d19c]/5 to-transparent border border-[#34a578]/30 backdrop-blur-sm group-hover:border-[#34a578]/50 transition-all duration-500">
-                    {/* Animated background pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <div className="absolute top-2 right-2 w-4 h-4 border border-[#34a578]/30 rounded-full animate-ping"></div>
-                      <div
-                        className="absolute bottom-2 left-2 w-4 h-4 border border-cyan-400/30 rounded-full animate-ping"
-                        style={{ animationDelay: "0.5s" }}
-                      ></div>
-                    </div>
-
-                    {/* Header */}
-                    <div className="relative z-10">
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="w-3 h-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full animate-pulse"></div>
-                        <h4 className="font-bold text-white text-xl tracking-wide">
-                          Tech Stack Expertise
-                        </h4>
-                        <div className="ml-auto text-xs px-3 py-1 bg-white/5 rounded-full text-gray-400 border border-white/10">
-                          Modern Stack
-                        </div>
-                      </div>
-
-                      {/* Tech badges with staggered animation */}
-                      {/* Tech badges with staggered animation */}
-                      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                        {[
-                          {
-                            name: "JavaScript",
-                            color: "from-yellow-400/20",
-                            toColor: "to-yellow-600/10",
-                          },
-                          {
-                            name: "TypeScript",
-                            color: "from-blue-400/20",
-                            toColor: "to-blue-600/10",
-                          },
-                          {
-                            name: "React.js",
-                            color: "from-cyan-400/20",
-                            toColor: "to-cyan-600/10",
-                          },
-                          {
-                            name: "Next.js",
-                            color: "from-gray-400/20",
-                            toColor: "to-black/10",
-                          },
-                          {
-                            name: "Redux",
-                            color: "from-purple-400/20",
-                            toColor: "to-purple-600/10",
-                          },
-                          {
-                            name: "Tailwind",
-                            color: "from-teal-400/20",
-                            toColor: "to-cyan-600/10",
-                          },
-                          {
-                            name: "Node.js",
-                            color: "from-green-400/20",
-                            toColor: "to-green-600/10",
-                          },
-                          {
-                            name: "Express.js",
-                            color: "from-gray-400/20",
-                            toColor: "to-gray-600/10",
-                          },
-                          {
-                            name: "MongoDB",
-                            color: "from-green-500/20",
-                            toColor: "to-green-700/10",
-                          },
-                          {
-                            name: "PostgreSQL",
-                            color: "from-blue-500/20",
-                            toColor: "to-blue-700/10",
-                          },
-
-                          {
-                            name: "GraphQL",
-                            color: "from-pink-400/20",
-                            toColor: "to-pink-600/10",
-                          },
-                          {
-                            name: "Docker",
-                            color: "from-blue-400/20",
-                            toColor: "to-cyan-600/10",
-                          },
-                        ].map((tech, i) => (
-                          <span
-                            key={tech.name}
-                            className="px-4 py-3 rounded-xl text-sm text-gray-300 border border-white/10 backdrop-blur-sm hover:scale-105 hover:border-white/20 hover:text-white transition-all duration-300 group-hover:shadow-lg"
-                            style={{
-                              background: `linear-gradient(135deg, 
-                                ${tech.color
-                                  .replace("from-", "rgba(")
-                                  .replace("/20", ", 0.08)")}, 
-                                ${tech.toColor
-                                  .replace("to-", "rgba(")
-                                  .replace("/10", ", 0.04)")})`,
-                              animationDelay: `${i * 0.05}s`,
-                            }}
-                          >
-                            <div className="flex items-center justify-between">
-                              <span>{tech.name}</span>
-                              <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-[#34a578]">
-                                →
-                              </span>
-                            </div>
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </SlideUp>
-
-                {/* Philosophy & Call to Action */}
-                <SlideUp delay={0.4}>
-                  <div className="mt-8 p-6 rounded-xl bg-gradient-to-br from-white/[0.02] to-white/[0.01] border border-white/10 backdrop-blur-sm group-hover:border-cyan-400/30 transition-all duration-500">
-                    {/* Quote icon */}
-                    <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[#34a578] to-cyan-400 flex items-center justify-center shadow-lg">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                      </svg>
-                    </div>
-
-                    <div className="pl-4">
-                      <p className="text-lg leading-relaxed text-gray-300 italic mb-6">
-                        "I thrive at the intersection of creativity and
-                        technology, building solutions that are not only
-                        functional but also delightful to use."
-                      </p>
-
-                      {/* CTA Section */}
-                      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
-                        <div className="flex items-center gap-3">
-                          <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
-                          <span className="text-sm font-medium text-white">
-                            Open to opportunities
-                          </span>
-                        </div>
-
-                        <a
-                          href="#contact"
-                          className="group/btn inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#34a578]/10 to-cyan-400/10 border border-[#34a578]/30 text-white hover:from-[#34a578]/20 hover:to-cyan-400/20 hover:border-[#34a578]/50 hover:scale-105 transition-all duration-300 backdrop-blur-sm"
-                        >
-                          <span>Let's Connect</span>
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#34a578] to-cyan-400 flex items-center justify-center">
                           <svg
-                            className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300"
+                            className="w-4 h-4 text-white"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -438,40 +131,711 @@ const PersonalInfo = () => {
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"
+                              strokeWidth="2"
+                              d="M13 10V3L4 14h7v7l9-11h-7z"
                             />
                           </svg>
-                        </a>
+                        </div>
+                        <h4 className="text-xl font-semibold text-white">
+                          My Coding Journey
+                        </h4>
                       </div>
 
-                      {/* Stats preview */}
-                      <div className="mt-6 grid grid-cols-3 gap-3">
-                        <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-                          <div className="text-xl font-bold text-white">
-                            50+
-                          </div>
-                          <div className="text-xs text-gray-400">Projects</div>
-                        </div>
-                        <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-                          <div className="text-xl font-bold text-white">
-                            2.5+
-                          </div>
-                          <div className="text-xs text-gray-400">Years</div>
-                        </div>
-                        <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
-                          <div className="text-xl font-bold text-white">∞</div>
-                          <div className="text-xs text-gray-400">Learning</div>
+                      <div className="space-y-4">
+                        <p className="text-gray-400 leading-relaxed">
+                          My journey into programming began with curiosity -
+                          taking apart websites to see how they worked. What
+                          started as a hobby soon became a passion as I
+                          discovered the power of code to create meaningful
+                          solutions.
+                        </p>
+
+                        <div className="p-4 rounded-lg bg-gradient-to-r from-[#34a578]/10 via-transparent to-transparent border-l-4 border-[#34a578]">
+                          <p className="text-gray-400">
+                            From writing my first "Hello World" to building
+                            full-stack applications, every line of code has been
+                            a step in an ongoing adventure of learning and
+                            growth.
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
-                </SlideUp>
+
+                  {/* The Work I Enjoy */}
+                  <div className="mb-10">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400/20 to-[#34a578]/20 border border-cyan-400/30 flex items-center justify-center">
+                        <svg
+                          className="w-5 h-5 text-cyan-400"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                          />
+                        </svg>
+                      </div>
+                      <h4 className="text-xl font-semibold text-white">
+                        The Work I Love
+                      </h4>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                      {/* card 1 */}
+                      <div className="relative group/stat">
+                        {/* Main card */}
+                        <div className="relative p-5 rounded-xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-transparent backdrop-blur-xl border border-white/15 group-hover/stat:border-white/25 transition-all duration-500 shadow-2xl shadow-black/30 group-hover/stat:shadow-[#34a578]/20 overflow-hidden">
+                          {/* Animated background gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-[#34a578]/5 via-transparent to-cyan-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700"></div>
+
+                          {/* Floating particles */}
+                          <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"></div>
+                          <div
+                            className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"
+                            style={{ animationDelay: "0.3s" }}
+                          ></div>
+
+                          {/* Animated corner decorations */}
+                          <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[#34a578]/40 rounded-tl opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"></div>
+                          <div
+                            className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-cyan-400/40 rounded-br opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"
+                            style={{ transitionDelay: "0.1s" }}
+                          ></div>
+
+                          {/* Animated line effect */}
+                          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-[#34a578] to-transparent group-hover/stat:w-3/4 transition-all duration-700"></div>
+
+                          {/* Content */}
+                          <div className="relative z-10">
+                            {/* Header with animated icon */}
+                            <div className="flex items-center gap-3 mb-4 group/title">
+                              <div className="relative">
+                                {/* Pulsing circle */}
+                                <div className="absolute -inset-3 bg-[#34a578] rounded-full blur-md opacity-0 group-hover/stat:opacity-30 transition-opacity duration-500"></div>
+
+                                {/* Animated icon container */}
+                                <div className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-[#34a578]/20 to-cyan-400/20 border border-[#34a578]/30 flex items-center justify-center group-hover/stat:scale-110 group-hover/stat:rotate-12 transition-all duration-500">
+                                  {/* Icon SVG */}
+                                  <svg
+                                    className="w-4 h-4 text-[#34a578] group-hover/stat:text-white transition-colors duration-500"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                    />
+                                  </svg>
+
+                                  {/* Animated dot */}
+                                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-0 group-hover/stat:opacity-100"></div>
+                                </div>
+                              </div>
+
+                              <h5 className="font-bold text-white tracking-wide relative">
+                                Problem Solving
+                                {/* Underline effect */}
+                                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#34a578] to-cyan-400 group-hover/stat:w-full transition-all duration-500"></div>
+                              </h5>
+                            </div>
+
+                            {/* Description text with gradient effect */}
+                            <div className="relative">
+                              <p className="text-sm text-gray-400 leading-relaxed group-hover/stat:text-gray-200 transition-colors duration-300">
+                                I thrive on tackling complex challenges and
+                                finding elegant, efficient solutions that make a
+                                real impact.
+                              </p>
+
+                              {/* Highlighted text effect on hover */}
+                              <div className="absolute inset-0 bg-gradient-to-r from-[#34a578]/5 via-transparent to-cyan-400/5 rounded opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+
+                            {/* Progress bar indicator */}
+                            <div className="mt-4 pt-3 border-t border-white/10">
+                              <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs text-gray-400">
+                                  Expertise Level
+                                </span>
+                                <span className="text-xs font-medium bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent">
+                                  95%
+                                </span>
+                              </div>
+                              <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-full w-0 bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 rounded-full group-hover/stat:w-[95%] transition-all duration-1000 ease-out"></div>
+                              </div>
+                            </div>
+
+                            {/* Tags */}
+                            <div className="mt-4 flex flex-wrap gap-1.5">
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-[#34a578]/10 text-[#34a578] border border-[#34a578]/20">
+                                Analytical
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">
+                                Creative
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                Strategic
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* card 2 */}
+                      <div className="relative group/stat">
+                        {/* Main card */}
+                        <div className="relative p-5 rounded-xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-transparent backdrop-blur-xl border border-white/15 group-hover/stat:border-white/25 transition-all duration-500 shadow-2xl shadow-black/30 group-hover/stat:shadow-[#34a578]/20 overflow-hidden">
+                          {/* Animated background gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-[#34a578]/5 via-transparent to-cyan-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700"></div>
+
+                          {/* Floating particles */}
+                          <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"></div>
+                          <div
+                            className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"
+                            style={{ animationDelay: "0.3s" }}
+                          ></div>
+
+                          {/* Animated corner decorations */}
+                          <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[#34a578]/40 rounded-tl opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"></div>
+                          <div
+                            className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-cyan-400/40 rounded-br opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"
+                            style={{ transitionDelay: "0.1s" }}
+                          ></div>
+
+                          {/* Animated line effect */}
+                          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-[#34a578] to-transparent group-hover/stat:w-3/4 transition-all duration-700"></div>
+
+                          {/* Content */}
+                          <div className="relative z-10">
+                            {/* Header with animated icon */}
+                            <div className="flex items-center gap-3 mb-4 group/title">
+                              <div className="relative">
+                                {/* Pulsing circle */}
+                                <div className="absolute -inset-3 bg-[#34a578] rounded-full blur-md opacity-0 group-hover/stat:opacity-30 transition-opacity duration-500"></div>
+
+                                {/* Animated icon container */}
+                                <div className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-[#34a578]/20 to-cyan-400/20 border border-[#34a578]/30 flex items-center justify-center group-hover/stat:scale-110 group-hover/stat:rotate-12 transition-all duration-500">
+                                  {/* Icon SVG */}
+                                  <svg
+                                    className="w-4 h-4 text-[#34a578] group-hover/stat:text-white transition-colors duration-500"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                    />
+                                  </svg>
+
+                                  {/* Animated dot */}
+                                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-0 group-hover/stat:opacity-100"></div>
+                                </div>
+                              </div>
+
+                              <h5 className="font-bold text-white tracking-wide relative">
+                                Creative Coding
+                                {/* Underline effect */}
+                                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#34a578] to-cyan-400 group-hover/stat:w-full transition-all duration-500"></div>
+                              </h5>
+                            </div>
+
+                            {/* Description text with gradient effect */}
+                            <div className="relative">
+                              <p className="text-sm text-gray-400 leading-relaxed group-hover/stat:text-gray-200 transition-colors duration-300">
+                                Crafting beautiful, functional interactive
+                                digital interfaces for exceptional user
+                                experiences.
+                              </p>
+
+                              {/* Highlighted text effect on hover */}
+                              <div className="absolute inset-0 bg-gradient-to-r from-[#34a578]/5 via-transparent to-cyan-400/5 rounded opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+
+                            {/* Progress bar indicator */}
+                            <div className="mt-4 pt-3 border-t border-white/10">
+                              <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs text-gray-400">
+                                  Expertise Level
+                                </span>
+                                <span className="text-xs font-medium bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent">
+                                  96%
+                                </span>
+                              </div>
+                              <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-full w-0 bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 rounded-full group-hover/stat:w-[95%] transition-all duration-1000 ease-out"></div>
+                              </div>
+                            </div>
+
+                            {/* Tags */}
+                            <div className="mt-4 flex flex-wrap gap-1.5">
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">
+                                UI/UX Focus
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                Innovative
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
+                                Artistic
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* card 3*/}
+                      <div className="relative group/stat">
+                        {/* Main card */}
+                        <div className="relative p-5 rounded-xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-transparent backdrop-blur-xl border border-white/15 group-hover/stat:border-white/25 transition-all duration-500 shadow-2xl shadow-black/30 group-hover/stat:shadow-[#34a578]/20 overflow-hidden">
+                          {/* Animated background gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-[#34a578]/5 via-transparent to-cyan-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700"></div>
+
+                          {/* Floating particles */}
+                          <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"></div>
+                          <div
+                            className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"
+                            style={{ animationDelay: "0.3s" }}
+                          ></div>
+
+                          {/* Animated corner decorations */}
+                          <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[#34a578]/40 rounded-tl opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"></div>
+                          <div
+                            className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-cyan-400/40 rounded-br opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"
+                            style={{ transitionDelay: "0.1s" }}
+                          ></div>
+
+                          {/* Animated line effect */}
+                          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-[#34a578] to-transparent group-hover/stat:w-3/4 transition-all duration-700"></div>
+
+                          {/* Content */}
+                          <div className="relative z-10">
+                            {/* Header with animated icon */}
+                            <div className="flex items-center gap-3 mb-4 group/title">
+                              <div className="relative">
+                                {/* Pulsing circle */}
+                                <div className="absolute -inset-3 bg-[#34a578] rounded-full blur-md opacity-0 group-hover/stat:opacity-30 transition-opacity duration-500"></div>
+
+                                {/* Animated icon container */}
+                                <div className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-[#34a578]/20 to-cyan-400/20 border border-[#34a578]/30 flex items-center justify-center group-hover/stat:scale-110 group-hover/stat:rotate-12 transition-all duration-500">
+                                  {/* Icon SVG */}
+                                  <svg
+                                    className="w-4 h-4 text-[#34a578] group-hover/stat:text-white transition-colors duration-500"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                    />
+                                  </svg>
+
+                                  {/* Animated dot */}
+                                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-0 group-hover/stat:opacity-100"></div>
+                                </div>
+                              </div>
+
+                              <h5 className="font-bold text-white tracking-wide relative">
+                                Collaboration
+                                {/* Underline effect */}
+                                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#34a578] to-cyan-400 group-hover/stat:w-full transition-all duration-500"></div>
+                              </h5>
+                            </div>
+
+                            {/* Description text with gradient effect */}
+                            <div className="relative">
+                              <p className="text-sm text-gray-400 leading-relaxed group-hover/stat:text-gray-200 transition-colors duration-300">
+                                Working with teams to build something greater
+                                than what any individual could create alone.
+                              </p>
+
+                              {/* Highlighted text effect on hover */}
+                              <div className="absolute inset-0 bg-gradient-to-r from-[#34a578]/5 via-transparent to-cyan-400/5 rounded opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+
+                            {/* Progress bar indicator */}
+                            <div className="mt-4 pt-3 border-t border-white/10">
+                              <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs text-gray-400">
+                                  Expertise Level
+                                </span>
+                                <span className="text-xs font-medium bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent">
+                                  96%
+                                </span>
+                              </div>
+                              <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-full w-0 bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 rounded-full group-hover/stat:w-[95%] transition-all duration-1000 ease-out"></div>
+                              </div>
+                            </div>
+
+                            {/* Tags */}
+                            <div className="mt-4 flex flex-wrap gap-1.5">
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">
+                                UI/UX Focus
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                                Innovative
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
+                                Artistic
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      {/* card 4*/}
+                      <div className="relative group/stat">
+                        {/* Main card */}
+                        <div className="relative p-5 rounded-xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-transparent backdrop-blur-xl border border-white/15 group-hover/stat:border-white/25 transition-all duration-500 shadow-2xl shadow-black/30 group-hover/stat:shadow-[#34a578]/20 overflow-hidden">
+                          {/* Animated background gradient */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-[#34a578]/5 via-transparent to-cyan-400/5 opacity-0 group-hover/stat:opacity-100 transition-opacity duration-700"></div>
+
+                          {/* Floating particles */}
+                          <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"></div>
+                          <div
+                            className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur-sm opacity-0 group-hover/stat:opacity-70 transition-opacity duration-500"
+                            style={{ animationDelay: "0.3s" }}
+                          ></div>
+
+                          {/* Animated corner decorations */}
+                          <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[#34a578]/40 rounded-tl opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"></div>
+                          <div
+                            className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-cyan-400/40 rounded-br opacity-0 group-hover/stat:opacity-100 transition-all duration-500 group-hover/stat:scale-125"
+                            style={{ transitionDelay: "0.1s" }}
+                          ></div>
+
+                          {/* Animated line effect */}
+                          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-transparent via-[#34a578] to-transparent group-hover/stat:w-3/4 transition-all duration-700"></div>
+
+                          {/* Content */}
+                          <div className="relative z-10">
+                            {/* Header with animated icon */}
+                            <div className="flex items-center gap-3 mb-4 group/title">
+                              <div className="relative">
+                                {/* Pulsing circle */}
+                                <div className="absolute -inset-3 bg-[#34a578] rounded-full blur-md opacity-0 group-hover/stat:opacity-30 transition-opacity duration-500"></div>
+
+                                {/* Animated icon container */}
+                                <div className="relative w-8 h-8 rounded-lg bg-gradient-to-br from-[#34a578]/20 to-cyan-400/20 border border-[#34a578]/30 flex items-center justify-center group-hover/stat:scale-110 group-hover/stat:rotate-12 transition-all duration-500">
+                                  {/* Icon SVG */}
+                                  <svg
+                                    className="w-4 h-4 text-[#34a578] group-hover/stat:text-white transition-colors duration-500"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth="2"
+                                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                    />
+                                  </svg>
+
+                                  {/* Animated dot */}
+                                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-0 group-hover/stat:opacity-100"></div>
+                                </div>
+                              </div>
+
+                              <h5 className="font-bold text-white tracking-wide relative">
+                                Expertise Level
+                                {/* Underline effect */}
+                                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#34a578] to-cyan-400 group-hover/stat:w-full transition-all duration-500"></div>
+                              </h5>
+                            </div>
+
+                            {/* Description text with gradient effect */}
+                            <div className="relative">
+                              <p className="text-sm text-gray-400 leading-relaxed group-hover/stat:text-gray-200 transition-colors duration-300">
+                                Continuously exploring new technologies and
+                                methodologies to stay at the cutting edge.
+                              </p>
+
+                              {/* Highlighted text effect on hover */}
+                              <div className="absolute inset-0 bg-gradient-to-r from-[#34a578]/5 via-transparent to-cyan-400/5 rounded opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500"></div>
+                            </div>
+
+                            {/* Progress bar indicator */}
+                            <div className="mt-4 pt-3 border-t border-white/10">
+                              <div className="flex items-center justify-between mb-1">
+                                <span className="text-xs text-gray-400">
+                                  Expertise Level
+                                </span>
+                                <span className="text-xs font-medium bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent">
+                                  ∞%
+                                </span>
+                              </div>
+                              <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-full w-0 bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 rounded-full group-hover/stat:w-[95%] transition-all duration-1000 ease-out"></div>
+                              </div>
+                            </div>
+
+                            {/* Tags */}
+                            <div className="mt-4 flex flex-wrap gap-1.5">
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">
+                                Curious
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                                Adaptable
+                              </span>
+                              <span className="px-2 py-0.5 text-xs rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20">
+                                Passionate
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 rounded-lg bg-gradient-to-r from-[#34a578]/10 to-transparent border border-[#34a578]/30">
+                      <p className="text-gray-400 text-center">
+                        "I believe in{" "}
+                        <span className="text-white font-medium">
+                          building things that matter
+                        </span>{" "}
+                        - software that improves lives, solves real problems,
+                        and brings joy to users."
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Personality & Interests */}
+                  <div>
+                    <div className="mb-8">
+                      {/* Section Header with Animation */}
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            {/* Animated icon */}
+                            <div className="relative">
+                              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400/20 to-[#34a578]/20 border border-cyan-400/30 flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
+                                <svg
+                                  className="w-4 h-4 text-cyan-400"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                  />
+                                </svg>
+                                <div className="absolute -inset-2 bg-cyan-400/10 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              </div>
+                            </div>
+
+                            <div>
+                              <h5 className="text-xl font-bold text-white">
+                                Hobbies & Interests
+                              </h5>
+                              <p className="text-sm text-gray-500">
+                                What I enjoy beyond coding
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <span className="text-xs text-gray-400 bg-white/5 px-3 py-1 rounded-full">
+                            Work-Life Balance
+                          </span>
+                          {/* Decorative element */}
+                          <div className="flex items-center mt-2 gap-2">
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                            <div
+                              className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"
+                              style={{ animationDelay: "0.3s" }}
+                            ></div>
+                            <div
+                              className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
+                              style={{ animationDelay: "0.6s" }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Hobbies Grid */}
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {[
+                          {
+                            name: "🏸 Badminton",
+                            desc: "Staying active and competitive",
+                            color: "from-green-500/20",
+                            borderColor: "border-green-500/30",
+                            iconColor: "text-green-400",
+                            gradient:
+                              "from-green-500/10 via-green-500/5 to-transparent",
+                          },
+                          {
+                            name: "🍳 Cooking",
+                            desc: "Creating flavors & experiences",
+                            color: "from-orange-500/20",
+                            borderColor: "border-orange-500/30",
+                            iconColor: "text-orange-400",
+                            gradient:
+                              "from-orange-500/10 via-red-500/5 to-transparent",
+                          },
+                          {
+                            name: "📚 Reading",
+                            desc: "Tech blogs & sci-fi novels",
+                            color: "from-amber-500/20",
+                            borderColor: "border-amber-500/30",
+                            iconColor: "text-amber-400",
+                            gradient:
+                              "from-amber-500/10 via-amber-500/5 to-transparent",
+                          },
+                          {
+                            name: "🎮 Gaming",
+                            desc: "Problem-solving in virtual worlds",
+                            color: "from-blue-500/20",
+                            borderColor: "border-blue-500/30",
+                            iconColor: "text-blue-400",
+                            gradient:
+                              "from-blue-500/10 via-blue-500/5 to-transparent",
+                          },
+                          {
+                            name: "✈️ Travel",
+                            desc: "Exploring new cultures & tech scenes",
+                            color: "from-cyan-500/20",
+                            borderColor: "border-cyan-500/30",
+                            iconColor: "text-cyan-400",
+                            gradient:
+                              "from-cyan-500/10 via-cyan-500/5 to-transparent",
+                          },
+                          {
+                            name: "🚴 Biking",
+                            desc: "Adventures on two wheels",
+                            color: "from-[#34a578]/20",
+                            borderColor: "border-[#34a578]/30",
+                            iconColor: "text-[#34a578]",
+                            gradient:
+                              "from-[#34a578]/10 via-[#45d19c]/5 to-transparent",
+                          },
+                        ].map((hobby, i) => (
+                          <div key={i} className="relative group/hobby-card">
+                            {/* Glow effect */}
+                            <div
+                              className={`absolute -inset-0.5 bg-gradient-to-r ${hobby.color} rounded-xl blur-sm opacity-0 group-hover/hobby-card:opacity-50 transition-opacity duration-500`}
+                            ></div>
+
+                            {/* Main card */}
+                            <div
+                              className={`relative p-3 rounded-xl bg-gradient-to-br ${hobby.gradient} backdrop-blur-sm border border-white/10 ${hobby.borderColor} group-hover/hobby-card:border-white/30 transition-all duration-500 overflow-hidden`}
+                            >
+                              {/* Shimmer effect */}
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-100%] group-hover/hobby-card:translate-x-[100%] transition-transform duration-1000"></div>
+
+                              {/* Corner decorations */}
+                              <div className="absolute top-2 left-2 w-3 h-3 border-t border-l border-white/20 rounded-tl opacity-0 group-hover/hobby-card:opacity-100 transition-opacity duration-500"></div>
+                              <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-white/20 rounded-br opacity-0 group-hover/hobby-card:opacity-100 transition-opacity duration-500"></div>
+
+                              {/* Content */}
+                              <div className="relative z-10">
+                                {/* Icon and Title */}
+                                <div className="flex items-center gap-3 mb-3">
+                                  <div
+                                    className={`w-10 h-10 rounded-lg bg-gradient-to-br ${hobby.color} border border-white/10 flex items-center justify-center group-hover/hobby-card:scale-110 group-hover/hobby-card:rotate-3 transition-all duration-300`}
+                                  >
+                                    <span className="text-lg">
+                                      {hobby.name.split(" ")[0]}
+                                    </span>
+                                  </div>
+                                  <div>
+                                    <h6 className="font-semibold text-white group-hover/hobby-card:text-gray-100 transition-colors">
+                                      {hobby.name.split(" ").slice(1).join(" ")}
+                                    </h6>
+                                    {/* Animated indicator */}
+                                    <div className="flex items-center gap-1 mt-1">
+                                      <div className="w-1 h-1 bg-white/50 rounded-full animate-pulse"></div>
+                                      <div
+                                        className="w-1 h-1 bg-white/50 rounded-full animate-pulse"
+                                        style={{ animationDelay: "0.2s" }}
+                                      ></div>
+                                      <div
+                                        className="w-1 h-1 bg-white/50 rounded-full animate-pulse"
+                                        style={{ animationDelay: "0.4s" }}
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Description */}
+                                <p className="text-xs text-gray-400 group-hover/hobby-card:text-gray-400 transition-colors leading-relaxed">
+                                  {hobby.desc}
+                                </p>
+
+                                {/* Hover indicator */}
+                                <div className="mt-3 flex items-center justify-between">
+                                  <div className="text-xs px-2 py-1 rounded-full bg-white/5 text-gray-400 border border-white/10 group-hover/hobby-card:bg-white/10 group-hover/hobby-card:text-white transition-all duration-300">
+                                    Explore →
+                                  </div>
+                                  <div
+                                    className={`w-2 h-2 rounded-full ${hobby.iconColor.replace(
+                                      "text-",
+                                      "bg-"
+                                    )} opacity-0 group-hover/hobby-card:opacity-100 transition-opacity duration-300`}
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Decorative footer */}
+                      <div className="mt-6 pt-6 border-t border-white/10">
+                        <div className="flex items-center justify-center gap-4">
+                          <div className="w-12 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-full"></div>
+                          <span className="text-xs text-gray-500">
+                            Balancing code with creativity
+                          </span>
+                          <div className="w-12 h-px bg-gradient-to-r from-transparent via-[#34a578] to-transparent rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <div className="text-center">
+                      <svg
+                        className="w-8 h-8 text-[#34a578] mx-auto mb-3 opacity-50"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                      </svg>
+                      <p className="text-xl italic text-gray-400 max-w-2xl mx-auto">
+                        "Code is my craft, but life is my canvas. I believe in
+                        building with purpose and living with passion."
+                      </p>
+                      <div className="mt-4 flex items-center justify-center gap-2">
+                        <div className="w-16 h-px bg-gradient-to-r from-transparent via-[#34a578] to-transparent rounded-full"></div>
+                        <span className="text-sm text-gray-400">
+                          — That's me in a nutshell
+                        </span>
+                        <div className="w-16 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-full"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Right Column*/}
+          </SlideUp>
+          {/* Right Column */}
           <div className="relative">
             {/* Add GitHub Stats here */}
             <GitHubStats

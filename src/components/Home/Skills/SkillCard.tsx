@@ -1,50 +1,21 @@
-// import React from "react";
-// import Image from "next/image";
-// import { MySkillsCardProps } from "./Skills";
-// import "../Services/Services";
-// import SlideUp from "@/components/Shared/animations/SlideUp";
-
-// const SkillCard: React.FC<MySkillsCardProps> = ({ item, delay = 0 }) => {
-//   return (
-//     <>
-//       <SlideUp delay={delay}>
-//         <div className="skillsBg  relative cursor-pointer overflow-hidden">
-//           {/* Top gradient border */}
-//           <div
-//             className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent`}
-//           />
-//           {/* Bottom gradient border */}
-//           <div
-//             className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent`}
-//           />
-//           <div className="">
-//             <div className="flex justify-center items-center">
-//               <Image
-//                 className="rounded-lg "
-//                 src={item?.image}
-//                 height={60}
-//                 width={60}
-//                 alt="JavascriptImg"
-//               />
-//             </div>
-//             <p className="pt-3 text-center text-xl">{item?.name}</p>
-//           </div>
-//         </div>
-//       </SlideUp>
-//     </>
-//   );
-// };
-
-// export default SkillCard;
-
 import React from "react";
 import Image from "next/image";
-import { MySkillsCardProps } from "./Skills";
+
 import "../Services/Services";
 import SlideUp from "@/components/Shared/animations/SlideUp";
-import { motion } from "framer-motion";
+// Add interface for the props
+interface SkillCardProps {
+  item: {
+    _id: string;
+    name: string;
+    image: string;
+    percentage?: number;
+    description?: string;
+  };
+  delay?: number;
+}
 
-const SkillCard: React.FC<MySkillsCardProps> = ({ item, delay = 0 }) => {
+const SkillCard: React.FC<SkillCardProps> = ({ item, delay = 0 }) => {
   return (
     <SlideUp delay={delay}>
       <div className="group relative cursor-pointer">
@@ -69,7 +40,7 @@ const SkillCard: React.FC<MySkillsCardProps> = ({ item, delay = 0 }) => {
             <div className="absolute -inset-2 border-2 border-[#34a578]/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             {/* Main icon container */}
-            <div className="relative w-20 h-[70px] rounded-2xl bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#34a578]/10 group-hover:to-cyan-500/10 transition-all duration-500 group-hover:rotate-3">
+            <div className="relative w-20 h-[60px] rounded-2xl bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#34a578]/10 group-hover:to-cyan-500/10 transition-all duration-500 group-hover:rotate-3">
               <Image
                 className="rounded-lg transform transition-transform duration-500 group-hover:scale-110"
                 src={item?.image}
@@ -95,7 +66,7 @@ const SkillCard: React.FC<MySkillsCardProps> = ({ item, delay = 0 }) => {
           </p>
 
           {/* Hover indicator */}
-          <div className="mt-4 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="mt-2 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="flex items-center gap-1 text-sm text-[#34a578]">
               {/* <span>View details</span> */}
               <svg

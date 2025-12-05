@@ -127,12 +127,7 @@ const Skills = async () => {
             {/* skill */}
 
             {data?.map((skill, idx) => (
-              <SkillCard
-                key={skill._id}
-                item={skill}
-                idx={idx}
-                delay={idx * 0.3}
-              />
+              <SkillCard key={skill._id} item={skill} delay={idx * 0.3} />
             ))}
           </div>
         </div>

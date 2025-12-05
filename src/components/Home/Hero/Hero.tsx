@@ -1,10 +1,16 @@
-// import zamirulPic from "@/public/assets/image/zamirul_pic";
 import { AiOutlineDownload } from "react-icons/ai";
 import "../../Home/Services/Services.css";
 import ZoomIn from "@/components/Shared/animations/ZoomIn";
 import SlideLeft from "@/components/Shared/animations/SlideLeft";
 import ImageWithSkeleton from "@/components/Shared/animations/ImageWithSkeleton";
 import { FiCode, FiStar } from "react-icons/fi";
+import {
+  FaDev,
+  FaFacebookF,
+  FaGithub,
+  FaLinkedin,
+  FaMedium,
+} from "react-icons/fa";
 
 const Hero = () => {
   const zamirulPic = "/assets/image/zamirul_pic.jpg";
@@ -61,7 +67,7 @@ const Hero = () => {
           {/* Main content */}
           <div className="relative z-10">
             {/* Animated intro line */}
-            <div className="flex items-center gap-3 mb-5 animate-fade-in">
+            <div className="flex items-center gap-3 mb-3 animate-fade-in">
               <div className="w-16 h-1 bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] rounded-full animate-glow" />
               <span className="text-sm font-semibold tracking-widest text-gray-400">
                 WELCOME TO MY PORTFOLIO
@@ -69,7 +75,7 @@ const Hero = () => {
             </div>
 
             {/* Hero title with gradient effect */}
-            <div className="mb-4">
+            <div className="">
               <h1 className="text-2xl md:text-4xl font-bold leading-tight">
                 <span className="block">
                   <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-text-shimmer">
@@ -88,9 +94,9 @@ const Hero = () => {
               {/* Hover glow effect only */}
               <div className="absolute -inset-4 bg-gradient-to-r from-[#34a578]/20 via-transparent to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
-              <div className="relative mt-8 p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 group-hover:border-[#34a578]/40 transition-colors duration-500">
+              <div className="relative mt-5 p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 group-hover:border-[#34a578]/40 transition-colors duration-500">
                 <SlideLeft delay={0.2}>
-                  <p className="text-lg leading-relaxed text-gray-300 mb-6 group-hover:text-white/90 transition-colors duration-300">
+                  <p className="text-[16px] leading-relaxed text-gray-300 mb-6 group-hover:text-white/90 transition-colors duration-300">
                     As a dedicated{" "}
                     <span className="font-bold text-white group-hover:text-[#34a578] transition-colors duration-300">
                       Frontend-Focused Full-Stack Engineer
@@ -101,7 +107,7 @@ const Hero = () => {
                     requirements into elegant, performant solutions that drive
                     business growth. My career spans{" "}
                     <span className="font-bold text-cyan-400">
-                      25+ production projects
+                      35+ production projects
                     </span>{" "}
                     across fintech, SaaS, e-commerce, and enterprise platforms,
                     consistently delivering exceptional user experiences that
@@ -110,37 +116,39 @@ const Hero = () => {
                 </SlideLeft>
 
                 <SlideLeft delay={0.4}>
-                  <div className="space-y-4">
+                  <div className="">
                     <div className="flex items-center gap-3 group/item hover:translate-x-2 transition-transform duration-300"></div>
-                    <div className="flex items-center gap-3 group/item hover:translate-x-2 transition-transform duration-300">
-                      <div
-                        className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                      <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300">
-                        Mastery of modern frontend ecosystems (React, Next.js, )
-                        with{" "}
-                        <span className="font-medium text-cyan-300">
-                          5,000+ hours
-                        </span>{" "}
-                        dedicated to pixel-perfect implementation and responsive
-                        design systems
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-3 group/item hover:translate-x-2 transition-transform duration-300">
-                      <div
-                        className="w-2 h-2 bg-[#45d19c] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.4s" }}
-                      ></div>
-                      <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300">
-                        Performance-first mindset optimizing Core Web Vitals,
-                        reducing load times by
-                        <span className="font-medium text-[#45d19c]">
-                          {" "}
-                          40-60%
-                        </span>{" "}
-                        and improving user retention
-                      </span>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 group/item hover:translate-x-2 transition-transform duration-300">
+                        <div
+                          className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"
+                          style={{ animationDelay: "0.2s" }}
+                        ></div>
+                        <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300">
+                          Mastery of modern frontend ecosystems (React, Next.js,
+                          ) with{" "}
+                          <span className="font-medium text-cyan-300">
+                            5,000+ hours
+                          </span>{" "}
+                          dedicated to pixel-perfect implementation and
+                          responsive design systems
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3 group/item hover:translate-x-2 transition-transform duration-300">
+                        <div
+                          className="w-2 h-2 bg-[#45d19c] rounded-full animate-pulse"
+                          style={{ animationDelay: "0.4s" }}
+                        ></div>
+                        <span className="text-gray-300 group-hover/item:text-white transition-colors duration-300">
+                          Performance-first mindset optimizing Core Web Vitals,
+                          reducing load times by
+                          <span className="font-medium text-[#45d19c]">
+                            {" "}
+                            40-60%
+                          </span>{" "}
+                          and improving user retention
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </SlideLeft>
@@ -159,7 +167,7 @@ const Hero = () => {
                       </div>
                       <div className="text-center p-3 rounded-lg bg-white/5 group/stat hover:bg-white/10 transition-colors duration-300">
                         <div className="text-2xl font-bold text-cyan-400">
-                          25+
+                          35+
                         </div>
                         <div className="text-sm text-gray-400 mt-1">
                           Projects
@@ -199,22 +207,6 @@ const Hero = () => {
                     />
                   </span>
                 </button>
-
-                {/* <div className="relative group/badge">
-                  <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-                  <div
-                    className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 animate-float"
-                    style={{ animationDelay: "0.5s" }}
-                  >
-                    <span className="relative flex items-center gap-3">
-                      DOWNLOAD RESUME
-                      <AiOutlineDownload
-                        size={20}
-                        className="group-hover:translate-y-1 transition-transform"
-                      />
-                    </span>
-                  </div>
-                </div> */}
               </a>
               <a href="#contact">
                 <button className="group px-8 md:mt-0 mt-5 py-4 bg-transparent border-2 border-[#34a578]/30 text-white font-semibold rounded-xl hover:bg-[#34a578]/10 hover:border-[#34a578] transition-all duration-300">
@@ -239,20 +231,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        {/* right side imhaeg  */}
         <ZoomIn>
           <div className=" rounded-2xl mt-4">
-            {/* <div className="z-20 p-1.5 relative overflow-hidden rounded-2xl cursor-pointer">
-              <ImageWithSkeleton
-                src={zamirulPic}
-                alt="zamirulPic"
-                width={400}
-                height={700}
-                classNameWrapper="p-1.5"
-                classNameImage="w-full h-[570px] object-cover rounded-2xl hover:scale-105 transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-                priority
-              />
-            </div> */}
-
             {/* Right Column - Profile Image with 3D Effect */}
             <div className="relative">
               {/* Floating container */}
@@ -271,9 +252,9 @@ const Hero = () => {
                       src={zamirulPic}
                       alt="Zamirul Kabir - Full Stack Developer & Tech Lead"
                       width={700}
-                      height={700}
+                      height={610}
                       classNameWrapper="relative overflow-hidden rounded-2xl"
-                      classNameImage="w-full h-[600px] md:h-[700px] object-cover rounded-2xl group-hover:scale-110 transition-transform duration-[1.2s] ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                      classNameImage="w-full h-[500px] md:h-[610px] object-cover rounded-2xl group-hover:scale-110 transition-transform duration-[1.2s] ease-[cubic-bezier(0.34,1.56,0.64,1)]"
                       priority
                     />
                   </ZoomIn>
@@ -282,7 +263,7 @@ const Hero = () => {
                   <div className="absolute top-7 right-1">
                     <div className="relative group/badge">
                       <div className="absolute -inset-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-                      <div className="relative px-5 py-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full text-white font-bold shadow-2xl shadow-[#34a578]/30 animate-float">
+                      <div className="relative px-5 py-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full text-white font-bold shadow-2xl shadow-[#34a578]/30 ">
                         <span className="flex items-center gap-2">
                           <FiCode className="text-lg" />
                           REACT.js
@@ -295,7 +276,7 @@ const Hero = () => {
                     <div className="relative group/badge">
                       <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
                       <div
-                        className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 animate-float"
+                        className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30"
                         style={{ animationDelay: "0.5s" }}
                       >
                         <span className="flex items-center gap-2">
@@ -309,7 +290,7 @@ const Hero = () => {
                     <div className="relative group/badge">
                       <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
                       <div
-                        className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 animate-float"
+                        className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30"
                         style={{ animationDelay: "0.5s" }}
                       >
                         <span className="flex items-center gap-2">
@@ -324,7 +305,7 @@ const Hero = () => {
                     <div className="relative group/badge">
                       <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
                       <div
-                        className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 animate-float"
+                        className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 "
                         style={{ animationDelay: "0.5s" }}
                       >
                         <span className="flex items-center gap-2">
@@ -388,6 +369,93 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
+              {/* socail icon  */}
+
+              {/* Social Icons Section */}
+              <div className="mt-6">
+                <div className="flex flex-wrap  gap-4 md:gap-5">
+                  {/* LinkedIn */}
+                  <a
+                    href="https://www.linkedin.com/in/zamirul-kabir/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
+                    aria-label="LinkedIn"
+                  >
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <FaLinkedin className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+                    </div>
+                    <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      LinkedIn
+                    </span>
+                  </a>
+
+                  {/* GitHub */}
+                  <a
+                    href="https://github.com/alive1258"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                    aria-label="GitHub"
+                  >
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <FaGithub className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      GitHub
+                    </span>
+                  </a>
+
+                  {/* Medium */}
+                  <a
+                    href="https://medium.com/@zamirulkabir999"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-yellow-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20"
+                    aria-label="Medium"
+                  >
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <FaMedium className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      Medium
+                    </span>
+                  </a>
+
+                  {/* Dev.to */}
+                  <a
+                    href="https://dev.to/zamirul_kabir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/20"
+                    aria-label="Dev.to"
+                  >
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <FaDev className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      Dev.to
+                    </span>
+                  </a>
+
+                  {/*     <FaFacebookF className="w-5 h-5 text-blue-500 group-hover:text-blue-400 transition-colors duration-300" />
+                   */}
+                  <a
+                    href="https://www.facebook.com/zamirul.kabir.s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-3 rounded-xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 hover:border-blue-600 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/20"
+                    aria-label="Facebook"
+                  >
+                    <div className="w-6 h-6 flex items-center justify-center">
+                      <FaFacebookF className="w-5 h-5 text-blue-500 group-hover:text-blue-400 transition-colors duration-300" />
+                    </div>
+                    <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                      Facebook
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </ZoomIn>
@@ -397,489 +465,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-// "use client";
-
-// import { AiOutlineDownload, AiOutlineArrowRight } from "react-icons/ai";
-// import {
-//   FiGithub,
-//   FiLinkedin,
-//   FiTwitter,
-//   FiCode,
-//   FiStar,
-//   FiAward,
-// } from "react-icons/fi";
-// import { HiOutlineSparkles, HiOutlineFire } from "react-icons/hi";
-// import { MdOutlineRocketLaunch } from "react-icons/md";
-// import "../../Home/Services/Services.css";
-// import ZoomIn from "@/components/Shared/animations/ZoomIn";
-// import SlideLeft from "@/components/Shared/animations/SlideLeft";
-// import ImageWithSkeleton from "@/components/Shared/animations/ImageWithSkeleton";
-
-// const Hero = () => {
-//   const zamirulPic = "/assets/image/zamirul_pic.jpg";
-
-//   const socialLinks = [
-//     {
-//       icon: FiGithub,
-//       href: "https://github.com/alive1258",
-//       label: "GitHub",
-//       color: "from-purple-500/20 to-purple-600/10",
-//       iconColor: "text-purple-400",
-//     },
-//     {
-//       icon: FiLinkedin,
-//       href: "https://linkedin.com",
-//       label: "LinkedIn",
-//       color: "from-blue-500/20 to-blue-600/10",
-//       iconColor: "text-blue-400",
-//     },
-//     {
-//       icon: FiTwitter,
-//       href: "https://twitter.com",
-//       label: "Twitter",
-//       color: "from-cyan-500/20 to-cyan-600/10",
-//       iconColor: "text-cyan-400",
-//     },
-//     {
-//       icon: FiCode,
-//       href: "https://",
-//       label: "Portfolio",
-//       color: "from-[#34a578]/20 to-[#45d19c]/10",
-//       iconColor: "text-[#34a578]",
-//     },
-//   ];
-
-//   const achievements = [
-//     {
-//       icon: FiStar,
-//       value: "2.5+",
-//       label: "Years Experience",
-//       color: "from-[#34a578] to-cyan-400",
-//     },
-//     {
-//       icon: FiAward,
-//       value: "50+",
-//       label: "Projects",
-//       color: "from-cyan-400 to-[#34a578]",
-//     },
-//     {
-//       icon: HiOutlineFire,
-//       value: "841+",
-//       label: "GitHub Commits",
-//       color: "from-[#45d19c] to-[#34a578]",
-//     },
-//     {
-//       icon: MdOutlineRocketLaunch,
-//       value: "100%",
-//       label: "Client Focus",
-//       color: "from-[#34a578] to-[#45d19c]",
-//     },
-//   ];
-
-//   return (
-//     <section
-//       id="hero"
-//       className="relative min-h-screen w-full bg-gradient-to-br from-gray-950 via-black to-gray-950 overflow-hidden"
-//     >
-//       {/* Advanced 3D Background */}
-//       <div className="absolute inset-0">
-//         {/* Moving gradient orbs */}
-//         <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-[#34a578]/15 via-transparent to-cyan-400/10 rounded-full blur-3xl animate-orb-float"></div>
-//         <div
-//           className="absolute bottom-1/4 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-purple-600/10 via-transparent to-[#34a578]/15 rounded-full blur-3xl animate-orb-float"
-//           style={{ animationDelay: "3s", animationDuration: "25s" }}
-//         ></div>
-
-//         {/* Geometric grid with gradient */}
-//         <div className="absolute inset-0 opacity-30">
-//           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(52,165,120,0.1),transparent_70%)]"></div>
-//           <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(-45deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
-//         </div>
-
-//         {/* Animated gradient lines */}
-//         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#34a578] to-transparent animate-shimmer"></div>
-//         <div
-//           className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-shimmer"
-//           style={{ animationDelay: "2s" }}
-//         ></div>
-
-//         {/* Floating particles */}
-//         <div className="absolute inset-0 overflow-hidden">
-//           {[...Array(40)].map((_, i) => (
-//             <div
-//               key={i}
-//               className="absolute rounded-full bg-gradient-to-br from-[#34a578]/30 to-cyan-400/30 animate-particle-float"
-//               style={{
-//                 width: `${Math.random() * 4 + 1}px`,
-//                 height: `${Math.random() * 4 + 1}px`,
-//                 left: `${Math.random() * 100}%`,
-//                 top: `${Math.random() * 100}%`,
-//                 animationDelay: `${i * 0.1}s`,
-//                 animationDuration: `${Math.random() * 20 + 10}s`,
-//               }}
-//             />
-//           ))}
-//         </div>
-//       </div>
-
-//       <div className="container mx-auto px-4 py-16 md:py-28 relative">
-//         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-//           {/* Left Column - Content */}
-//           <div className="relative z-20">
-//             {/* Glowing badge */}
-//             <div className="relative inline-block mb-12 group/badge">
-//               <div className="absolute -inset-3 bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] rounded-full blur-lg opacity-0 group-hover/badge:opacity-30 transition-opacity duration-700"></div>
-//               <div className="relative inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-white/10 to-white/[0.02] backdrop-blur-2xl border border-white/20 rounded-full animate-fade-in">
-//                 <HiOutlineSparkles className="text-[#34a578] text-xl animate-spin-slow" />
-//                 <span className="text-sm font-semibold text-white tracking-widest">
-//                   OPEN TO OPPORTUNITIES
-//                 </span>
-//                 <div className="flex items-center gap-1">
-//                   <div className="w-1.5 h-1.5 bg-[#34a578] rounded-full animate-pulse"></div>
-//                   <div
-//                     className="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"
-//                     style={{ animationDelay: "0.3s" }}
-//                   ></div>
-//                   <div
-//                     className="w-1.5 h-1.5 bg-[#45d19c] rounded-full animate-pulse"
-//                     style={{ animationDelay: "0.6s" }}
-//                   ></div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Hero Title with Glitch Effect */}
-//             <div className="mb-10 relative">
-//               <div className="absolute -inset-6 bg-gradient-to-br from-[#34a578]/10 via-transparent to-cyan-400/10 rounded-3xl blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-1000"></div>
-
-//               <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 relative">
-//                 <span className="block text-white">
-//                   ZAMIRUL
-//                   <span className="absolute top-0 left-0 text-[#34a578] opacity-20 animate-glitch">
-//                     ZAMIRUL
-//                   </span>
-//                 </span>
-//                 <span className="block bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 bg-clip-text text-transparent animate-gradient-x-fast">
-//                   KABIR
-//                   <span
-//                     className="absolute top-0 left-0 bg-gradient-to-r from-cyan-400 via-[#34a578] to-[#45d19c] bg-clip-text text-transparent opacity-30 animate-glitch"
-//                     style={{ animationDelay: "0.1s" }}
-//                   >
-//                     KABIR
-//                   </span>
-//                 </span>
-//               </h1>
-
-//               {/* Animated title underline */}
-//               <div className="relative mt-8">
-//                 <div className="flex items-center gap-4">
-//                   <div className="w-24 h-1 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full animate-pulse"></div>
-//                   <h2 className="text-2xl md:text-3xl font-bold text-gray-300">
-//                     FULL-STACK <span className="text-[#34a578]">DEVELOPER</span>
-//                     <span className="text-gray-500 mx-3">•</span>
-//                     <span className="text-cyan-400">TECH LEAD</span>
-//                   </h2>
-//                   <div
-//                     className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-[#34a578] rounded-full animate-pulse"
-//                     style={{ animationDelay: "1s" }}
-//                   ></div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Interactive Description Card */}
-//             <div className="relative group/card mb-12">
-//               {/* Card glow effect */}
-//               <div className="absolute -inset-6 bg-gradient-to-r from-[#34a578]/20 via-cyan-400/10 to-[#45d19c]/20 rounded-3xl blur-2xl opacity-0 group-hover/card:opacity-100 transition-all duration-1000"></div>
-
-//               {/* Animated border */}
-//               <div className="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] opacity-0 group-hover/card:opacity-100 animate-gradient-x"></div>
-
-//               <div className="relative p-8 rounded-3xl bg-gradient-to-br from-white/[0.04] via-black/40 to-white/[0.02] backdrop-blur-2xl border border-white/15 group-hover/card:border-transparent transition-all duration-700">
-//                 <SlideLeft delay={0.4}>
-//                   <p className="text-xl leading-relaxed text-gray-300 mb-8 group-hover/card:text-white/90 transition-colors duration-500">
-//                     Crafting{" "}
-//                     <span className="font-bold text-white">
-//                       high-performance web applications
-//                     </span>{" "}
-//                     with
-//                     <span className="bg-gradient-to-r from-[#34a578] to-cyan-400 bg-clip-text text-transparent font-black mx-2">
-//                       cutting-edge technologies
-//                     </span>
-//                     . Expert in building scalable solutions that merge
-//                     <span className="text-cyan-400 font-semibold">
-//                       {" "}
-//                       innovation
-//                     </span>{" "}
-//                     with
-//                     <span className="text-[#34a578] font-semibold">
-//                       {" "}
-//                       practicality
-//                     </span>
-//                     .
-//                   </p>
-//                 </SlideLeft>
-
-//                 {/* Tech stack indicators */}
-//                 <div className="flex flex-wrap gap-3 mb-8">
-//                   {[
-//                     "React",
-//                     "Next.js",
-//                     "TypeScript",
-//                     "Node.js",
-//                     "Tailwind",
-//                     "MongoDB",
-//                   ].map((tech, i) => (
-//                     <span
-//                       key={tech}
-//                       className="px-4 py-2 rounded-lg bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 text-gray-300 text-sm font-medium hover:bg-gradient-to-br hover:from-[#34a578]/20 hover:to-cyan-400/10 hover:border-[#34a578]/40 hover:text-white hover:scale-105 transition-all duration-300 animate-fade-in"
-//                       style={{ animationDelay: `${0.6 + i * 0.1}s` }}
-//                     >
-//                       {tech}
-//                     </span>
-//                   ))}
-//                 </div>
-
-//                 {/* Achievements Grid */}
-//                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-//                   {achievements.map((achievement, index) => {
-//                     const Icon = achievement.icon;
-//                     return (
-//                       <div
-//                         key={achievement.label}
-//                         className="relative group/achievement animate-fade-in"
-//                         style={{ animationDelay: `${0.8 + index * 0.1}s` }}
-//                       >
-//                         <div
-//                           className={`absolute -inset-1 bg-gradient-to-br ${achievement.color} rounded-xl blur opacity-0 group-hover/achievement:opacity-30 transition-opacity duration-500`}
-//                         ></div>
-
-//                         <div className="relative p-4 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 group-hover/achievement:border-transparent transition-all duration-300">
-//                           <div className="flex items-center gap-3 mb-2">
-//                             <div
-//                               className={`p-2 rounded-lg bg-gradient-to-br ${achievement.color}/20 border border-white/10`}
-//                             >
-//                               <Icon className="text-xl text-white" />
-//                             </div>
-//                             <div className="text-2xl font-bold text-white">
-//                               {achievement.value}
-//                             </div>
-//                           </div>
-//                           <div className="text-xs text-gray-400 font-medium">
-//                             {achievement.label}
-//                           </div>
-//                         </div>
-//                       </div>
-//                     );
-//                   })}
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Enhanced CTA Buttons */}
-//             <div className="flex flex-col sm:flex-row gap-6 mb-12">
-//               {/* Primary CTA with 3D effect */}
-//               <a
-//                 href="/Resume_of_Zamirul.pdf"
-//                 download
-//                 className="group/primary relative flex-1"
-//               >
-//                 <div className="absolute -inset-4 bg-gradient-to-r from-[#34a578] via-cyan-500 to-[#45d19c] rounded-3xl blur-2xl opacity-0 group-hover/primary:opacity-40 transition-all duration-700"></div>
-//                 <div className="absolute inset-0 bg-gradient-to-r from-[#34a578] to-[#45d19c] rounded-2xl opacity-0 group-hover/primary:opacity-100 transition-opacity duration-500 animate-gradient-x"></div>
-
-//                 <button className="relative w-full px-10 py-5 bg-gradient-to-r from-[#34a578] to-[#45d19c] text-white font-bold rounded-2xl hover:shadow-2xl hover:shadow-[#34a578]/50 transition-all duration-500 hover:scale-105 group-hover/primary:translate-y-[-2px] flex items-center justify-center gap-4 overflow-hidden">
-//                   {/* Shimmer effect */}
-//                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover/primary:translate-x-[100%] transition-transform duration-1000"></div>
-
-//                   <AiOutlineDownload className="text-2xl group-hover/primary:animate-bounce" />
-//                   <span className="text-lg">Download Resume</span>
-//                   <AiOutlineArrowRight className="text-xl opacity-0 group-hover/primary:opacity-100 group-hover/primary:translate-x-2 transition-all duration-300" />
-//                 </button>
-//               </a>
-
-//               {/* Secondary CTA with glass effect */}
-//               <a href="#contact" className="group/secondary relative flex-1">
-//                 <div className="absolute -inset-4 bg-gradient-to-r from-white/10 via-transparent to-white/10 rounded-3xl blur-2xl opacity-0 group-hover/secondary:opacity-30 transition-opacity duration-700"></div>
-
-//                 <button className="relative w-full px-10 py-5 bg-white/[0.07] backdrop-blur-2xl border border-white/20 text-white font-bold rounded-2xl hover:bg-white/10 hover:border-[#34a578]/50 transition-all duration-500 hover:scale-105 group-hover/secondary:translate-y-[-2px] flex items-center justify-center gap-4">
-//                   <span className="text-lg">Start Project</span>
-//                   <AiOutlineArrowRight className="text-xl group-hover/secondary:translate-x-2 transition-transform duration-300" />
-//                 </button>
-//               </a>
-//             </div>
-
-//             {/* Social Links with Enhanced Design */}
-//             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-//               <span className="text-sm font-semibold text-gray-400 tracking-widest flex items-center gap-2">
-//                 <div className="w-8 h-px bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full"></div>
-//                 CONNECT WITH ME
-//                 <div className="w-8 h-px bg-gradient-to-r from-cyan-400 to-[#34a578] rounded-full"></div>
-//               </span>
-
-//               <div className="flex items-center gap-4">
-//                 {socialLinks.map((social, index) => {
-//                   const Icon = social.icon;
-//                   return (
-//                     <a
-//                       key={social.label}
-//                       href={social.href}
-//                       target="_blank"
-//                       rel="noopener noreferrer"
-//                       className={`relative group/social animate-fade-in`}
-//                       style={{ animationDelay: `${1.2 + index * 0.1}s` }}
-//                     >
-//                       <div
-//                         className={`absolute -inset-3 bg-gradient-to-br ${social.color} rounded-2xl blur opacity-0 group-hover/social:opacity-30 transition-opacity duration-500`}
-//                       ></div>
-
-//                       <div className="relative p-3 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 group-hover/social:border-transparent transition-all duration-300">
-//                         <Icon
-//                           className={`w-6 h-6 ${social.iconColor} group-hover/social:scale-110 transition-transform duration-300`}
-//                         />
-//                       </div>
-
-//                       {/* Tooltip */}
-//                       <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-black/80 backdrop-blur-sm border border-white/10 rounded-lg text-xs text-white opacity-0 group-hover/social:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-//                         {social.label}
-//                         <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black/80 border-b border-r border-white/10 rotate-45"></div>
-//                       </div>
-//                     </a>
-//                   );
-//                 })}
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Right Column - Profile Image with 3D Effect */}
-//           <div className="relative">
-//             {/* Floating container */}
-//             <div className="relative group">
-//               {/* Outer glow layers */}
-//               <div className="absolute -inset-8 bg-gradient-to-br from-[#34a578]/30 via-transparent to-cyan-400/30 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-1000"></div>
-//               <div className="absolute -inset-4 bg-gradient-to-br from-[#34a578]/20 via-transparent to-cyan-400/20 rounded-[32px] blur-xl opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
-
-//               {/* Animated gradient border */}
-//               <div className="absolute -inset-0.5 rounded-[28px] bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] opacity-0 group-hover:opacity-100 animate-gradient-x-fast"></div>
-
-//               {/* Main image container */}
-//               <div className="relative overflow-hidden rounded-[24px] bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-2xl border border-white/20 p-3 group-hover:border-transparent transition-all duration-700 transform group-hover:rotate-[0.5deg]">
-//                 <ZoomIn>
-//                   <ImageWithSkeleton
-//                     src={zamirulPic}
-//                     alt="Zamirul Kabir - Full Stack Developer & Tech Lead"
-//                     width={700}
-//                     height={900}
-//                     classNameWrapper="relative overflow-hidden rounded-2xl"
-//                     classNameImage="w-full h-[700px] md:h-[850px] object-cover rounded-2xl group-hover:scale-110 transition-transform duration-[1.2s] ease-[cubic-bezier(0.34,1.56,0.64,1)]"
-//                     priority
-//                   />
-//                 </ZoomIn>
-
-//                 {/* Floating tech badges */}
-//                 <div className="absolute -top-6 -right-6">
-//                   <div className="relative group/badge">
-//                     <div className="absolute -inset-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-//                     <div className="relative px-5 py-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full text-white font-bold shadow-2xl shadow-[#34a578]/30 animate-float">
-//                       <span className="flex items-center gap-2">
-//                         <FiCode className="text-lg" />
-//                         REACT.js
-//                       </span>
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 <div className="absolute -bottom-6 -left-6">
-//                   <div className="relative group/badge">
-//                     <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-//                     <div
-//                       className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 animate-float"
-//                       style={{ animationDelay: "0.5s" }}
-//                     >
-//                       <span className="flex items-center gap-2">
-//                         <FiStar className="text-lg" />
-//                         NEXT.js
-//                       </span>
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* Status indicator with pulse */}
-//                 <div className="absolute top-8 left-8 group/status">
-//                   <div className="relative">
-//                     <div className="absolute -inset-3 bg-[#34a578]/20 rounded-full blur opacity-0 group-hover/status:opacity-100 transition-opacity duration-500"></div>
-//                     <div className="relative flex items-center gap-3 px-4 py-3 bg-black/60 backdrop-blur-2xl rounded-full border border-white/20">
-//                       <div className="relative">
-//                         <div className="w-3 h-3 bg-[#34a578] rounded-full animate-pulse"></div>
-//                         <div className="absolute -inset-2 border border-[#34a578]/30 rounded-full animate-ping"></div>
-//                       </div>
-//                       <span className="text-sm font-semibold text-white">
-//                         Available for Hire
-//                       </span>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Floating stats card */}
-//             <div className="absolute -bottom-10 -right-10 md:block hidden">
-//               <div
-//                 className="relative group/stats animate-fade-in"
-//                 style={{ animationDelay: "1.5s" }}
-//               >
-//                 <div className="absolute -inset-6 bg-gradient-to-br from-[#34a578]/10 to-cyan-400/10 rounded-3xl blur-2xl opacity-0 group-hover/stats:opacity-100 transition-opacity duration-700"></div>
-
-//                 <div className="relative p-6 bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-2xl border border-white/20 rounded-3xl min-w-[280px] transform group-hover/stats:translate-y-[-5px] transition-transform duration-500">
-//                   <div className="text-center mb-4">
-//                     <div className="text-4xl font-black text-white mb-2 animate-count-up">
-//                       841+
-//                     </div>
-//                     <div className="text-sm text-gray-400 font-medium">
-//                       GitHub Contributions
-//                     </div>
-//                   </div>
-//                   <div className="flex items-center justify-center gap-3">
-//                     <div className="w-2 h-2 bg-[#34a578] rounded-full animate-pulse"></div>
-//                     <div className="text-sm text-gray-300 font-medium">
-//                       Active since 2021
-//                     </div>
-//                     <div
-//                       className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"
-//                       style={{ animationDelay: "0.3s" }}
-//                     ></div>
-//                   </div>
-
-//                   {/* Progress bar */}
-//                   <div className="mt-4 w-full h-2 bg-white/5 rounded-full overflow-hidden">
-//                     <div className="h-full bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] rounded-full animate-progress"></div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Enhanced Scroll Indicator */}
-//       <div
-//         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-fade-in"
-//         style={{ animationDelay: "2s" }}
-//       >
-//         <div className="flex flex-col items-center gap-4">
-//           <span className="text-sm text-gray-500 font-medium tracking-widest animate-pulse">
-//             SCROLL TO EXPLORE
-//           </span>
-//           <div className="relative">
-//             <div className="w-6 h-10 border-2 border-gray-700 rounded-full flex justify-center">
-//               <div className="w-1 h-3 bg-gradient-to-b from-[#34a578] via-cyan-400 to-[#45d19c] rounded-full mt-2 animate-scroll-dot"></div>
-//             </div>
-//             <div className="absolute -inset-4 border-2 border-[#34a578]/10 rounded-full animate-ping-slow"></div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;

@@ -100,25 +100,6 @@ const Navbar = () => {
                   About
                 </Link>
               </li>
-
-              <li>
-                <Link
-                  to="experience"
-                  smooth={true}
-                  duration={1100}
-                  spy={true}
-                  activeClass=""
-                  onSetActive={handleSetActive}
-                  onClick={() => setActiveLink("experience")}
-                  className={
-                    activeLink === "experience"
-                      ? "active text-[#34a578]"
-                      : "text-white"
-                  }
-                >
-                  Experience
-                </Link>
-              </li>
               <li>
                 <Link
                   to="skills"
@@ -137,6 +118,25 @@ const Navbar = () => {
                   Skills
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="experience"
+                  smooth={true}
+                  duration={1100}
+                  spy={true}
+                  activeClass=""
+                  onSetActive={handleSetActive}
+                  onClick={() => setActiveLink("experience")}
+                  className={
+                    activeLink === "experience"
+                      ? "active text-[#34a578]"
+                      : "text-white"
+                  }
+                >
+                  Experience
+                </Link>
+              </li>
+
               <li>
                 <Link
                   to="projects"
@@ -250,6 +250,19 @@ const Navbar = () => {
               </Link>
             </li>
             <div className="border-b-2 border-[#34a578]"></div>
+
+            <li className="py-6 list-none">
+              {" "}
+              <Link
+                onClick={handleClick}
+                to="skills"
+                smooth={true}
+                duration={1100}
+              >
+                Skills
+              </Link>
+            </li>
+            <div className="border-b-2 border-[#34a578]"></div>
             <li className="py-6 list-none">
               {" "}
               <Link
@@ -285,19 +298,6 @@ const Navbar = () => {
                 Projects
               </Link>
             </li>
-            <div className="border-b-2 border-[#34a578]"></div>
-            <li className="py-6 list-none">
-              {" "}
-              <Link
-                onClick={handleClick}
-                to="skills"
-                smooth={true}
-                duration={1100}
-              >
-                Skills
-              </Link>
-            </li>
-            <div className="border-b-2 border-[#34a578]"></div>
 
             <li className="py-6 list-none">
               {" "}

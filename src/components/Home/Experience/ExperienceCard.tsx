@@ -1,99 +1,235 @@
-import React from "react";
-import { BiBox, BiChevronRight, BiCalendar } from "react-icons/bi";
-import { MyExperienceCardProps } from "./Experience";
+"use client";
+import React, { useState } from "react";
 import SlideUp from "@/components/Shared/animations/SlideUp";
 
-const ExperienceCard: React.FC<MyExperienceCardProps> = ({
-  item,
-  delay = 0,
+interface ExperienceCardProps {
+  experience: {
+    id: number;
+    title: string;
+    company: string;
+    date: string;
+    duration: string;
+    location: string;
+    type: string;
+    description: string;
+    achievements: string[];
+    technologies: string[];
+    icon: string;
+    gradient: string;
+  };
+  index: number;
+  totalCards: number;
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({
+  experience,
+  index,
+  totalCards,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="relative group">
-      {/* Glowing background effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-[#34a578]/10 via-transparent to-cyan-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-
-      <div className="relative flex gap-6 pb-8">
-        {/* Timeline line and icon */}
-        <div className="flex flex-col items-center">
-          {/* Animated icon container */}
-          <div className="relative z-10">
-            {/* Outer glow ring */}
-            <div className="absolute -inset-3 bg-gradient-to-br from-[#34a578] to-cyan-400 rounded-full opacity-0 group-hover:opacity-30 blur-md transition-opacity duration-500"></div>
-
-            {/* Main icon container */}
-            <div className="relative flex justify-center items-center w-14 h-14 bg-gradient-to-br from-[#34a578] to-[#45d19c] rounded-full group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-[#34a578]/20">
-              <BiBox size={24} className="text-white" />
-
-              {/* Inner decorative rings */}
-              <div className="absolute inset-2 border-2 border-white/20 rounded-full animate-ping-slow"></div>
-              <div className="absolute inset-1 border border-white/10 rounded-full"></div>
+    <SlideUp delay={index * 0.2}>
+      <div className="relative">
+        {/* Main Card */}
+        <div>
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-transparent backdrop-blur-xl border border-white/10">
+            {/* Gradient Border */}
+            <div className="absolute inset-0 rounded-2xl">
+              <div
+                className={`absolute inset-0 ${experience.gradient} opacity-5 blur-sm rounded-2xl`}
+              ></div>
             </div>
 
-            {/* Floating dot animation */}
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 animate-bounce"></div>
-          </div>
+            {/* Card Content */}
+            <div className="relative z-10 p-5 md:p-8">
+              {/* Header */}
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    {/* <div className="text-2xl">{experience.icon}</div> */}
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        {experience.title}
+                      </h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-gray-300 font-medium">
+                          {experience.company}
+                        </span>
+                        <span
+                          className={`px-2 py-1 text-xs rounded-full ${
+                            experience.type === "full-time"
+                              ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                              : "bg-purple-500/20 text-purple-400 border border-purple-500/30"
+                          }`}
+                        >
+                          {experience.type === "full-time"
+                            ? "Full Time"
+                            : "Part Time"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
 
-          {/* Animated timeline line */}
-          <div className="relative mt-4">
-            <div className="w-0.5 h-full bg-gradient-to-b from-[#34a578] via-gray-600 to-transparent rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-              {/* Moving dot on timeline */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#34a578] rounded-full opacity-0 group-hover:opacity-100 animate-pulse"></div>
-            </div>
+                  {/* Date and Location */}
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mt-3">
+                    <div className="flex items-center gap-2">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span>{experience.date}</span>
+                      <span className="px-2 py-0.5 bg-white/5 rounded-md">
+                        {experience.duration}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                      </svg>
+                      <span
+                        className={
+                          experience.location.includes("Remote")
+                            ? "text-cyan-400"
+                            : "text-gray-400"
+                        }
+                      >
+                        {experience.location}
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
-            {/* Timeline end cap */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-cyan-400 to-transparent rounded-full blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
-          </div>
-        </div>
-
-        {/* Experience Content */}
-        <SlideUp delay={delay}>
-          <div className="flex-1 relative">
-            {/* Card with glassmorphism effect */}
-            <div className="relative p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 group-hover:border-[#34a578]/40 transition-all duration-500 group-hover:scale-[1.02]">
-              {/* Date badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 bg-gradient-to-r from-[#34a578]/10 to-transparent rounded-full border border-[#34a578]/20 group-hover:border-[#34a578]/40 transition-colors duration-300">
-                <BiCalendar className="text-[#34a578]" size={14} />
-                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
-                  {item?.date}
-                </span>
+                {/* Level Badge */}
+                <div className="hidden md:block">
+                  <div
+                    className={`px-4 py-2 ${experience.gradient} rounded-full text-white font-bold text-sm`}
+                  >
+                    Level {totalCards - index}
+                  </div>
+                </div>
               </div>
 
-              {/* Title with animated underline */}
-              <div className="mb-2">
-                <h1 className="text-2xl font-bold text-white mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-gray-200 group-hover:to-white group-hover:bg-clip-text transition-all duration-300">
-                  {item?.title}
-                </h1>
-                <div className="w-16 h-0.5 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full mb-3 group-hover:w-24 transition-all duration-500"></div>
-              </div>
-
-              {/* Company with gradient text */}
-              <h3 className="text-xl font-semibold mb-4">
-                <span className="bg-gradient-to-r from-[#34a578] via-[#45d19c] to-cyan-400 bg-clip-text text-transparent">
-                  {item?.company}
-                </span>
-              </h3>
-
-              {/* Description with fade effect */}
-              <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-white/90 transition-colors duration-300">
-                {item?.description}
+              {/* Description */}
+              <p className="text-gray-300 leading-relaxed mb-6">
+                {experience.description}
               </p>
 
-              {/* Bottom gradient line */}
-              <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#34a578]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Achievements */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-lg font-semibold text-white flex items-center gap-2">
+                    <div
+                      className={`w-2 h-2 rounded-full ${experience.gradient}`}
+                    ></div>
+                    Key Achievements
+                  </h4>
+                </div>
+                <div className="space-y-3">
+                  {(isExpanded
+                    ? experience.achievements
+                    : experience.achievements.slice(0, 3)
+                  ).map((achievement, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div
+                        className={`w-6 h-6 rounded-full ${experience.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}
+                      >
+                        <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                      </div>
+                      <span className="text-gray-400">{achievement}</span>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="group relative px-4 py-2 text-sm mt-3 rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <div
+                    className={`absolute inset-0 ${experience.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  ></div>
+                  <div className="relative z-10 flex items-center gap-2 text-gray-300 group-hover:text-white">
+                    {isExpanded ? (
+                      <>
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M5 15l7-7 7 7"
+                          />
+                        </svg>
+                        Show Less
+                      </>
+                    ) : (
+                      <>
+                        <svg
+                          className="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                        Show More
+                      </>
+                    )}
+                  </div>
+                </button>
+              </div>
 
-              {/* Hover indicator arrow */}
-              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                <BiChevronRight size={24} className="text-[#34a578]" />
+              {/* Technologies */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                  <div
+                    className={`w-2 h-2 rounded-full ${experience.gradient}`}
+                  ></div>
+                  Technologies
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {experience.technologies.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1.5 text-sm rounded-lg bg-white/5 border border-white/10 text-gray-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-
-            {/* Decorative corner elements */}
-            <div className="absolute top-4 left-4 w-4 h-4 border-t border-l border-white/10 rounded-tl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-cyan-500/10 rounded-br-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
-        </SlideUp>
+        </div>
       </div>
-    </div>
+    </SlideUp>
   );
 };
 
