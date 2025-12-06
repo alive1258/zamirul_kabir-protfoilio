@@ -6,6 +6,7 @@ import Experience from "@/components/Home/Experience/Experience";
 import Hero from "@/components/Home/Hero/Hero";
 import Projects from "@/components/Home/Projects/Projects";
 import Service from "@/components/Home/Services/Services";
+import FeedTestimonials from "@/components/Home/Testimonials/Testimonials";
 
 // Dynamically import problematic components
 import dynamic from "next/dynamic";
@@ -34,6 +35,7 @@ const HomePage = () => {
         <ChooseMe />
         <BlogSection />
         <Service />
+        <FeedTestimonials />
         <Contact />
       </div>
     </>
