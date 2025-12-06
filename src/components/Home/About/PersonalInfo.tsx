@@ -84,7 +84,7 @@ const PersonalInfo = () => {
 
           {/* Personal Journey & Philosophy Section */}
           <SlideUp delay={0.2}>
-            <div className="relative group h-full overflow-y-auto overflow-x-hidden ">
+            <div className="relative group md:h-[990px] h-[550px] overflow-y-auto overflow-x-hidden ">
               {/* Glowing border effect */}
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#34a578]/20 via-transparent to-cyan-400/20 rounded-2xl sm:rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-500"></div>
 
