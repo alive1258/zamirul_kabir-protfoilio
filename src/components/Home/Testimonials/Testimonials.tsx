@@ -7,7 +7,6 @@ import {
   Star,
   Calendar,
   UserCheck,
-  MessageSquare,
   Award,
   Sparkles,
   Quote,
@@ -16,10 +15,12 @@ import {
   CheckCircle,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FeedItem {
   id: number;
   name: string;
+  img: string;
   role: string;
   company?: string;
   date: string;
@@ -37,6 +38,7 @@ export default function FeedTestimonials() {
     {
       id: 1,
       name: "MD. LITON HOSSAIN",
+      img: "/testimonials/liton.jpg",
       role: "CEO at ASIAN IT INC.",
       company: "ASIAN IT INC.",
       date: "January 6, 2024",
@@ -57,7 +59,9 @@ export default function FeedTestimonials() {
     {
       id: 2,
       name: "Sabbir Hasan",
+      img: "/testimonials/sabbir.jpg",
       role: "SQA Engineer | Automation & API Testing Expert",
+      company: "IDEEZA",
       date: "September 19, 2025",
       relationship: "Mentor",
       content:
@@ -77,7 +81,9 @@ export default function FeedTestimonials() {
     {
       id: 3,
       name: "Mehadi Hasan Shaon",
+      img: "/testimonials/mehadi.jpg",
       role: "Google Certified UI/UX Designer",
+      company: "Alagzoo Software",
       date: "July 14, 2025",
       relationship: "Client",
       content:
@@ -201,7 +207,7 @@ export default function FeedTestimonials() {
         </Link>
 
         {/* Testimonials Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 gap-8 mb-20">
           {feedItems.map((item) => (
             <div
               key={item.id}
@@ -220,17 +226,18 @@ export default function FeedTestimonials() {
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-center gap-4">
                     <div className="relative">
-                      <div
-                        className={`absolute inset-0 ${item.color.replace(
-                          "/20",
-                          "/40"
-                        )} rounded-full blur-md`}
-                      ></div>
-                      <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center">
+                      {/* <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-800 to-black border border-white/10 flex items-center justify-center">
                         <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                           {item.name.charAt(0)}
                         </span>
-                      </div>
+                      </div> */}
+                      <Image
+                        width={70}
+                        height={70}
+                        src={item?.img}
+                        alt="img"
+                        className="rounded-lg"
+                      />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">
@@ -355,7 +362,7 @@ export default function FeedTestimonials() {
               color: "from-emerald-500/20 to-green-500/20",
             },
             {
-              value: "2+",
+              value: "2.5+",
               label: "Years Experience",
               icon: "⚡",
               color: "from-purple-500/20 to-pink-500/20",
@@ -382,6 +389,7 @@ export default function FeedTestimonials() {
         </div>
 
         {/* CTA Section */}
+        {/* CTA Section */}
         <div className="text-center">
           <div className="relative bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-12 overflow-hidden">
             {/* Background Pattern */}
@@ -397,16 +405,15 @@ export default function FeedTestimonials() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <Link
                 target="_blank"
-                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/zamirul-kabir/"
-                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105"
+                className="group z-50 inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105"
               >
                 <Linkedin className="w-5 h-5" />
                 Connect on LinkedIn
                 <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
 
               <a
                 href="#contact"

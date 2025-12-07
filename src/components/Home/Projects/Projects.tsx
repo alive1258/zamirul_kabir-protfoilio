@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
 import ProjectCard from "./ProjectCard";
-
 import Link from "next/link";
 import SlideUp from "@/components/Shared/animations/SlideUp";
 import { projectCategories, projectsData } from "../../../../utils/projectData";
@@ -38,9 +36,6 @@ const Projects = () => {
       />
 
       {/* END HEADER SECTION */}
-
-      {/* START CATEGORY FILTER BUTTONS */}
-      {/* START CATEGORY FILTER BUTTONS - Glass Morphism */}
       <SlideUp delay={0.3}>
         <div className="my-10 flex justify-center flex-wrap gap-3">
           {projectCategories?.map((cat) => (
@@ -97,22 +92,55 @@ const Projects = () => {
           ))}
         </div>
       </SlideUp>
-      {/* END CATEGORY FILTER BUTTONS */}
 
       {/* START FILTERED PROJECT CARD LIST */}
       <div>
-        {displayData?.map((item, idx) => (
-          <ProjectCard
-            item={item}
-            idx={idx}
-            key={`${item.id}-${selectedCategory}`}
-            delay={idx * 0.3}
-          />
-        ))}
+        {displayData?.length > 0 ? (
+          displayData.map((item, idx) => (
+            <ProjectCard
+              item={item}
+              idx={idx}
+              key={`${item.id}-${selectedCategory}`}
+              delay={idx * 0.3}
+            />
+          ))
+        ) : (
+          <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
+            {/* Empty state illustration */}
+            <div className="relative mb-6">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 border border-white/10 flex items-center justify-center">
+                <svg
+                  className="w-12 h-12 text-gray-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              {/* Animated dots */}
+              <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#3B82F6] rounded-full animate-ping opacity-20"></div>
+            </div>
+
+            <h3 className="text-xl font-bold text-white mb-3">
+              No Projects Found
+            </h3>
+            <p className="text-gray-400 max-w-md mb-6">
+              {selectedCategory === "All"
+                ? "No projects available at the moment. Check back soon!"
+                : `No projects found in the "${selectedCategory}" category. Try another category or check back later.`}
+            </p>
+          </div>
+        )}
       </div>
       {/* END FILTERED PROJECT CARD LIST */}
 
-      {/* Show More/Less Button */}
       {filteredData.length > 5 && (
         <SlideUp className="pt-10 flex justify-center">
           <button
@@ -137,49 +165,11 @@ const Projects = () => {
       )}
 
       {/* View All Projects Button */}
-      <SlideUp className="pt-10 flex justify-center uppercase">
+      {/* <SlideUp className="pt-10 flex justify-center uppercase">
         <Link href="/projects">
           <Button content="View All Projects" />
         </Link>
-      </SlideUp>
-
-      {/* Stats Section */}
-      <SlideUp>
-        <div className="mt-16 pt-12 border-t border-gray-200">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-3xl font-bold text-[#3B82F6] mb-2">
-                {projectsData.length}
-              </div>
-              <div className="text-gray-600 text-sm">Total Projects</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#3B82F6] mb-2">
-                {projectsData.filter((p) => p.featured).length}
-              </div>
-              <div className="text-gray-600 text-sm">Featured</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#3B82F6] mb-2">
-                {
-                  Array.from(new Set(projectsData.map((p) => p.category)))
-                    .length
-                }
-              </div>
-              <div className="text-gray-600 text-sm">Categories</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#3B82F6] mb-2">
-                {
-                  Array.from(new Set(projectsData.flatMap((p) => p.tags)))
-                    .length
-                }
-              </div>
-              <div className="text-gray-600 text-sm">Technologies</div>
-            </div>
-          </div>
-        </div>
-      </SlideUp>
+      </SlideUp> */}
     </section>
   );
 };

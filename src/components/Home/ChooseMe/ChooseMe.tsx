@@ -306,13 +306,13 @@ const ChooseMe = () => {
       color: "pink",
     },
     {
-      icon: "/assets/icons/f5.png",
+      icon: "/assets/icons/f2.png",
       title: "Projects Delivered",
       value: "50+",
       color: "amber",
     },
     {
-      icon: "/assets/icons/f6.png",
+      icon: "/assets/icons/f1.png",
       title: "Hours of Development",
       value: "5000+",
       color: "emerald",
