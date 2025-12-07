@@ -16,14 +16,18 @@ const Projects = () => {
   const filteredData =
     selectedCategory === "All"
       ? projectsData
-      : projectsData.filter((item) => item.category === selectedCategory);
+      : projectsData.filter(
+          (item) => item.category.includes(selectedCategory) // Use includes for array
+        );
 
   // Limit display to 5 projects unless showAll is true
-  const displayData = showAll ? filteredData : filteredData.slice(0, 5);
+  const displayData = showAll ? filteredData : filteredData.slice(0, 3);
+
+  // Check if we need to show the "Show All" button
+  const shouldShowButton = filteredData.length > 3;
 
   return (
     <section id="projects" className="container md:my-14 my-20">
-      {/* START HEADER SECTION */}
       {/* START HEADER SECTION */}
       <BadgeLabel
         text="Portfolio"
@@ -34,8 +38,8 @@ const Projects = () => {
         subtitle="A collection of my recent work showcasing modern web development and innovative solutions"
         className="mb-16 md:mb-24"
       />
-
       {/* END HEADER SECTION */}
+
       <SlideUp delay={0.3}>
         <div className="my-10 flex justify-center flex-wrap gap-3">
           {projectCategories?.map((cat) => (
@@ -46,7 +50,7 @@ const Projects = () => {
               <button
                 onClick={() => {
                   setSelectedCategory(cat);
-                  setShowAll(false);
+                  setShowAll(false); // Reset to show only 5 when changing category
                 }}
                 className="relative"
               >
@@ -141,35 +145,72 @@ const Projects = () => {
       </div>
       {/* END FILTERED PROJECT CARD LIST */}
 
-      {filteredData.length > 5 && (
+      {/* Show All / Show Less Button - Only show when there are more than 5 projects */}
+      {shouldShowButton && (
         <SlideUp className="pt-10 flex justify-center">
           <button
             onClick={() => setShowAll(!showAll)}
-            className={`font-satoshi font-medium transition-all duration-300 ease-in-out ${
-              showAll
-                ? "text-[#3B82F6] hover:text-blue-700"
-                : "text-tertiary-base hover:text-[#3B82F6]"
-            }`}
+            className="group relative"
           >
-            <span className="flex items-center gap-2">
-              {showAll
-                ? "Show Less Projects"
-                : `Show All ${filteredData.length} Projects`}
-              <RiArrowRightLine
-                size={20}
-                className={`transition-transform ${showAll ? "rotate-90" : ""}`}
-              />
-            </span>
+            {/* Neon glow background */}
+            <div className="absolute -inset-3 bg-gradient-to-r from-[#3B82F6] via-cyan-400 to-violet-500 rounded-2xl opacity-0 group-hover:opacity-20 blur-2xl transition-all duration-700 group-hover:scale-105"></div>
+
+            {/* Glowing border */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#3B82F6] via-cyan-400 to-[#3B82F6] rounded-2xl opacity-0 group-hover:opacity-30 blur transition-opacity duration-500"></div>
+
+            {/* Glass morphism container */}
+            <div className="relative px-8 py-4 rounded-2xl backdrop-blur-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 group-hover:border-white/30 transition-all duration-500 overflow-hidden">
+              {/* Animated gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6]/0 via-[#3B82F6]/10 to-cyan-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+
+              <span className="flex items-center gap-4 relative z-10">
+                {/* Animated icon */}
+                <div className="relative">
+                  <div
+                    className={`w-7 h-7 rounded-full flex items-center justify-center transition-all duration-500 ${
+                      showAll
+                        ? "bg-gradient-to-br from-[#3B82F6] to-cyan-400 shadow-lg shadow-[#3B82F6]/50"
+                        : "bg-gradient-to-br from-gray-800 to-gray-700 group-hover:bg-gradient-to-br group-hover:from-[#3B82F6] group-hover:to-cyan-400"
+                    }`}
+                  >
+                    <RiArrowRightLine
+                      size={18}
+                      className={`text-white transition-all duration-500 ${
+                        showAll ? "rotate-90" : "group-hover:translate-x-1"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Pulsing outer ring */}
+                  {showAll && (
+                    <>
+                      <div className="absolute -inset-2 rounded-full border-2 border-[#3B82F6]/30 animate-ping"></div>
+                      <div className="absolute -inset-1 rounded-full border border-cyan-400/50 animate-pulse"></div>
+                    </>
+                  )}
+                </div>
+
+                {/* Text with gradient effect */}
+                <span className="font-satoshi font-semibold text-base">
+                  {showAll ? (
+                    <span className="bg-gradient-to-r from-[#3B82F6] via-cyan-400 to-[#3B82F6] bg-clip-text text-transparent bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-500">
+                      Show Less Projects
+                    </span>
+                  ) : (
+                    <>
+                      Show All{" "}
+                      <span className="bg-gradient-to-r from-[#3B82F6] via-cyan-400 to-[#3B82F6] bg-clip-text text-transparent font-bold animate-gradient bg-size-200 bg-pos-0 hover:bg-pos-100 transition-all duration-500">
+                        {filteredData.length}
+                      </span>{" "}
+                      Projects
+                    </>
+                  )}
+                </span>
+              </span>
+            </div>
           </button>
         </SlideUp>
       )}
-
-      {/* View All Projects Button */}
-      {/* <SlideUp className="pt-10 flex justify-center uppercase">
-        <Link href="/projects">
-          <Button content="View All Projects" />
-        </Link>
-      </SlideUp> */}
     </section>
   );
 };

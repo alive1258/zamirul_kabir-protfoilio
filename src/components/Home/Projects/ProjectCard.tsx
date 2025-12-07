@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item, idx, delay = 0 }) => {
                     src={item?.image}
                     alt={item?.name}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={idx < 3}
                     loading={idx < 3 ? "eager" : "lazy"}
                     quality={90}
@@ -113,7 +113,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item, idx, delay = 0 }) => {
               </div>
 
               {/* Project Title */}
-              <h1 className="md:text-[32px] text-[20px] mb-4 font-satoshi font-bold">
+              <h1 className="md:text-2xl text-[20px] mb-4 font-satoshi font-bold">
                 <button
                   onClick={() => setShowModal(true)}
                   className="text-gray-200  hover:text-[#3B82F6] text-left transition-colors duration-300 relative group/title"
@@ -125,7 +125,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item, idx, delay = 0 }) => {
               </h1>
 
               {/* Project Description */}
-              <p className="text-gray-400 font-satoshi font-medium text-[16px] mb-6 leading-relaxed">
+              <p className="text-gray-400 font-satoshi font-medium text-sm mb-6 leading-relaxed">
                 {item?.description}
               </p>
 
@@ -143,7 +143,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item, idx, delay = 0 }) => {
 
               {/* Stats with animated dots */}
               <div className="mb-6 flex flex-wrap gap-4">
-                {item.achievements.slice(0, 2).map((achievement, idx) => (
+                {item.achievements.slice(0, 1).map((achievement, idx) => (
                   <div key={idx} className="flex items-center gap-2 group/stat">
                     <div className="relative">
                       <div className="absolute -inset-1 bg-[#3B82F6] rounded-full blur opacity-0 group-hover/stat:opacity-30 transition-opacity duration-300"></div>
@@ -171,6 +171,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ item, idx, delay = 0 }) => {
                     external: true,
                     icon: <RiArrowRightLine size={20} />,
                   },
+                  // Conditionally add server link if it exists
+                  ...(item.server_github_link
+                    ? [
+                        {
+                          label: "Server Code",
+                          href: item.server_github_link,
+                          external: true,
+                          icon: <RiArrowRightLine size={20} />,
+                        },
+                      ]
+                    : []),
                   {
                     label: "View Details",
                     action: () => setShowModal(true),
