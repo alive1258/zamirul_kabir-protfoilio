@@ -1,6 +1,6 @@
 # 🎓 Zamiru Kabir Portfolio
 
-![Portfolio Banner](/public/image/portfolio-zamirul.png)
+![Portfolio Banner](/public/images/portfolio-zamirul.png)
 
 ## 📋 Executive Summary
 
