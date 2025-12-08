@@ -40,7 +40,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ item, delay = 0 }) => {
             <div className="absolute -inset-2 border-2 border-[#34a578]/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
             {/* Main icon container */}
-            <div className="relative w-20 h-[60px] rounded-2xl bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#34a578]/10 group-hover:to-cyan-500/10 transition-all duration-500 group-hover:rotate-3">
+            <div className="relative w-20 md:h-[60px] h-14 rounded-2xl bg-gradient-to-br from-white/10 to-black/20 backdrop-blur-sm border border-white/10 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-[#34a578]/10 group-hover:to-cyan-500/10 transition-all duration-500 group-hover:rotate-3">
               <Image
                 className="rounded-lg transform transition-transform duration-500 group-hover:scale-110"
                 src={item?.image}
@@ -59,7 +59,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ item, delay = 0 }) => {
           </div>
 
           {/* Skill name with gradient */}
-          <p className="text-center text-xl font-semibold mb-2">
+          <p className="text-center md:text-xl text-lg font-semibold mb-2">
             <span className="text-white group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-gray-200 group-hover:to-white group-hover:bg-clip-text group-hover:text-transparent transition-all duration-500">
               {item?.name}
             </span>

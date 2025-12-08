@@ -144,7 +144,7 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
 
           {/* good  */}
 
-          <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:gap-4 gap-3 mb-8">
             {stats.map((stat) => {
               const Icon = stat.icon;
 
@@ -169,7 +169,7 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover/stat:opacity-100 translate-x-[-100%] group-hover/stat:translate-x-[100%] transition-all duration-1000" />
                   </div>
 
-                  <div className="relative p-4 rounded-xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-white/[0.01] backdrop-blur-xl border border-white/15 group-hover/stat:border-white/25 transition-all duration-500 shadow-2xl shadow-black/20 group-hover/stat:shadow-[#34a578]/10">
+                  <div className="relative md:p-4 p-3 rounded-xl bg-gradient-to-br from-white/[0.07] via-white/[0.03] to-white/[0.01] backdrop-blur-xl border border-white/15 group-hover/stat:border-white/25 transition-all duration-500 shadow-2xl shadow-black/20 group-hover/stat:shadow-[#34a578]/10">
                     <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-white/20 rounded-tl opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
                     <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-cyan-400/30 rounded-br opacity-0 group-hover/stat:opacity-100 transition-opacity duration-500" />
 
@@ -193,7 +193,7 @@ const GitHubStats: React.FC<GitHubStatsProps> = ({
 
                       <div className="mb-2 ">
                         <div
-                          className={`text-3xl font-black bg-gradient-to-br ${stat.color} bg-clip-text text-transparent leading-none`}
+                          className={`lg:text-3xl text-xl font-black bg-gradient-to-br ${stat.color} bg-clip-text text-transparent leading-none`}
                         >
                           {isInView ? (
                             <CountUp
