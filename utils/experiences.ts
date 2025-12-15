@@ -15,38 +15,6 @@ export interface Experience {
 
 export const experiencesData: Experience[] = [
   {
-    id: 5,
-    title: "Frontend Developer",
-    company: "Zephix | Software Development Company",
-    location: "Dhaka, Bangladesh · Remote",
-    date: "Nov 2025 - Present",
-    duration: "2 months",
-    description:
-      "Frontend Developer specializing in Next.js and e-commerce dashboard development. Working on modern web applications with focus on user experience and performance optimization.",
-    achievements: [
-      "Developing front-end solutions for e-commerce platforms and dashboards",
-      "Implementing responsive UI components using React.js and modern frameworks",
-      "Collaborating with development teams to deliver high-quality web applications",
-      "Working on performance optimization and code quality improvements",
-      "Building scalable and maintainable React components with TypeScript",
-      "Implementing real-time features and interactive user interfaces",
-      "Optimizing web applications for mobile devices and cross-browser compatibility",
-    ],
-    technologies: [
-      "React.js",
-      "TypeScript",
-      "Next.js",
-      "Tailwind CSS",
-      "JavaScript",
-      "E-commerce",
-      "Dashboard Development",
-      "Shadcn/UI",
-    ],
-    type: "part-time",
-    icon: "🖥️",
-    gradient: "bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500",
-  },
-  {
     id: 1,
     title: "Full Stack Developer",
     company: "EForgeIT",
