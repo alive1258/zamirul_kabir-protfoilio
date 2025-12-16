@@ -27,7 +27,7 @@ const HeroSkeleton = dynamic(() => import("./HeroSkeleton"), {
 });
 
 const Hero = () => {
-  const zamirulPic = "/assets/image/zamirul_pic.jpg";
+  const zamirulPic = "/assets/image/zamirulPic.png";
   const [isLoading, setIsLoading] = useState(true);
   const [contentLoaded, setContentLoaded] = useState(false);
 
@@ -54,7 +54,7 @@ const Hero = () => {
     <Suspense fallback={<HeroSkeleton />}>
       <div
         id="hero"
-        className="relative w-full bg-[#0f172a] overflow-hidden pt-16 pb-20 md:pt-28 md:pb-28 lg:pb-32"
+        className="relative w-full bg-[#0f172a] overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 lg:pb-32"
       >
         {/* Background Elements - Responsive */}
         <div className="absolute hidden lg:block blurred-blue-circle"></div>
@@ -140,7 +140,7 @@ const Hero = () => {
                 </div>
 
                 {/* Hero Title */}
-                <div className="mb-6 sm:mb-8">
+                <div className="mb-3 sm:mb-4">
                   <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                     <span className="block mb-2">
                       <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-text-shimmer">
@@ -155,7 +155,7 @@ const Hero = () => {
                 </div>
 
                 {/* Description Card */}
-                <div className="relative group mb-8">
+                <div className="relative group mb-4">
                   <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#34a578]/20 via-transparent to-cyan-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
                   <div className="relative p-4 sm:p-6 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 group-hover:border-[#34a578]/40 transition-colors duration-500">
@@ -338,10 +338,10 @@ const Hero = () => {
                     <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-br from-[#34a578]/20 via-transparent to-cyan-400/20 rounded-2xl sm:rounded-[32px] blur-lg sm:blur-xl opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
 
                     {/* Animated gradient border */}
-                    <div className="absolute -inset-0.5 rounded-2xl sm:rounded-[28px] bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] opacity-0 group-hover:duration-300 ease-in-out transition-all group-hover:opacity-100 animate-gradient-x-fast"></div>
-
+                    {/* <div className="absolute -inset-0.5 rounded-2xl sm:rounded-[28px] bg-gradient-to-r from-[#34a578] via-cyan-400 to-[#45d19c] opacity-0 group-hover:duration-300 ease-in-out transition-all group-hover:opacity-100 animate-gradient-x-fast"></div> */}
+                    <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-br from-[#34a578]/10 to-cyan-400/10 rounded-2xl sm:rounded-3xl blur-xl sm:blur-2xl opacity-0 group-hover/stats:opacity-100 transition-opacity duration-700"></div>
                     {/* Main image container */}
-                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-xl sm:backdrop-blur-2xl border border-white/20 p-2 sm:p-3 group-hover:border-transparent transition-all duration-700">
+                    <div className="relative  bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-xl sm:backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl min-w-[200px] sm:min-w-[280px] transform group-hover/stats:translate-y-[-5px] transition-transform duration-500">
                       <ImageWithSkeleton
                         src={zamirulPic}
                         alt="Zamirul Kabir - Full Stack Developer & Tech Lead"
@@ -351,14 +351,10 @@ const Hero = () => {
                         classNameImage="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[610px] object-cover rounded-2xl group-hover:scale-110 transition-transform duration-[1.2s] ease-[cubic-bezier(0.34,1.56,0.64,1)]"
                         priority
                       />
-
                       <div className="absolute bottom-96 left-1">
                         <div className="relative group/badge">
                           <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-                          <div
-                            className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30"
-                            style={{ animationDelay: "0.5s" }}
-                          >
+                          <div className="relative px-3 py-2 sm:px-4 rounded-full sm:py-3 bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-xl sm:backdrop-blur-2xl border border-white/20 text-white font-bold text-sm sm:text-base shadow-xl sm:shadow-2xl shadow-[#34a578]/30">
                             <span className="flex items-center gap-2">
                               <FiStar className="text-lg" />
                               Problem Solver
@@ -369,10 +365,7 @@ const Hero = () => {
                       <div className="absolute bottom-52 left-1">
                         <div className="relative group/badge">
                           <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-                          <div
-                            className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30"
-                            style={{ animationDelay: "0.5s" }}
-                          >
+                          <div className="relative px-3 py-2 sm:px-4 rounded-full sm:py-3 bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-xl sm:backdrop-blur-2xl border border-white/20 text-white font-bold text-sm sm:text-base shadow-xl sm:shadow-2xl shadow-[#34a578]/30">
                             <span className="flex items-center gap-2">
                               <FiStar className="text-lg" />
                               Team Lead
@@ -380,14 +373,10 @@ const Hero = () => {
                           </div>
                         </div>
                       </div>
-
                       <div className="absolute bottom-6 left-1">
                         <div className="relative group/badge">
                           <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-                          <div
-                            className="relative px-5 py-3 bg-gradient-to-r from-cyan-400 to-[#45d19c] rounded-full text-white font-bold shadow-2xl shadow-cyan-400/30 "
-                            style={{ animationDelay: "0.5s" }}
-                          >
+                          <div className="relative px-3 py-2 sm:px-4 rounded-full sm:py-3 bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-xl sm:backdrop-blur-2xl border border-white/20 text-white font-bold text-sm sm:text-base shadow-xl sm:shadow-2xl shadow-[#34a578]/30">
                             <span className="flex items-center gap-2">
                               <FiStar className="text-lg" />
                               NEXT.js
@@ -397,10 +386,10 @@ const Hero = () => {
                       </div>
 
                       {/* Floating tech badges - Responsive positioning */}
-                      <div className="absolute top-4 right-4 sm:top-7 sm:right-7">
+                      <div className="absolute top-4 right-4 sm:top-7 sm:right-2">
                         <div className="relative group/badge">
                           <div className="absolute -inset-2 sm:-inset-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full blur opacity-0 group-hover/badge:opacity-30 transition-opacity duration-500"></div>
-                          <div className="relative px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-[#34a578] to-cyan-400 rounded-full text-white font-bold text-sm sm:text-base shadow-xl sm:shadow-2xl shadow-[#34a578]/30">
+                          <div className="relative px-3 py-2 sm:px-4 rounded-full sm:py-3 bg-gradient-to-br from-white/[0.06] via-black/40 to-white/[0.03] backdrop-blur-xl sm:backdrop-blur-2xl border border-white/20 text-white font-bold text-sm sm:text-base shadow-xl sm:shadow-2xl shadow-[#34a578]/30">
                             <span className="flex items-center gap-1 sm:gap-2">
                               <FiCode className="text-sm sm:text-lg" />
                               REACT.js
@@ -408,7 +397,6 @@ const Hero = () => {
                           </div>
                         </div>
                       </div>
-
                       {/* Status indicator */}
                       <div className="absolute top-4 left-4 sm:top-8 sm:left-8 group/status">
                         <div className="relative">
